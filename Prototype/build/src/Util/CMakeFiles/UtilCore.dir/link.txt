@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libUtilCore.a  CMakeFiles/UtilCore.dir/clientVar.cc.o CMakeFiles/UtilCore.dir/compressGen.cc.o CMakeFiles/UtilCore.dir/configure.cc.o CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o CMakeFiles/UtilCore.dir/readCache.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libUtilCore.a

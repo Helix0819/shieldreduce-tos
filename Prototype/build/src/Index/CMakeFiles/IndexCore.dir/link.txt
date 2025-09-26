@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libIndexCore.a  CMakeFiles/IndexCore.dir/absIndex.cc.o CMakeFiles/IndexCore.dir/enclaveIndex.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libIndexCore.a

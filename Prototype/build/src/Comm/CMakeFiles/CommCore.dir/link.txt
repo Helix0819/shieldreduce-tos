@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libCommCore.a  CMakeFiles/CommCore.dir/sslConnect.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libCommCore.a

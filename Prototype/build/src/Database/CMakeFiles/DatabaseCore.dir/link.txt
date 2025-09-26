@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libDatabaseCore.a  CMakeFiles/DatabaseCore.dir/absDatabase.cc.o CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libDatabaseCore.a

@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libClientCore.a  CMakeFiles/ClientCore.dir/chunker.cc.o CMakeFiles/ClientCore.dir/dataRetriever.cc.o CMakeFiles/ClientCore.dir/dataSender.cc.o CMakeFiles/ClientCore.dir/raVerifier.cc.o CMakeFiles/ClientCore.dir/restoreWriter.cc.o CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libClientCore.a

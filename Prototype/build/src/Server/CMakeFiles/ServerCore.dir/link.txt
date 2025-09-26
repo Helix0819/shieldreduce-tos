@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libServerCore.a  CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o CMakeFiles/ServerCore.dir/dataReceiver.cc.o CMakeFiles/ServerCore.dir/dataWriter.cc.o CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o CMakeFiles/ServerCore.dir/raUtil.cc.o CMakeFiles/ServerCore.dir/serverOptThread.cc.o CMakeFiles/ServerCore.dir/storageCore.cc.o
+/usr/bin/llvm-ranlib ../../../lib/libServerCore.a

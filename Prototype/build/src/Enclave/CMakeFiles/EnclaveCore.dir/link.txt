@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc ../../../lib/libEnclaveCore.a  CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o
+/usr/bin/llvm-ranlib ../../../lib/libEnclaveCore.a
