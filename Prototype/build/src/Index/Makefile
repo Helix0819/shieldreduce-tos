@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/Index/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Index/CMakeFiles/IndexCore.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/CMakeFiles/IndexCore.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Index/CMakeFiles/IndexCore.dir/rule
 .PHONY : src/Index/CMakeFiles/IndexCore.dir/rule
 
 # Convenience name for target.
@@ -125,7 +125,7 @@ IndexCore: src/Index/CMakeFiles/IndexCore.dir/rule
 
 # fast build rule for target.
 IndexCore/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/build
 .PHONY : IndexCore/fast
 
 absIndex.o: absIndex.cc.o
@@ -134,7 +134,7 @@ absIndex.o: absIndex.cc.o
 
 # target to build an object file
 absIndex.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o
 .PHONY : absIndex.cc.o
 
 absIndex.i: absIndex.cc.i
@@ -143,7 +143,7 @@ absIndex.i: absIndex.cc.i
 
 # target to preprocess a source file
 absIndex.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.i
 .PHONY : absIndex.cc.i
 
 absIndex.s: absIndex.cc.s
@@ -152,7 +152,7 @@ absIndex.s: absIndex.cc.s
 
 # target to generate assembly for a file
 absIndex.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.s
 .PHONY : absIndex.cc.s
 
 enclaveIndex.o: enclaveIndex.cc.o
@@ -161,7 +161,7 @@ enclaveIndex.o: enclaveIndex.cc.o
 
 # target to build an object file
 enclaveIndex.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o
 .PHONY : enclaveIndex.cc.o
 
 enclaveIndex.i: enclaveIndex.cc.i
@@ -170,7 +170,7 @@ enclaveIndex.i: enclaveIndex.cc.i
 
 # target to preprocess a source file
 enclaveIndex.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.i
 .PHONY : enclaveIndex.cc.i
 
 enclaveIndex.s: enclaveIndex.cc.s
@@ -179,7 +179,7 @@ enclaveIndex.s: enclaveIndex.cc.s
 
 # target to generate assembly for a file
 enclaveIndex.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Index/CMakeFiles/IndexCore.dir/build.make src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.s
 .PHONY : enclaveIndex.cc.s
 
 # Help Target
@@ -208,6 +208,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o"
+  "/root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c" "/root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

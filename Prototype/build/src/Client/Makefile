@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/Client/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/Client/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Client/CMakeFiles/ClientCore.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/CMakeFiles/ClientCore.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Client/CMakeFiles/ClientCore.dir/rule
 .PHONY : src/Client/CMakeFiles/ClientCore.dir/rule
 
 # Convenience name for target.
@@ -125,7 +125,7 @@ ClientCore: src/Client/CMakeFiles/ClientCore.dir/rule
 
 # fast build rule for target.
 ClientCore/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/build
 .PHONY : ClientCore/fast
 
 chunker.o: chunker.cc.o
@@ -134,7 +134,7 @@ chunker.o: chunker.cc.o
 
 # target to build an object file
 chunker.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.o
 .PHONY : chunker.cc.o
 
 chunker.i: chunker.cc.i
@@ -143,7 +143,7 @@ chunker.i: chunker.cc.i
 
 # target to preprocess a source file
 chunker.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.i
 .PHONY : chunker.cc.i
 
 chunker.s: chunker.cc.s
@@ -152,7 +152,7 @@ chunker.s: chunker.cc.s
 
 # target to generate assembly for a file
 chunker.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/chunker.cc.s
 .PHONY : chunker.cc.s
 
 dataRetriever.o: dataRetriever.cc.o
@@ -161,7 +161,7 @@ dataRetriever.o: dataRetriever.cc.o
 
 # target to build an object file
 dataRetriever.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.o
 .PHONY : dataRetriever.cc.o
 
 dataRetriever.i: dataRetriever.cc.i
@@ -170,7 +170,7 @@ dataRetriever.i: dataRetriever.cc.i
 
 # target to preprocess a source file
 dataRetriever.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.i
 .PHONY : dataRetriever.cc.i
 
 dataRetriever.s: dataRetriever.cc.s
@@ -179,7 +179,7 @@ dataRetriever.s: dataRetriever.cc.s
 
 # target to generate assembly for a file
 dataRetriever.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataRetriever.cc.s
 .PHONY : dataRetriever.cc.s
 
 dataSender.o: dataSender.cc.o
@@ -188,7 +188,7 @@ dataSender.o: dataSender.cc.o
 
 # target to build an object file
 dataSender.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.o
 .PHONY : dataSender.cc.o
 
 dataSender.i: dataSender.cc.i
@@ -197,7 +197,7 @@ dataSender.i: dataSender.cc.i
 
 # target to preprocess a source file
 dataSender.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.i
 .PHONY : dataSender.cc.i
 
 dataSender.s: dataSender.cc.s
@@ -206,7 +206,7 @@ dataSender.s: dataSender.cc.s
 
 # target to generate assembly for a file
 dataSender.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.s
 .PHONY : dataSender.cc.s
 
 raVerifier.o: raVerifier.cc.o
@@ -215,7 +215,7 @@ raVerifier.o: raVerifier.cc.o
 
 # target to build an object file
 raVerifier.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o
 .PHONY : raVerifier.cc.o
 
 raVerifier.i: raVerifier.cc.i
@@ -224,7 +224,7 @@ raVerifier.i: raVerifier.cc.i
 
 # target to preprocess a source file
 raVerifier.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.i
 .PHONY : raVerifier.cc.i
 
 raVerifier.s: raVerifier.cc.s
@@ -233,7 +233,7 @@ raVerifier.s: raVerifier.cc.s
 
 # target to generate assembly for a file
 raVerifier.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.s
 .PHONY : raVerifier.cc.s
 
 restoreWriter.o: restoreWriter.cc.o
@@ -242,7 +242,7 @@ restoreWriter.o: restoreWriter.cc.o
 
 # target to build an object file
 restoreWriter.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.o
 .PHONY : restoreWriter.cc.o
 
 restoreWriter.i: restoreWriter.cc.i
@@ -251,7 +251,7 @@ restoreWriter.i: restoreWriter.cc.i
 
 # target to preprocess a source file
 restoreWriter.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.i
 .PHONY : restoreWriter.cc.i
 
 restoreWriter.s: restoreWriter.cc.s
@@ -260,7 +260,7 @@ restoreWriter.s: restoreWriter.cc.s
 
 # target to generate assembly for a file
 restoreWriter.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.s
 .PHONY : restoreWriter.cc.s
 
 sessionKeyExchange.o: sessionKeyExchange.cc.o
@@ -269,7 +269,7 @@ sessionKeyExchange.o: sessionKeyExchange.cc.o
 
 # target to build an object file
 sessionKeyExchange.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.o
 .PHONY : sessionKeyExchange.cc.o
 
 sessionKeyExchange.i: sessionKeyExchange.cc.i
@@ -278,7 +278,7 @@ sessionKeyExchange.i: sessionKeyExchange.cc.i
 
 # target to preprocess a source file
 sessionKeyExchange.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.i
 .PHONY : sessionKeyExchange.cc.i
 
 sessionKeyExchange.s: sessionKeyExchange.cc.s
@@ -287,7 +287,7 @@ sessionKeyExchange.s: sessionKeyExchange.cc.s
 
 # target to generate assembly for a file
 sessionKeyExchange.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Client/CMakeFiles/ClientCore.dir/build.make src/Client/CMakeFiles/ClientCore.dir/sessionKeyExchange.cc.s
 .PHONY : sessionKeyExchange.cc.s
 
 # Help Target
@@ -328,6 +328,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

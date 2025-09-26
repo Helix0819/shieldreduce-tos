@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o"
+  "/root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c" "/root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -20,8 +20,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "src/Enclave"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc" "/root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc" "/root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

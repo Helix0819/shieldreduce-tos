@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/App/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/App/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/App/CMakeFiles/compressSYN.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/compressSYN.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/compressSYN.dir/rule
 .PHONY : src/App/CMakeFiles/compressSYN.dir/rule
 
 # Convenience name for target.
@@ -125,12 +125,12 @@ compressSYN: src/App/CMakeFiles/compressSYN.dir/rule
 
 # fast build rule for target.
 compressSYN/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/build
 .PHONY : compressSYN/fast
 
 # Convenience name for target.
 src/App/CMakeFiles/ShieldReduceClient.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/ShieldReduceClient.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/ShieldReduceClient.dir/rule
 .PHONY : src/App/CMakeFiles/ShieldReduceClient.dir/rule
 
 # Convenience name for target.
@@ -140,12 +140,12 @@ ShieldReduceClient: src/App/CMakeFiles/ShieldReduceClient.dir/rule
 
 # fast build rule for target.
 ShieldReduceClient/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/build
 .PHONY : ShieldReduceClient/fast
 
 # Convenience name for target.
 src/App/CMakeFiles/ShieldReduceServer.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/ShieldReduceServer.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/App/CMakeFiles/ShieldReduceServer.dir/rule
 .PHONY : src/App/CMakeFiles/ShieldReduceServer.dir/rule
 
 # Convenience name for target.
@@ -155,7 +155,7 @@ ShieldReduceServer: src/App/CMakeFiles/ShieldReduceServer.dir/rule
 
 # fast build rule for target.
 ShieldReduceServer/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/build
 .PHONY : ShieldReduceServer/fast
 
 dbeClient.o: dbeClient.cc.o
@@ -164,7 +164,7 @@ dbeClient.o: dbeClient.cc.o
 
 # target to build an object file
 dbeClient.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.o
 .PHONY : dbeClient.cc.o
 
 dbeClient.i: dbeClient.cc.i
@@ -173,7 +173,7 @@ dbeClient.i: dbeClient.cc.i
 
 # target to preprocess a source file
 dbeClient.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.i
 .PHONY : dbeClient.cc.i
 
 dbeClient.s: dbeClient.cc.s
@@ -182,7 +182,7 @@ dbeClient.s: dbeClient.cc.s
 
 # target to generate assembly for a file
 dbeClient.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceClient.dir/build.make src/App/CMakeFiles/ShieldReduceClient.dir/dbeClient.cc.s
 .PHONY : dbeClient.cc.s
 
 dbeServer.o: dbeServer.cc.o
@@ -191,7 +191,7 @@ dbeServer.o: dbeServer.cc.o
 
 # target to build an object file
 dbeServer.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.o
 .PHONY : dbeServer.cc.o
 
 dbeServer.i: dbeServer.cc.i
@@ -200,7 +200,7 @@ dbeServer.i: dbeServer.cc.i
 
 # target to preprocess a source file
 dbeServer.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.i
 .PHONY : dbeServer.cc.i
 
 dbeServer.s: dbeServer.cc.s
@@ -209,7 +209,7 @@ dbeServer.s: dbeServer.cc.s
 
 # target to generate assembly for a file
 dbeServer.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/ShieldReduceServer.dir/build.make src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.s
 .PHONY : dbeServer.cc.s
 
 synCompress.o: synCompress.cc.o
@@ -218,7 +218,7 @@ synCompress.o: synCompress.cc.o
 
 # target to build an object file
 synCompress.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.o
 .PHONY : synCompress.cc.o
 
 synCompress.i: synCompress.cc.i
@@ -227,7 +227,7 @@ synCompress.i: synCompress.cc.i
 
 # target to preprocess a source file
 synCompress.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.i
 .PHONY : synCompress.cc.i
 
 synCompress.s: synCompress.cc.s
@@ -236,7 +236,7 @@ synCompress.s: synCompress.cc.s
 
 # target to generate assembly for a file
 synCompress.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/App/CMakeFiles/compressSYN.dir/build.make src/App/CMakeFiles/compressSYN.dir/synCompress.cc.s
 .PHONY : synCompress.cc.s
 
 # Help Target
@@ -270,6 +270,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

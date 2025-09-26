@@ -9,34 +9,6 @@ src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.o
  ../include/storageCore.h
  ../src/Enclave/include/ocallUtil.h
  ../src/Enclave/include/storeOCall.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/absDatabase.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/absIndex.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/absRecvDecoder.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/clientVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/dataReceiver.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/dataWriter.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/define.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/enclaveIndex.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/enclaveRecvDecoder.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/factoryDatabase.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/inMemoryDatabase.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/leveldbDatabase.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/raUtil.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/readCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/serverOptThead.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/sslConnection.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/storageCore.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/App/dbeServer.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ocallUtil.h
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_capable.h
@@ -110,3 +82,31 @@ src/App/CMakeFiles/ShieldReduceServer.dir/dbeServer.cc.o
  /opt/intel/sgxssl/include/openssl/x509.h
  /opt/intel/sgxssl/include/openssl/x509_vfy.h
  /opt/intel/sgxssl/include/openssl/x509err.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.h
+ /root/shieldreduce-tos/Prototype/include/absDatabase.h
+ /root/shieldreduce-tos/Prototype/include/absIndex.h
+ /root/shieldreduce-tos/Prototype/include/absRecvDecoder.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/clientVar.h
+ /root/shieldreduce-tos/Prototype/include/configure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
+ /root/shieldreduce-tos/Prototype/include/dataReceiver.h
+ /root/shieldreduce-tos/Prototype/include/dataWriter.h
+ /root/shieldreduce-tos/Prototype/include/define.h
+ /root/shieldreduce-tos/Prototype/include/enclaveIndex.h
+ /root/shieldreduce-tos/Prototype/include/enclaveRecvDecoder.h
+ /root/shieldreduce-tos/Prototype/include/factoryDatabase.h
+ /root/shieldreduce-tos/Prototype/include/inMemoryDatabase.h
+ /root/shieldreduce-tos/Prototype/include/leveldbDatabase.h
+ /root/shieldreduce-tos/Prototype/include/lruCache.h
+ /root/shieldreduce-tos/Prototype/include/messageQueue.h
+ /root/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
+ /root/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
+ /root/shieldreduce-tos/Prototype/include/raUtil.h
+ /root/shieldreduce-tos/Prototype/include/readCache.h
+ /root/shieldreduce-tos/Prototype/include/serverOptThead.h
+ /root/shieldreduce-tos/Prototype/include/sslConnection.h
+ /root/shieldreduce-tos/Prototype/include/storageCore.h
+ /root/shieldreduce-tos/Prototype/src/App/dbeServer.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ocallUtil.h

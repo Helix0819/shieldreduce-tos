@@ -3,21 +3,6 @@
 
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.o
  ../src/Enclave/include/xdelta3-decode.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/xdelta3.c
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-blkcache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-cfgs.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-djw.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-fgk.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-hash.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-internal.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-list.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-lzma.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-main.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-merge.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-second.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-test.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/tlibc/errno.h
  /opt/intel/sgxsdk/include/tlibc/float.h
  /opt/intel/sgxsdk/include/tlibc/inttypes.h
@@ -36,12 +21,27 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.o
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
  /opt/intel/sgxsdk/include/tlibc/sys/types.h
  /opt/intel/sgxsdk/include/tlibc/unistd.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/xdelta3.c
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-blkcache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-cfgs.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-djw.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-fgk.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-hash.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-internal.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-list.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-lzma.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-main.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-merge.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-second.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3-test.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.o
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.c
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.h
  /opt/intel/sgxsdk/include/tlibc/string.h
  /opt/intel/sgxsdk/include/tlibc/sys/_types.h
  /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.c
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -49,14 +49,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/RAECall.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/RAECall.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -178,6 +170,14 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/RAECall.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/RAECall.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -185,14 +185,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/keyECall.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/keyECall.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -315,6 +307,14 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/keyECall.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/keyECall.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -322,18 +322,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/restoreECall.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallRecvDecoder.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/restoreECall.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -454,6 +442,18 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/restoreECall.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallRecvDecoder.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/restoreECall.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -461,27 +461,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/storeECall.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallDEBE.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallFreqIndex.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallMeGA.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/storeECall.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -620,6 +599,27 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/include/lruCache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecall/storeECall.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallDEBE.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallFreqIndex.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallMeGA.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/storeECall.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -627,22 +627,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallDEBE.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallDEBE.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -778,6 +762,22 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallDEBE.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallDEBE.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -785,24 +785,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallFreqIndex.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallFreqIndex.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -941,6 +923,24 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/include/lruCache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallFreqIndex.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallFreqIndex.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -948,24 +948,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallMeGA.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallMeGA.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -1104,6 +1086,24 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/include/lruCache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/ecallMeGA.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallMeGA.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -1111,19 +1111,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/enclaveBase.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -1259,23 +1246,25 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallIndex/enclaveBase.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/enclaveBase.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.o
  ../include/chunkStructure.h
  ../src/Enclave/ecallSrc/edelta/htable.h
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallStore/ecallRecvDecoder.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallRecvDecoder.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -1396,6 +1385,17 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallStore/ecallRecvDecoder.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallRecvDecoder.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -1403,14 +1403,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallStore/ecallStorage.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -1530,6 +1522,14 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallStore/ecallStorage.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallStorage.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -1537,13 +1537,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/commonEnclave.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -1663,6 +1656,13 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/commonEnclave.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -1670,14 +1670,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallCMSketch.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -1797,19 +1789,20 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallCMSketch.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallCMSketch.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.o
  ../include/chunkStructure.h
  ../src/Enclave/ecallSrc/edelta/htable.h
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallClient.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -1929,19 +1922,19 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallClient.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.o
  ../include/chunkStructure.h
  ../src/Enclave/ecallSrc/edelta/htable.h
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallEnc.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -2061,6 +2054,13 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallEnc.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -2068,14 +2068,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallEntryHeap.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__debug
@@ -2195,9 +2187,15 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallEntryHeap.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEntryHeap.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.o
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallLz4.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
  /opt/intel/sgxsdk/include/tlibc/assert.h
  /opt/intel/sgxsdk/include/tlibc/limits.h
  /opt/intel/sgxsdk/include/tlibc/stdarg.h
@@ -2210,6 +2208,8 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.o
  /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
  /opt/intel/sgxsdk/include/tlibc/sys/limits.h
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallLz4.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -2217,17 +2217,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.o
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallOffline.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/config.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -2363,6 +2352,17 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.o
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallOffline.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/config.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallLz4.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallOffline.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/xdelta3.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.o
  ../include/chunkStructure.h
  ../include/constVar.h
@@ -2370,15 +2370,6 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache
  ../src/Enclave/ecallSrc/edelta/md5.h
  ../src/Enclave/ecallSrc/edelta/util.h
  ../src/Enclave/ecallSrc/edelta/xxhash.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallinContainercache.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
  /opt/intel/sgxsdk/include/libcxx/__bit_reference
  /opt/intel/sgxsdk/include/libcxx/__bsd_locale_fallbacks.h
  /opt/intel/sgxsdk/include/libcxx/__config
@@ -2514,10 +2505,16 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache
  /opt/intel/sgxssl/include/openssl/safestack.h
  /opt/intel/sgxssl/include/openssl/stack.h
  /opt/intel/sgxssl/include/openssl/symhacks.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
+ /root/shieldreduce-tos/Prototype/include/chunkStructure.h
+ /root/shieldreduce-tos/Prototype/include/constVar.h
+ /root/shieldreduce-tos/Prototype/include/lruCache.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/ecallUtil/ecallinContainercache.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/commonEnclave.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallClient.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallEnc.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/include/ecallinContainercache.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.o
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.h
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__sgx
  /opt/intel/sgxsdk/include/libcxx/cmath
@@ -2542,12 +2539,10 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.o
  /opt/intel/sgxsdk/include/tlibc/sys/endian.h
  /opt/intel/sgxsdk/include/tlibc/sys/limits.h
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.o
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.h
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.h
  /opt/intel/sgxsdk/include/libcxx/__config
  /opt/intel/sgxsdk/include/libcxx/__sgx
  /opt/intel/sgxsdk/include/libcxx/cstdint
@@ -2564,9 +2559,12 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.o
  /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
  /opt/intel/sgxsdk/include/tlibc/sys/endian.h
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/htable.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/md5.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/util.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.h
 src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.o
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.cc
- /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.h
  /opt/intel/sgxsdk/include/tlibc/stddef.h
  /opt/intel/sgxsdk/include/tlibc/stdint.h
  /opt/intel/sgxsdk/include/tlibc/stdlib.h
@@ -2574,3 +2572,5 @@ src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.o
  /opt/intel/sgxsdk/include/tlibc/sys/_types.h
  /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.cc
+ /root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta/xxhash.h

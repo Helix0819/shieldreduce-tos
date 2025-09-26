@@ -1266,7 +1266,7 @@ void Ocall_SavehotContainer(const char *containerID, uint8_t *containerBody, siz
 
     fwrite((char *)containerBody, currentSize, 1, containerFile);
     fclose(containerFile);
-    tool::Logging("OCALL", "SavehotContainer: wrote %s, size=%zu\n", fileFullName.c_str(), currentSize);
+    // tool::Logging("OCALL", "SavehotContainer: wrote %s, size=%zu\n", fileFullName.c_str(), currentSize);
     return;
 }
 

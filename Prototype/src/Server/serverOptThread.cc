@@ -68,7 +68,8 @@ ServerOptThread::ServerOptThread(SSLConnection *dataSecureChannel,
                  << "OfflineSize, "
                  << "OfflineTime(s), "
                  << "AverageOfflineTime(s), "
-                 << "OverallReductionRatio"
+                 << "OverallReductionRatio, "
+                 << "SelectOptimalBaseTime(s)"
                  << endl;
     }
     else
@@ -618,7 +619,8 @@ void ServerOptThread::Run(SSL *clientSSL)
                  << enclaveInfo.offlineCompress_size << ", "
                  << offlineTime << ", "
                  << total_offline_time / (backupid + 1) << ", "
-                 << 1. * totalRecvLogicalSize_ / enclaveInfo.offlineCompress_size << endl;
+                 << 1. * totalRecvLogicalSize_ / enclaveInfo.offlineCompress_size << ", "
+                 << enclaveInfo.selectOptimalBaseTime << endl;
         Ecall_UpdateOnlineInfo(eidSGX_);
         logFile_.flush();
 

@@ -3,8 +3,6 @@
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: ../include/chunkStructure.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: ../include/constVar.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/storeEnclave_u.c
-src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/storeEnclave_u.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx_attributes.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx_defs.h
@@ -19,9 +17,9 @@ src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/inc
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx_tcrypto.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx_trts.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: /opt/intel/sgxsdk/include/sgx_tseal.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/storeEnclave_u.c
+src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/storeEnclave_u.h
 
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: ../src/Enclave/include/ocallUtil.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: ../src/Enclave/ocallSrc/ocallUtil.cc
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_defs.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_eid.h
@@ -29,28 +27,9 @@ src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsd
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_key.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_report.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: /opt/intel/sgxsdk/include/sgx_urts.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: ../src/Enclave/include/ocallUtil.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: ../src/Enclave/ocallSrc/ocallUtil.cc
 
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: src/Enclave/storeEnclave_u.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/absDatabase.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/absRecvDecoder.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/chunkStructure.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/clientVar.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/configure.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/constVar.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/cryptoPrimitive.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/dataWriter.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/define.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/enclaveRecvDecoder.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/lruCache.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue/atomicops.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue/readerwriterqueue.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/readCache.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/sslConnection.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/storageCore.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/include/ocallUtil.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/include/storeOCall.h
-src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/ocallSrc/storeOCall.cc
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxsdk/include/sgx.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxsdk/include/sgx_capable.h
@@ -122,4 +101,25 @@ src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxs
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxssl/include/openssl/x509.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxssl/include/openssl/x509_vfy.h
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: /opt/intel/sgxssl/include/openssl/x509err.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: src/Enclave/storeEnclave_u.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/absDatabase.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/absRecvDecoder.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/chunkStructure.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/clientVar.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/configure.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/constVar.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/cryptoPrimitive.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/dataWriter.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/define.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/enclaveRecvDecoder.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/lruCache.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue/atomicops.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/messageQueue/readerwriterqueue.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/readCache.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/sslConnection.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../include/storageCore.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/include/ocallUtil.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/include/storeOCall.h
+src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/ocallSrc/storeOCall.cc
 

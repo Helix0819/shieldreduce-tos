@@ -110,6 +110,12 @@ public:
     string tmpBaseContainerID;
     string curHotDeltaContainerID;
     string tmpDeltaContainerID;
+    uint64_t selectOptimalBaseTime = 0;
+    uint64_t selectOptimalBaseCount = 0;
+    uint64_t _startTimeOffline = 0;
+    uint64_t _endTimeOffline = 0;
+    uint64_t _testOcallTimeOffline = 0;
+    uint64_t _testOcallCountOffline = 0;
     /**
      * @brief Construct a new Ecall Offline processer object
      *

@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -Wall -Wno-implicit-exception-spec-mismatch -DCHECK_SGX_HW=1   -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/helix/repos/shieldreduce-tos/Prototype/src/../include -I/home/helix/repos/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include 
+CXX_INCLUDES = -I/root/shieldreduce-tos/Prototype/src/../include -I/root/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include 
 

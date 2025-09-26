@@ -1,4 +1,4 @@
-# Install script for directory: /home/helix/repos/shieldreduce-tos/Prototype/src
+# Install script for directory: /root/shieldreduce-tos/Prototype/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,15 +39,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/App/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Client/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Util/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Database/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Server/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Index/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/Comm/cmake_install.cmake")
-  include("/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/App/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Client/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Util/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Database/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Server/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Enclave/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Index/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/Comm/cmake_install.cmake")
+  include("/root/shieldreduce-tos/Prototype/build/src/IASUtil/cmake_install.cmake")
 
 endif()
 

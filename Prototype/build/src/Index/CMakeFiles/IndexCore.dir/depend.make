@@ -16,6 +16,22 @@ src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o: ../include/storageCore.h
 src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o: ../src/Index/absIndex.cc
 
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../include/constVar.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_capable.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_defs.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_ecp_types.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_edger8r.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_eid.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_error.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_key.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_key_exchange.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_quote.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_report.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_tcrypto.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_trts.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_tseal.h
+src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_urts.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: src/Enclave/storeEnclave_u.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../include/absDatabase.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../include/absIndex.h
@@ -38,20 +54,4 @@ src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../include/storageCore.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../src/Enclave/include/ocallUtil.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../src/Enclave/include/storeOCall.h
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../src/Index/enclaveIndex.cc
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_capable.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_defs.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_ecp_types.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_edger8r.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_eid.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_error.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_key.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_key_exchange.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_quote.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_report.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_tcrypto.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_trts.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_tseal.h
-src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: /opt/intel/sgxsdk/include/sgx_urts.h
 

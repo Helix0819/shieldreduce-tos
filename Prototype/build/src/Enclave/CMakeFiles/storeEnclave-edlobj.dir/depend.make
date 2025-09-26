@@ -3,8 +3,6 @@
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: ../include/chunkStructure.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: ../include/constVar.h
-src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/storeEnclave_t.c
-src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/storeEnclave_t.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/sgx.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/sgx_attributes.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/sgx_defs.h
@@ -32,4 +30,6 @@ src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sg
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: /opt/intel/sgxsdk/include/tlibc/wchar.h
+src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/storeEnclave_t.c
+src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/storeEnclave_t.h
 

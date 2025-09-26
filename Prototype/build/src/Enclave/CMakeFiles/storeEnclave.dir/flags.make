@@ -7,11 +7,11 @@ C_FLAGS = -O3 -Wall -Wno-implicit-exception-spec-mismatch -DCHECK_SGX_HW=1 -fPIC
 
 C_DEFINES = -DstoreEnclave_EXPORTS
 
-C_INCLUDES = -I/home/helix/repos/shieldreduce-tos/Prototype/src/../include -I/home/helix/repos/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include -I/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include -I/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta -I/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx 
+C_INCLUDES = -I/root/shieldreduce-tos/Prototype/src/../include -I/root/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include -I/root/shieldreduce-tos/Prototype/src/Enclave/include -I/root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta -I/root/shieldreduce-tos/Prototype/build/src/Enclave -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx 
 
 CXX_FLAGS = -O3 -Wall -Wno-implicit-exception-spec-mismatch -DCHECK_SGX_HW=1 -fPIC   -m64 -O3 -UDEBUG -DNDEBUG -DEDEBUG -nostdinc -fvisibility=hidden -fpie -fstack-protector-strong -nostdinc++ -std=gnu++17
 
 CXX_DEFINES = -DstoreEnclave_EXPORTS
 
-CXX_INCLUDES = -I/home/helix/repos/shieldreduce-tos/Prototype/src/../include -I/home/helix/repos/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include -I/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/include -I/home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta -I/home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx 
+CXX_INCLUDES = -I/root/shieldreduce-tos/Prototype/src/../include -I/root/shieldreduce-tos/Prototype/src/../build/src/Enclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxssl/include -I/root/shieldreduce-tos/Prototype/src/Enclave/include -I/root/shieldreduce-tos/Prototype/src/Enclave/ecallSrc/edelta -I/root/shieldreduce-tos/Prototype/build/src/Enclave -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx 
 

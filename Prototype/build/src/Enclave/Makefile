@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Enclave/CMakeFiles/EnclaveCore.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/EnclaveCore.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/EnclaveCore.dir/rule
 .PHONY : src/Enclave/CMakeFiles/EnclaveCore.dir/rule
 
 # Convenience name for target.
@@ -125,12 +125,12 @@ EnclaveCore: src/Enclave/CMakeFiles/EnclaveCore.dir/rule
 
 # fast build rule for target.
 EnclaveCore/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/build
 .PHONY : EnclaveCore/fast
 
 # Convenience name for target.
 src/Enclave/CMakeFiles/storeEnclave-sign.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave-sign.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave-sign.dir/rule
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-sign.dir/rule
 
 # Convenience name for target.
@@ -140,12 +140,12 @@ storeEnclave-sign: src/Enclave/CMakeFiles/storeEnclave-sign.dir/rule
 
 # fast build rule for target.
 storeEnclave-sign/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-sign.dir/build.make src/Enclave/CMakeFiles/storeEnclave-sign.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-sign.dir/build.make src/Enclave/CMakeFiles/storeEnclave-sign.dir/build
 .PHONY : storeEnclave-sign/fast
 
 # Convenience name for target.
 src/Enclave/CMakeFiles/storeEnclave.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave.dir/rule
 .PHONY : src/Enclave/CMakeFiles/storeEnclave.dir/rule
 
 # Convenience name for target.
@@ -155,12 +155,12 @@ storeEnclave: src/Enclave/CMakeFiles/storeEnclave.dir/rule
 
 # fast build rule for target.
 storeEnclave/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/build
 .PHONY : storeEnclave/fast
 
 # Convenience name for target.
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/rule
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/rule
 
 # Convenience name for target.
@@ -170,7 +170,7 @@ storeEnclave-edlobj: src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/rule
 
 # fast build rule for target.
 storeEnclave-edlobj/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build
 .PHONY : storeEnclave-edlobj/fast
 
 ecallSrc/ecall/RAECall.o: ecallSrc/ecall/RAECall.cc.o
@@ -179,7 +179,7 @@ ecallSrc/ecall/RAECall.o: ecallSrc/ecall/RAECall.cc.o
 
 # target to build an object file
 ecallSrc/ecall/RAECall.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.o
 .PHONY : ecallSrc/ecall/RAECall.cc.o
 
 ecallSrc/ecall/RAECall.i: ecallSrc/ecall/RAECall.cc.i
@@ -188,7 +188,7 @@ ecallSrc/ecall/RAECall.i: ecallSrc/ecall/RAECall.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecall/RAECall.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.i
 .PHONY : ecallSrc/ecall/RAECall.cc.i
 
 ecallSrc/ecall/RAECall.s: ecallSrc/ecall/RAECall.cc.s
@@ -197,7 +197,7 @@ ecallSrc/ecall/RAECall.s: ecallSrc/ecall/RAECall.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecall/RAECall.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/RAECall.cc.s
 .PHONY : ecallSrc/ecall/RAECall.cc.s
 
 ecallSrc/ecall/keyECall.o: ecallSrc/ecall/keyECall.cc.o
@@ -206,7 +206,7 @@ ecallSrc/ecall/keyECall.o: ecallSrc/ecall/keyECall.cc.o
 
 # target to build an object file
 ecallSrc/ecall/keyECall.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.o
 .PHONY : ecallSrc/ecall/keyECall.cc.o
 
 ecallSrc/ecall/keyECall.i: ecallSrc/ecall/keyECall.cc.i
@@ -215,7 +215,7 @@ ecallSrc/ecall/keyECall.i: ecallSrc/ecall/keyECall.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecall/keyECall.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.i
 .PHONY : ecallSrc/ecall/keyECall.cc.i
 
 ecallSrc/ecall/keyECall.s: ecallSrc/ecall/keyECall.cc.s
@@ -224,7 +224,7 @@ ecallSrc/ecall/keyECall.s: ecallSrc/ecall/keyECall.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecall/keyECall.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/keyECall.cc.s
 .PHONY : ecallSrc/ecall/keyECall.cc.s
 
 ecallSrc/ecall/restoreECall.o: ecallSrc/ecall/restoreECall.cc.o
@@ -233,7 +233,7 @@ ecallSrc/ecall/restoreECall.o: ecallSrc/ecall/restoreECall.cc.o
 
 # target to build an object file
 ecallSrc/ecall/restoreECall.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.o
 .PHONY : ecallSrc/ecall/restoreECall.cc.o
 
 ecallSrc/ecall/restoreECall.i: ecallSrc/ecall/restoreECall.cc.i
@@ -242,7 +242,7 @@ ecallSrc/ecall/restoreECall.i: ecallSrc/ecall/restoreECall.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecall/restoreECall.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.i
 .PHONY : ecallSrc/ecall/restoreECall.cc.i
 
 ecallSrc/ecall/restoreECall.s: ecallSrc/ecall/restoreECall.cc.s
@@ -251,7 +251,7 @@ ecallSrc/ecall/restoreECall.s: ecallSrc/ecall/restoreECall.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecall/restoreECall.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/restoreECall.cc.s
 .PHONY : ecallSrc/ecall/restoreECall.cc.s
 
 ecallSrc/ecall/storeECall.o: ecallSrc/ecall/storeECall.cc.o
@@ -260,7 +260,7 @@ ecallSrc/ecall/storeECall.o: ecallSrc/ecall/storeECall.cc.o
 
 # target to build an object file
 ecallSrc/ecall/storeECall.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.o
 .PHONY : ecallSrc/ecall/storeECall.cc.o
 
 ecallSrc/ecall/storeECall.i: ecallSrc/ecall/storeECall.cc.i
@@ -269,7 +269,7 @@ ecallSrc/ecall/storeECall.i: ecallSrc/ecall/storeECall.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecall/storeECall.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.i
 .PHONY : ecallSrc/ecall/storeECall.cc.i
 
 ecallSrc/ecall/storeECall.s: ecallSrc/ecall/storeECall.cc.s
@@ -278,7 +278,7 @@ ecallSrc/ecall/storeECall.s: ecallSrc/ecall/storeECall.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecall/storeECall.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecall/storeECall.cc.s
 .PHONY : ecallSrc/ecall/storeECall.cc.s
 
 ecallSrc/ecallIndex/ecallDEBE.o: ecallSrc/ecallIndex/ecallDEBE.cc.o
@@ -287,7 +287,7 @@ ecallSrc/ecallIndex/ecallDEBE.o: ecallSrc/ecallIndex/ecallDEBE.cc.o
 
 # target to build an object file
 ecallSrc/ecallIndex/ecallDEBE.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.o
 .PHONY : ecallSrc/ecallIndex/ecallDEBE.cc.o
 
 ecallSrc/ecallIndex/ecallDEBE.i: ecallSrc/ecallIndex/ecallDEBE.cc.i
@@ -296,7 +296,7 @@ ecallSrc/ecallIndex/ecallDEBE.i: ecallSrc/ecallIndex/ecallDEBE.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallIndex/ecallDEBE.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.i
 .PHONY : ecallSrc/ecallIndex/ecallDEBE.cc.i
 
 ecallSrc/ecallIndex/ecallDEBE.s: ecallSrc/ecallIndex/ecallDEBE.cc.s
@@ -305,7 +305,7 @@ ecallSrc/ecallIndex/ecallDEBE.s: ecallSrc/ecallIndex/ecallDEBE.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallIndex/ecallDEBE.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallDEBE.cc.s
 .PHONY : ecallSrc/ecallIndex/ecallDEBE.cc.s
 
 ecallSrc/ecallIndex/ecallFreqIndex.o: ecallSrc/ecallIndex/ecallFreqIndex.cc.o
@@ -314,7 +314,7 @@ ecallSrc/ecallIndex/ecallFreqIndex.o: ecallSrc/ecallIndex/ecallFreqIndex.cc.o
 
 # target to build an object file
 ecallSrc/ecallIndex/ecallFreqIndex.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.o
 .PHONY : ecallSrc/ecallIndex/ecallFreqIndex.cc.o
 
 ecallSrc/ecallIndex/ecallFreqIndex.i: ecallSrc/ecallIndex/ecallFreqIndex.cc.i
@@ -323,7 +323,7 @@ ecallSrc/ecallIndex/ecallFreqIndex.i: ecallSrc/ecallIndex/ecallFreqIndex.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallIndex/ecallFreqIndex.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.i
 .PHONY : ecallSrc/ecallIndex/ecallFreqIndex.cc.i
 
 ecallSrc/ecallIndex/ecallFreqIndex.s: ecallSrc/ecallIndex/ecallFreqIndex.cc.s
@@ -332,7 +332,7 @@ ecallSrc/ecallIndex/ecallFreqIndex.s: ecallSrc/ecallIndex/ecallFreqIndex.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallIndex/ecallFreqIndex.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallFreqIndex.cc.s
 .PHONY : ecallSrc/ecallIndex/ecallFreqIndex.cc.s
 
 ecallSrc/ecallIndex/ecallMeGA.o: ecallSrc/ecallIndex/ecallMeGA.cc.o
@@ -341,7 +341,7 @@ ecallSrc/ecallIndex/ecallMeGA.o: ecallSrc/ecallIndex/ecallMeGA.cc.o
 
 # target to build an object file
 ecallSrc/ecallIndex/ecallMeGA.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.o
 .PHONY : ecallSrc/ecallIndex/ecallMeGA.cc.o
 
 ecallSrc/ecallIndex/ecallMeGA.i: ecallSrc/ecallIndex/ecallMeGA.cc.i
@@ -350,7 +350,7 @@ ecallSrc/ecallIndex/ecallMeGA.i: ecallSrc/ecallIndex/ecallMeGA.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallIndex/ecallMeGA.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.i
 .PHONY : ecallSrc/ecallIndex/ecallMeGA.cc.i
 
 ecallSrc/ecallIndex/ecallMeGA.s: ecallSrc/ecallIndex/ecallMeGA.cc.s
@@ -359,7 +359,7 @@ ecallSrc/ecallIndex/ecallMeGA.s: ecallSrc/ecallIndex/ecallMeGA.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallIndex/ecallMeGA.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/ecallMeGA.cc.s
 .PHONY : ecallSrc/ecallIndex/ecallMeGA.cc.s
 
 ecallSrc/ecallIndex/enclaveBase.o: ecallSrc/ecallIndex/enclaveBase.cc.o
@@ -368,7 +368,7 @@ ecallSrc/ecallIndex/enclaveBase.o: ecallSrc/ecallIndex/enclaveBase.cc.o
 
 # target to build an object file
 ecallSrc/ecallIndex/enclaveBase.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.o
 .PHONY : ecallSrc/ecallIndex/enclaveBase.cc.o
 
 ecallSrc/ecallIndex/enclaveBase.i: ecallSrc/ecallIndex/enclaveBase.cc.i
@@ -377,7 +377,7 @@ ecallSrc/ecallIndex/enclaveBase.i: ecallSrc/ecallIndex/enclaveBase.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallIndex/enclaveBase.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.i
 .PHONY : ecallSrc/ecallIndex/enclaveBase.cc.i
 
 ecallSrc/ecallIndex/enclaveBase.s: ecallSrc/ecallIndex/enclaveBase.cc.s
@@ -386,7 +386,7 @@ ecallSrc/ecallIndex/enclaveBase.s: ecallSrc/ecallIndex/enclaveBase.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallIndex/enclaveBase.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallIndex/enclaveBase.cc.s
 .PHONY : ecallSrc/ecallIndex/enclaveBase.cc.s
 
 ecallSrc/ecallStore/ecallRecvDecoder.o: ecallSrc/ecallStore/ecallRecvDecoder.cc.o
@@ -395,7 +395,7 @@ ecallSrc/ecallStore/ecallRecvDecoder.o: ecallSrc/ecallStore/ecallRecvDecoder.cc.
 
 # target to build an object file
 ecallSrc/ecallStore/ecallRecvDecoder.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.o
 .PHONY : ecallSrc/ecallStore/ecallRecvDecoder.cc.o
 
 ecallSrc/ecallStore/ecallRecvDecoder.i: ecallSrc/ecallStore/ecallRecvDecoder.cc.i
@@ -404,7 +404,7 @@ ecallSrc/ecallStore/ecallRecvDecoder.i: ecallSrc/ecallStore/ecallRecvDecoder.cc.
 
 # target to preprocess a source file
 ecallSrc/ecallStore/ecallRecvDecoder.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.i
 .PHONY : ecallSrc/ecallStore/ecallRecvDecoder.cc.i
 
 ecallSrc/ecallStore/ecallRecvDecoder.s: ecallSrc/ecallStore/ecallRecvDecoder.cc.s
@@ -413,7 +413,7 @@ ecallSrc/ecallStore/ecallRecvDecoder.s: ecallSrc/ecallStore/ecallRecvDecoder.cc.
 
 # target to generate assembly for a file
 ecallSrc/ecallStore/ecallRecvDecoder.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallRecvDecoder.cc.s
 .PHONY : ecallSrc/ecallStore/ecallRecvDecoder.cc.s
 
 ecallSrc/ecallStore/ecallStorage.o: ecallSrc/ecallStore/ecallStorage.cc.o
@@ -422,7 +422,7 @@ ecallSrc/ecallStore/ecallStorage.o: ecallSrc/ecallStore/ecallStorage.cc.o
 
 # target to build an object file
 ecallSrc/ecallStore/ecallStorage.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.o
 .PHONY : ecallSrc/ecallStore/ecallStorage.cc.o
 
 ecallSrc/ecallStore/ecallStorage.i: ecallSrc/ecallStore/ecallStorage.cc.i
@@ -431,7 +431,7 @@ ecallSrc/ecallStore/ecallStorage.i: ecallSrc/ecallStore/ecallStorage.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallStore/ecallStorage.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.i
 .PHONY : ecallSrc/ecallStore/ecallStorage.cc.i
 
 ecallSrc/ecallStore/ecallStorage.s: ecallSrc/ecallStore/ecallStorage.cc.s
@@ -440,7 +440,7 @@ ecallSrc/ecallStore/ecallStorage.s: ecallSrc/ecallStore/ecallStorage.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallStore/ecallStorage.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallStore/ecallStorage.cc.s
 .PHONY : ecallSrc/ecallStore/ecallStorage.cc.s
 
 ecallSrc/ecallUtil/commonEnclave.o: ecallSrc/ecallUtil/commonEnclave.cc.o
@@ -449,7 +449,7 @@ ecallSrc/ecallUtil/commonEnclave.o: ecallSrc/ecallUtil/commonEnclave.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/commonEnclave.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.o
 .PHONY : ecallSrc/ecallUtil/commonEnclave.cc.o
 
 ecallSrc/ecallUtil/commonEnclave.i: ecallSrc/ecallUtil/commonEnclave.cc.i
@@ -458,7 +458,7 @@ ecallSrc/ecallUtil/commonEnclave.i: ecallSrc/ecallUtil/commonEnclave.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/commonEnclave.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.i
 .PHONY : ecallSrc/ecallUtil/commonEnclave.cc.i
 
 ecallSrc/ecallUtil/commonEnclave.s: ecallSrc/ecallUtil/commonEnclave.cc.s
@@ -467,7 +467,7 @@ ecallSrc/ecallUtil/commonEnclave.s: ecallSrc/ecallUtil/commonEnclave.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/commonEnclave.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/commonEnclave.cc.s
 .PHONY : ecallSrc/ecallUtil/commonEnclave.cc.s
 
 ecallSrc/ecallUtil/ecallCMSketch.o: ecallSrc/ecallUtil/ecallCMSketch.cc.o
@@ -476,7 +476,7 @@ ecallSrc/ecallUtil/ecallCMSketch.o: ecallSrc/ecallUtil/ecallCMSketch.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallCMSketch.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallCMSketch.cc.o
 
 ecallSrc/ecallUtil/ecallCMSketch.i: ecallSrc/ecallUtil/ecallCMSketch.cc.i
@@ -485,7 +485,7 @@ ecallSrc/ecallUtil/ecallCMSketch.i: ecallSrc/ecallUtil/ecallCMSketch.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallCMSketch.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallCMSketch.cc.i
 
 ecallSrc/ecallUtil/ecallCMSketch.s: ecallSrc/ecallUtil/ecallCMSketch.cc.s
@@ -494,7 +494,7 @@ ecallSrc/ecallUtil/ecallCMSketch.s: ecallSrc/ecallUtil/ecallCMSketch.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallCMSketch.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallCMSketch.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallCMSketch.cc.s
 
 ecallSrc/ecallUtil/ecallClient.o: ecallSrc/ecallUtil/ecallClient.cc.o
@@ -503,7 +503,7 @@ ecallSrc/ecallUtil/ecallClient.o: ecallSrc/ecallUtil/ecallClient.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallClient.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallClient.cc.o
 
 ecallSrc/ecallUtil/ecallClient.i: ecallSrc/ecallUtil/ecallClient.cc.i
@@ -512,7 +512,7 @@ ecallSrc/ecallUtil/ecallClient.i: ecallSrc/ecallUtil/ecallClient.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallClient.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallClient.cc.i
 
 ecallSrc/ecallUtil/ecallClient.s: ecallSrc/ecallUtil/ecallClient.cc.s
@@ -521,7 +521,7 @@ ecallSrc/ecallUtil/ecallClient.s: ecallSrc/ecallUtil/ecallClient.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallClient.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallClient.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallClient.cc.s
 
 ecallSrc/ecallUtil/ecallEnc.o: ecallSrc/ecallUtil/ecallEnc.cc.o
@@ -530,7 +530,7 @@ ecallSrc/ecallUtil/ecallEnc.o: ecallSrc/ecallUtil/ecallEnc.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallEnc.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallEnc.cc.o
 
 ecallSrc/ecallUtil/ecallEnc.i: ecallSrc/ecallUtil/ecallEnc.cc.i
@@ -539,7 +539,7 @@ ecallSrc/ecallUtil/ecallEnc.i: ecallSrc/ecallUtil/ecallEnc.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallEnc.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallEnc.cc.i
 
 ecallSrc/ecallUtil/ecallEnc.s: ecallSrc/ecallUtil/ecallEnc.cc.s
@@ -548,7 +548,7 @@ ecallSrc/ecallUtil/ecallEnc.s: ecallSrc/ecallUtil/ecallEnc.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallEnc.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEnc.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallEnc.cc.s
 
 ecallSrc/ecallUtil/ecallEntryHeap.o: ecallSrc/ecallUtil/ecallEntryHeap.cc.o
@@ -557,7 +557,7 @@ ecallSrc/ecallUtil/ecallEntryHeap.o: ecallSrc/ecallUtil/ecallEntryHeap.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallEntryHeap.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallEntryHeap.cc.o
 
 ecallSrc/ecallUtil/ecallEntryHeap.i: ecallSrc/ecallUtil/ecallEntryHeap.cc.i
@@ -566,7 +566,7 @@ ecallSrc/ecallUtil/ecallEntryHeap.i: ecallSrc/ecallUtil/ecallEntryHeap.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallEntryHeap.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallEntryHeap.cc.i
 
 ecallSrc/ecallUtil/ecallEntryHeap.s: ecallSrc/ecallUtil/ecallEntryHeap.cc.s
@@ -575,7 +575,7 @@ ecallSrc/ecallUtil/ecallEntryHeap.s: ecallSrc/ecallUtil/ecallEntryHeap.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallEntryHeap.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallEntryHeap.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallEntryHeap.cc.s
 
 ecallSrc/ecallUtil/ecallLz4.o: ecallSrc/ecallUtil/ecallLz4.cc.o
@@ -584,7 +584,7 @@ ecallSrc/ecallUtil/ecallLz4.o: ecallSrc/ecallUtil/ecallLz4.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallLz4.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallLz4.cc.o
 
 ecallSrc/ecallUtil/ecallLz4.i: ecallSrc/ecallUtil/ecallLz4.cc.i
@@ -593,7 +593,7 @@ ecallSrc/ecallUtil/ecallLz4.i: ecallSrc/ecallUtil/ecallLz4.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallLz4.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallLz4.cc.i
 
 ecallSrc/ecallUtil/ecallLz4.s: ecallSrc/ecallUtil/ecallLz4.cc.s
@@ -602,7 +602,7 @@ ecallSrc/ecallUtil/ecallLz4.s: ecallSrc/ecallUtil/ecallLz4.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallLz4.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallLz4.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallLz4.cc.s
 
 ecallSrc/ecallUtil/ecallOffline.o: ecallSrc/ecallUtil/ecallOffline.cc.o
@@ -611,7 +611,7 @@ ecallSrc/ecallUtil/ecallOffline.o: ecallSrc/ecallUtil/ecallOffline.cc.o
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallOffline.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallOffline.cc.o
 
 ecallSrc/ecallUtil/ecallOffline.i: ecallSrc/ecallUtil/ecallOffline.cc.i
@@ -620,7 +620,7 @@ ecallSrc/ecallUtil/ecallOffline.i: ecallSrc/ecallUtil/ecallOffline.cc.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallOffline.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallOffline.cc.i
 
 ecallSrc/ecallUtil/ecallOffline.s: ecallSrc/ecallUtil/ecallOffline.cc.s
@@ -629,7 +629,7 @@ ecallSrc/ecallUtil/ecallOffline.s: ecallSrc/ecallUtil/ecallOffline.cc.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallOffline.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallOffline.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallOffline.cc.s
 
 ecallSrc/ecallUtil/ecallinContainercache.o: ecallSrc/ecallUtil/ecallinContainercache.cc.o
@@ -638,7 +638,7 @@ ecallSrc/ecallUtil/ecallinContainercache.o: ecallSrc/ecallUtil/ecallinContainerc
 
 # target to build an object file
 ecallSrc/ecallUtil/ecallinContainercache.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.o
 .PHONY : ecallSrc/ecallUtil/ecallinContainercache.cc.o
 
 ecallSrc/ecallUtil/ecallinContainercache.i: ecallSrc/ecallUtil/ecallinContainercache.cc.i
@@ -647,7 +647,7 @@ ecallSrc/ecallUtil/ecallinContainercache.i: ecallSrc/ecallUtil/ecallinContainerc
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/ecallinContainercache.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.i
 .PHONY : ecallSrc/ecallUtil/ecallinContainercache.cc.i
 
 ecallSrc/ecallUtil/ecallinContainercache.s: ecallSrc/ecallUtil/ecallinContainercache.cc.s
@@ -656,7 +656,7 @@ ecallSrc/ecallUtil/ecallinContainercache.s: ecallSrc/ecallUtil/ecallinContainerc
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/ecallinContainercache.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/ecallinContainercache.cc.s
 .PHONY : ecallSrc/ecallUtil/ecallinContainercache.cc.s
 
 ecallSrc/ecallUtil/xdelta3.o: ecallSrc/ecallUtil/xdelta3.c.o
@@ -665,7 +665,7 @@ ecallSrc/ecallUtil/xdelta3.o: ecallSrc/ecallUtil/xdelta3.c.o
 
 # target to build an object file
 ecallSrc/ecallUtil/xdelta3.c.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.o
 .PHONY : ecallSrc/ecallUtil/xdelta3.c.o
 
 ecallSrc/ecallUtil/xdelta3.i: ecallSrc/ecallUtil/xdelta3.c.i
@@ -674,7 +674,7 @@ ecallSrc/ecallUtil/xdelta3.i: ecallSrc/ecallUtil/xdelta3.c.i
 
 # target to preprocess a source file
 ecallSrc/ecallUtil/xdelta3.c.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.i
 .PHONY : ecallSrc/ecallUtil/xdelta3.c.i
 
 ecallSrc/ecallUtil/xdelta3.s: ecallSrc/ecallUtil/xdelta3.c.s
@@ -683,7 +683,7 @@ ecallSrc/ecallUtil/xdelta3.s: ecallSrc/ecallUtil/xdelta3.c.s
 
 # target to generate assembly for a file
 ecallSrc/ecallUtil/xdelta3.c.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/ecallUtil/xdelta3.c.s
 .PHONY : ecallSrc/ecallUtil/xdelta3.c.s
 
 ecallSrc/edelta/htable.o: ecallSrc/edelta/htable.cc.o
@@ -692,7 +692,7 @@ ecallSrc/edelta/htable.o: ecallSrc/edelta/htable.cc.o
 
 # target to build an object file
 ecallSrc/edelta/htable.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.o
 .PHONY : ecallSrc/edelta/htable.cc.o
 
 ecallSrc/edelta/htable.i: ecallSrc/edelta/htable.cc.i
@@ -701,7 +701,7 @@ ecallSrc/edelta/htable.i: ecallSrc/edelta/htable.cc.i
 
 # target to preprocess a source file
 ecallSrc/edelta/htable.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.i
 .PHONY : ecallSrc/edelta/htable.cc.i
 
 ecallSrc/edelta/htable.s: ecallSrc/edelta/htable.cc.s
@@ -710,7 +710,7 @@ ecallSrc/edelta/htable.s: ecallSrc/edelta/htable.cc.s
 
 # target to generate assembly for a file
 ecallSrc/edelta/htable.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/htable.cc.s
 .PHONY : ecallSrc/edelta/htable.cc.s
 
 ecallSrc/edelta/md5.o: ecallSrc/edelta/md5.c.o
@@ -719,7 +719,7 @@ ecallSrc/edelta/md5.o: ecallSrc/edelta/md5.c.o
 
 # target to build an object file
 ecallSrc/edelta/md5.c.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.o
 .PHONY : ecallSrc/edelta/md5.c.o
 
 ecallSrc/edelta/md5.i: ecallSrc/edelta/md5.c.i
@@ -728,7 +728,7 @@ ecallSrc/edelta/md5.i: ecallSrc/edelta/md5.c.i
 
 # target to preprocess a source file
 ecallSrc/edelta/md5.c.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.i
 .PHONY : ecallSrc/edelta/md5.c.i
 
 ecallSrc/edelta/md5.s: ecallSrc/edelta/md5.c.s
@@ -737,7 +737,7 @@ ecallSrc/edelta/md5.s: ecallSrc/edelta/md5.c.s
 
 # target to generate assembly for a file
 ecallSrc/edelta/md5.c.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/md5.c.s
 .PHONY : ecallSrc/edelta/md5.c.s
 
 ecallSrc/edelta/util.o: ecallSrc/edelta/util.cc.o
@@ -746,7 +746,7 @@ ecallSrc/edelta/util.o: ecallSrc/edelta/util.cc.o
 
 # target to build an object file
 ecallSrc/edelta/util.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.o
 .PHONY : ecallSrc/edelta/util.cc.o
 
 ecallSrc/edelta/util.i: ecallSrc/edelta/util.cc.i
@@ -755,7 +755,7 @@ ecallSrc/edelta/util.i: ecallSrc/edelta/util.cc.i
 
 # target to preprocess a source file
 ecallSrc/edelta/util.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.i
 .PHONY : ecallSrc/edelta/util.cc.i
 
 ecallSrc/edelta/util.s: ecallSrc/edelta/util.cc.s
@@ -764,7 +764,7 @@ ecallSrc/edelta/util.s: ecallSrc/edelta/util.cc.s
 
 # target to generate assembly for a file
 ecallSrc/edelta/util.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/util.cc.s
 .PHONY : ecallSrc/edelta/util.cc.s
 
 ecallSrc/edelta/xxhash.o: ecallSrc/edelta/xxhash.cc.o
@@ -773,7 +773,7 @@ ecallSrc/edelta/xxhash.o: ecallSrc/edelta/xxhash.cc.o
 
 # target to build an object file
 ecallSrc/edelta/xxhash.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.o
 .PHONY : ecallSrc/edelta/xxhash.cc.o
 
 ecallSrc/edelta/xxhash.i: ecallSrc/edelta/xxhash.cc.i
@@ -782,7 +782,7 @@ ecallSrc/edelta/xxhash.i: ecallSrc/edelta/xxhash.cc.i
 
 # target to preprocess a source file
 ecallSrc/edelta/xxhash.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.i
 .PHONY : ecallSrc/edelta/xxhash.cc.i
 
 ecallSrc/edelta/xxhash.s: ecallSrc/edelta/xxhash.cc.s
@@ -791,7 +791,7 @@ ecallSrc/edelta/xxhash.s: ecallSrc/edelta/xxhash.cc.s
 
 # target to generate assembly for a file
 ecallSrc/edelta/xxhash.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave.dir/build.make src/Enclave/CMakeFiles/storeEnclave.dir/ecallSrc/edelta/xxhash.cc.s
 .PHONY : ecallSrc/edelta/xxhash.cc.s
 
 ocallSrc/ocallUtil.o: ocallSrc/ocallUtil.cc.o
@@ -800,7 +800,7 @@ ocallSrc/ocallUtil.o: ocallSrc/ocallUtil.cc.o
 
 # target to build an object file
 ocallSrc/ocallUtil.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o
 .PHONY : ocallSrc/ocallUtil.cc.o
 
 ocallSrc/ocallUtil.i: ocallSrc/ocallUtil.cc.i
@@ -809,7 +809,7 @@ ocallSrc/ocallUtil.i: ocallSrc/ocallUtil.cc.i
 
 # target to preprocess a source file
 ocallSrc/ocallUtil.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i
 .PHONY : ocallSrc/ocallUtil.cc.i
 
 ocallSrc/ocallUtil.s: ocallSrc/ocallUtil.cc.s
@@ -818,7 +818,7 @@ ocallSrc/ocallUtil.s: ocallSrc/ocallUtil.cc.s
 
 # target to generate assembly for a file
 ocallSrc/ocallUtil.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s
 .PHONY : ocallSrc/ocallUtil.cc.s
 
 ocallSrc/storeOCall.o: ocallSrc/storeOCall.cc.o
@@ -827,7 +827,7 @@ ocallSrc/storeOCall.o: ocallSrc/storeOCall.cc.o
 
 # target to build an object file
 ocallSrc/storeOCall.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o
 .PHONY : ocallSrc/storeOCall.cc.o
 
 ocallSrc/storeOCall.i: ocallSrc/storeOCall.cc.i
@@ -836,7 +836,7 @@ ocallSrc/storeOCall.i: ocallSrc/storeOCall.cc.i
 
 # target to preprocess a source file
 ocallSrc/storeOCall.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i
 .PHONY : ocallSrc/storeOCall.cc.i
 
 ocallSrc/storeOCall.s: ocallSrc/storeOCall.cc.s
@@ -845,7 +845,7 @@ ocallSrc/storeOCall.s: ocallSrc/storeOCall.cc.s
 
 # target to generate assembly for a file
 ocallSrc/storeOCall.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s
 .PHONY : ocallSrc/storeOCall.cc.s
 
 storeEnclave_t.o: storeEnclave_t.c.o
@@ -854,7 +854,7 @@ storeEnclave_t.o: storeEnclave_t.c.o
 
 # target to build an object file
 storeEnclave_t.c.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o
 .PHONY : storeEnclave_t.c.o
 
 storeEnclave_t.i: storeEnclave_t.c.i
@@ -863,7 +863,7 @@ storeEnclave_t.i: storeEnclave_t.c.i
 
 # target to preprocess a source file
 storeEnclave_t.c.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i
 .PHONY : storeEnclave_t.c.i
 
 storeEnclave_t.s: storeEnclave_t.c.s
@@ -872,7 +872,7 @@ storeEnclave_t.s: storeEnclave_t.c.s
 
 # target to generate assembly for a file
 storeEnclave_t.c.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s
 .PHONY : storeEnclave_t.c.s
 
 storeEnclave_u.o: storeEnclave_u.c.o
@@ -881,7 +881,7 @@ storeEnclave_u.o: storeEnclave_u.c.o
 
 # target to build an object file
 storeEnclave_u.c.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o
 .PHONY : storeEnclave_u.c.o
 
 storeEnclave_u.i: storeEnclave_u.c.i
@@ -890,7 +890,7 @@ storeEnclave_u.i: storeEnclave_u.c.i
 
 # target to preprocess a source file
 storeEnclave_u.c.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i
 .PHONY : storeEnclave_u.c.i
 
 storeEnclave_u.s: storeEnclave_u.c.s
@@ -899,7 +899,7 @@ storeEnclave_u.s: storeEnclave_u.c.s
 
 # target to generate assembly for a file
 storeEnclave_u.c.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Enclave/CMakeFiles/EnclaveCore.dir/build.make src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s
 .PHONY : storeEnclave_u.c.s
 
 # Help Target
@@ -1006,6 +1006,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

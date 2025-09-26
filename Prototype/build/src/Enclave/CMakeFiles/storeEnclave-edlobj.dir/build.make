@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/depend.make
@@ -61,21 +61,21 @@ include src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/progress.make
 include src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/flags.make
 
 src/Enclave/storeEnclave_t.c: ../src/Enclave/storeEnclave.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating storeEnclave_t.c"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --trusted /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.edl --search-path /opt/intel/sgxssl/include:/opt/intel/sgxsdk/include:/opt/intel/sgxsdk/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating storeEnclave_t.c"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --trusted /root/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.edl --search-path /opt/intel/sgxssl/include:/opt/intel/sgxsdk/include:/opt/intel/sgxsdk/include
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/flags.make
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o: src/Enclave/storeEnclave_t.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o   -c /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c > CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c > CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.i
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c -o CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c -o CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.s
 
 storeEnclave-edlobj: src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o
 storeEnclave-edlobj: src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build.make
@@ -88,10 +88,10 @@ src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build: storeEnclave-edlobj
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/build
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/storeEnclave-edlobj.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/storeEnclave-edlobj.dir/cmake_clean.cmake
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/clean
 
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/depend: src/Enclave/storeEnclave_t.c
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Enclave /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Enclave /root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/depend
 

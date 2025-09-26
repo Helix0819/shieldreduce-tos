@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 boost/property_tree/json_parser.hpp
 -
 boost/property_tree/ptree.hpp
 -
 define.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
+/root/shieldreduce-tos/Prototype/include/define.h
 constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
+/root/shieldreduce-tos/Prototype/include/define.h
 sys/time.h
 -
 sys/resource.h
@@ -36,11 +36,11 @@ unistd.h
 pthread.h
 -
 constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/sslConnection.h
+/root/shieldreduce-tos/Prototype/include/sslConnection.h
 configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 netinet/in.h
 -
 sys/socket.h
@@ -56,7 +56,7 @@ openssl/ssl.h
 openssl/err.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/src/Comm/sslConnect.cc
+/root/shieldreduce-tos/Prototype/src/Comm/sslConnect.cc
 ../../include/sslConnection.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/sslConnection.h
+/root/shieldreduce-tos/Prototype/include/sslConnection.h
 

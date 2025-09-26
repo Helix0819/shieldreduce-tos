@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Util/CMakeFiles/UtilCore.dir/depend.make
@@ -62,68 +62,68 @@ include src/Util/CMakeFiles/UtilCore.dir/flags.make
 
 src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o: src/Util/CMakeFiles/UtilCore.dir/flags.make
 src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o: ../src/Util/clientVar.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/clientVar.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Util/clientVar.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/clientVar.cc.o -c /root/shieldreduce-tos/Prototype/src/Util/clientVar.cc
 
 src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UtilCore.dir/clientVar.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Util/clientVar.cc > CMakeFiles/UtilCore.dir/clientVar.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Util/clientVar.cc > CMakeFiles/UtilCore.dir/clientVar.cc.i
 
 src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UtilCore.dir/clientVar.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Util/clientVar.cc -o CMakeFiles/UtilCore.dir/clientVar.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Util/clientVar.cc -o CMakeFiles/UtilCore.dir/clientVar.cc.s
 
 src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o: src/Util/CMakeFiles/UtilCore.dir/flags.make
 src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o: ../src/Util/compressGen.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/compressGen.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Util/compressGen.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/compressGen.cc.o -c /root/shieldreduce-tos/Prototype/src/Util/compressGen.cc
 
 src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UtilCore.dir/compressGen.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Util/compressGen.cc > CMakeFiles/UtilCore.dir/compressGen.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Util/compressGen.cc > CMakeFiles/UtilCore.dir/compressGen.cc.i
 
 src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UtilCore.dir/compressGen.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Util/compressGen.cc -o CMakeFiles/UtilCore.dir/compressGen.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Util/compressGen.cc -o CMakeFiles/UtilCore.dir/compressGen.cc.s
 
 src/Util/CMakeFiles/UtilCore.dir/configure.cc.o: src/Util/CMakeFiles/UtilCore.dir/flags.make
 src/Util/CMakeFiles/UtilCore.dir/configure.cc.o: ../src/Util/configure.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/configure.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/configure.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Util/configure.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/configure.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/configure.cc.o -c /root/shieldreduce-tos/Prototype/src/Util/configure.cc
 
 src/Util/CMakeFiles/UtilCore.dir/configure.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UtilCore.dir/configure.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Util/configure.cc > CMakeFiles/UtilCore.dir/configure.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Util/configure.cc > CMakeFiles/UtilCore.dir/configure.cc.i
 
 src/Util/CMakeFiles/UtilCore.dir/configure.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UtilCore.dir/configure.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Util/configure.cc -o CMakeFiles/UtilCore.dir/configure.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Util/configure.cc -o CMakeFiles/UtilCore.dir/configure.cc.s
 
 src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o: src/Util/CMakeFiles/UtilCore.dir/flags.make
 src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o: ../src/Util/cryptoPrimitive.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o -c /root/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc
 
 src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc > CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc > CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i
 
 src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc -o CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc -o CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s
 
 src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o: src/Util/CMakeFiles/UtilCore.dir/flags.make
 src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o: ../src/Util/readCache.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/readCache.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Util/readCache.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UtilCore.dir/readCache.cc.o -c /root/shieldreduce-tos/Prototype/src/Util/readCache.cc
 
 src/Util/CMakeFiles/UtilCore.dir/readCache.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UtilCore.dir/readCache.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Util/readCache.cc > CMakeFiles/UtilCore.dir/readCache.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Util/readCache.cc > CMakeFiles/UtilCore.dir/readCache.cc.i
 
 src/Util/CMakeFiles/UtilCore.dir/readCache.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UtilCore.dir/readCache.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Util/readCache.cc -o CMakeFiles/UtilCore.dir/readCache.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Util/readCache.cc -o CMakeFiles/UtilCore.dir/readCache.cc.s
 
 # Object files for target UtilCore
 UtilCore_OBJECTS = \
@@ -143,9 +143,9 @@ UtilCore_EXTERNAL_OBJECTS =
 ../lib/libUtilCore.a: src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o
 ../lib/libUtilCore.a: src/Util/CMakeFiles/UtilCore.dir/build.make
 ../lib/libUtilCore.a: src/Util/CMakeFiles/UtilCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library ../../../lib/libUtilCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -P CMakeFiles/UtilCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UtilCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library ../../../lib/libUtilCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -P CMakeFiles/UtilCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UtilCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/Util/CMakeFiles/UtilCore.dir/build: ../lib/libUtilCore.a
@@ -153,10 +153,10 @@ src/Util/CMakeFiles/UtilCore.dir/build: ../lib/libUtilCore.a
 .PHONY : src/Util/CMakeFiles/UtilCore.dir/build
 
 src/Util/CMakeFiles/UtilCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -P CMakeFiles/UtilCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Util && $(CMAKE_COMMAND) -P CMakeFiles/UtilCore.dir/cmake_clean.cmake
 .PHONY : src/Util/CMakeFiles/UtilCore.dir/clean
 
 src/Util/CMakeFiles/UtilCore.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Util /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util/CMakeFiles/UtilCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Util /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Util /root/shieldreduce-tos/Prototype/build/src/Util/CMakeFiles/UtilCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Util/CMakeFiles/UtilCore.dir/depend
 

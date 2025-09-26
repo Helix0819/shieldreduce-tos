@@ -6,57 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
+/root/shieldreduce-tos/Prototype/include/chunkStructure.h
 constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 stdint.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/clientVar.h
+/root/shieldreduce-tos/Prototype/include/clientVar.h
 define.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
+/root/shieldreduce-tos/Prototype/include/define.h
 chunkStructure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
+/root/shieldreduce-tos/Prototype/include/chunkStructure.h
 messageQueue.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue.h
+/root/shieldreduce-tos/Prototype/include/messageQueue.h
 readCache.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/readCache.h
+/root/shieldreduce-tos/Prototype/include/readCache.h
 sslConnection.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/sslConnection.h
+/root/shieldreduce-tos/Prototype/include/sslConnection.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/compressGen.h
-define.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
-constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
-cstring
--
-unordered_map
--
-
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 boost/property_tree/json_parser.hpp
 -
 boost/property_tree/ptree.hpp
 -
 define.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
+/root/shieldreduce-tos/Prototype/include/define.h
 constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
+/root/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
 openssl/evp.h
 -
 openssl/crypto.h
 -
 chunkStructure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
+/root/shieldreduce-tos/Prototype/include/chunkStructure.h
 configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/define.h
+/root/shieldreduce-tos/Prototype/include/define.h
 sys/time.h
 -
 sys/resource.h
@@ -74,9 +64,9 @@ unistd.h
 pthread.h
 -
 constVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/constVar.h
+/root/shieldreduce-tos/Prototype/include/constVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
+/root/shieldreduce-tos/Prototype/include/lruCache.h
 algorithm
 -
 cstdint
@@ -94,13 +84,13 @@ unordered_map
 stdio.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue.h
+/root/shieldreduce-tos/Prototype/include/messageQueue.h
 configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 chunkStructure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/chunkStructure.h
+/root/shieldreduce-tos/Prototype/include/chunkStructure.h
 messageQueue/readerwriterqueue.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
+/root/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
 boost/atomic.hpp
 -
 boost/lockfree/queue.hpp
@@ -110,7 +100,7 @@ boost/thread/mutex.hpp
 boost/thread/thread.hpp
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
+/root/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
 cerrno
 -
 cassert
@@ -138,9 +128,9 @@ mach/mach.h
 semaphore.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
+/root/shieldreduce-tos/Prototype/include/messageQueue/readerwriterqueue.h
 atomicops.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
+/root/shieldreduce-tos/Prototype/include/messageQueue/atomicops.h
 new
 -
 type_traits
@@ -164,15 +154,15 @@ chrono
 CoreFoundation/CoreFoundation.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/readCache.h
+/root/shieldreduce-tos/Prototype/include/readCache.h
 configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 lruCache.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/lruCache.h
+/root/shieldreduce-tos/Prototype/include/lruCache.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/include/sslConnection.h
+/root/shieldreduce-tos/Prototype/include/sslConnection.h
 configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
+/root/shieldreduce-tos/Prototype/include/configure.h
 netinet/in.h
 -
 sys/socket.h
@@ -188,25 +178,11 @@ openssl/ssl.h
 openssl/err.h
 -
 
-/home/helix/repos/shieldreduce-tos/Prototype/src/Util/clientVar.cc
+/root/shieldreduce-tos/Prototype/src/Util/clientVar.cc
 ../../include/clientVar.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/clientVar.h
+/root/shieldreduce-tos/Prototype/include/clientVar.h
 
-/home/helix/repos/shieldreduce-tos/Prototype/src/Util/compressGen.cc
-../../include/compressGen.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/compressGen.h
-
-/home/helix/repos/shieldreduce-tos/Prototype/src/Util/configure.cc
-../../include/configure.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/configure.h
-
-/home/helix/repos/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc
+/root/shieldreduce-tos/Prototype/src/Util/cryptoPrimitive.cc
 ../../include/cryptoPrimitive.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
-
-/home/helix/repos/shieldreduce-tos/Prototype/src/Util/readCache.cc
-../../include/readCache.h
-/home/helix/repos/shieldreduce-tos/Prototype/include/readCache.h
-boost/thread/mutex.hpp
--
+/root/shieldreduce-tos/Prototype/include/cryptoPrimitive.h
 

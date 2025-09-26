@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Utility rule file for storeEnclave-sign.
 
@@ -57,7 +57,7 @@ CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
 include src/Enclave/CMakeFiles/storeEnclave-sign.dir/progress.make
 
 src/Enclave/CMakeFiles/storeEnclave-sign:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_sign sign -key /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.pem -config /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.config.xml -enclave /home/helix/repos/shieldreduce-tos/Prototype/lib/libstoreEnclave.so -out /home/helix/repos/shieldreduce-tos/Prototype/lib/storeEnclave.signed.so
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_sign sign -key /root/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.pem -config /root/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.config.xml -enclave /root/shieldreduce-tos/Prototype/lib/libstoreEnclave.so -out /root/shieldreduce-tos/Prototype/lib/storeEnclave.signed.so
 
 storeEnclave-sign: src/Enclave/CMakeFiles/storeEnclave-sign
 storeEnclave-sign: src/Enclave/CMakeFiles/storeEnclave-sign.dir/build.make
@@ -70,10 +70,10 @@ src/Enclave/CMakeFiles/storeEnclave-sign.dir/build: storeEnclave-sign
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-sign.dir/build
 
 src/Enclave/CMakeFiles/storeEnclave-sign.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/storeEnclave-sign.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/storeEnclave-sign.dir/cmake_clean.cmake
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-sign.dir/clean
 
 src/Enclave/CMakeFiles/storeEnclave-sign.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-sign.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Enclave /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Enclave /root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/storeEnclave-sign.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Enclave/CMakeFiles/storeEnclave-sign.dir/depend
 

@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/Database/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Database/CMakeFiles/DatabaseCore.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/CMakeFiles/DatabaseCore.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Database/CMakeFiles/DatabaseCore.dir/rule
 .PHONY : src/Database/CMakeFiles/DatabaseCore.dir/rule
 
 # Convenience name for target.
@@ -125,7 +125,7 @@ DatabaseCore: src/Database/CMakeFiles/DatabaseCore.dir/rule
 
 # fast build rule for target.
 DatabaseCore/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/build
 .PHONY : DatabaseCore/fast
 
 absDatabase.o: absDatabase.cc.o
@@ -134,7 +134,7 @@ absDatabase.o: absDatabase.cc.o
 
 # target to build an object file
 absDatabase.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o
 .PHONY : absDatabase.cc.o
 
 absDatabase.i: absDatabase.cc.i
@@ -143,7 +143,7 @@ absDatabase.i: absDatabase.cc.i
 
 # target to preprocess a source file
 absDatabase.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.i
 .PHONY : absDatabase.cc.i
 
 absDatabase.s: absDatabase.cc.s
@@ -152,7 +152,7 @@ absDatabase.s: absDatabase.cc.s
 
 # target to generate assembly for a file
 absDatabase.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.s
 .PHONY : absDatabase.cc.s
 
 factoryDatabase.o: factoryDatabase.cc.o
@@ -161,7 +161,7 @@ factoryDatabase.o: factoryDatabase.cc.o
 
 # target to build an object file
 factoryDatabase.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o
 .PHONY : factoryDatabase.cc.o
 
 factoryDatabase.i: factoryDatabase.cc.i
@@ -170,7 +170,7 @@ factoryDatabase.i: factoryDatabase.cc.i
 
 # target to preprocess a source file
 factoryDatabase.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i
 .PHONY : factoryDatabase.cc.i
 
 factoryDatabase.s: factoryDatabase.cc.s
@@ -179,7 +179,7 @@ factoryDatabase.s: factoryDatabase.cc.s
 
 # target to generate assembly for a file
 factoryDatabase.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s
 .PHONY : factoryDatabase.cc.s
 
 inMemoryDatabase.o: inMemoryDatabase.cc.o
@@ -188,7 +188,7 @@ inMemoryDatabase.o: inMemoryDatabase.cc.o
 
 # target to build an object file
 inMemoryDatabase.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o
 .PHONY : inMemoryDatabase.cc.o
 
 inMemoryDatabase.i: inMemoryDatabase.cc.i
@@ -197,7 +197,7 @@ inMemoryDatabase.i: inMemoryDatabase.cc.i
 
 # target to preprocess a source file
 inMemoryDatabase.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i
 .PHONY : inMemoryDatabase.cc.i
 
 inMemoryDatabase.s: inMemoryDatabase.cc.s
@@ -206,7 +206,7 @@ inMemoryDatabase.s: inMemoryDatabase.cc.s
 
 # target to generate assembly for a file
 inMemoryDatabase.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s
 .PHONY : inMemoryDatabase.cc.s
 
 leveldbDatabase.o: leveldbDatabase.cc.o
@@ -215,7 +215,7 @@ leveldbDatabase.o: leveldbDatabase.cc.o
 
 # target to build an object file
 leveldbDatabase.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o
 .PHONY : leveldbDatabase.cc.o
 
 leveldbDatabase.i: leveldbDatabase.cc.i
@@ -224,7 +224,7 @@ leveldbDatabase.i: leveldbDatabase.cc.i
 
 # target to preprocess a source file
 leveldbDatabase.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i
 .PHONY : leveldbDatabase.cc.i
 
 leveldbDatabase.s: leveldbDatabase.cc.s
@@ -233,7 +233,7 @@ leveldbDatabase.s: leveldbDatabase.cc.s
 
 # target to generate assembly for a file
 leveldbDatabase.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Database/CMakeFiles/DatabaseCore.dir/build.make src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s
 .PHONY : leveldbDatabase.cc.s
 
 # Help Target
@@ -268,6 +268,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

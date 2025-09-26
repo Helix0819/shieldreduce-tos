@@ -1,4 +1,4 @@
-# Install script for directory: /home/helix/repos/shieldreduce-tos/Prototype/src/Server
+# Install script for directory: /root/shieldreduce-tos/Prototype/src/Server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

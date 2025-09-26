@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles /home/helix/repos/shieldreduce-tos/Prototype/build/src/Util/CMakeFiles/progress.marks
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles /root/shieldreduce-tos/Prototype/build/src/Util/CMakeFiles/progress.marks
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/shieldreduce-tos/Prototype/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/clean
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/preinstall
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/Util/CMakeFiles/UtilCore.dir/rule:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/CMakeFiles/UtilCore.dir/rule
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f CMakeFiles/Makefile2 src/Util/CMakeFiles/UtilCore.dir/rule
 .PHONY : src/Util/CMakeFiles/UtilCore.dir/rule
 
 # Convenience name for target.
@@ -125,7 +125,7 @@ UtilCore: src/Util/CMakeFiles/UtilCore.dir/rule
 
 # fast build rule for target.
 UtilCore/fast:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/build
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/build
 .PHONY : UtilCore/fast
 
 clientVar.o: clientVar.cc.o
@@ -134,7 +134,7 @@ clientVar.o: clientVar.cc.o
 
 # target to build an object file
 clientVar.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.o
 .PHONY : clientVar.cc.o
 
 clientVar.i: clientVar.cc.i
@@ -143,7 +143,7 @@ clientVar.i: clientVar.cc.i
 
 # target to preprocess a source file
 clientVar.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.i
 .PHONY : clientVar.cc.i
 
 clientVar.s: clientVar.cc.s
@@ -152,7 +152,7 @@ clientVar.s: clientVar.cc.s
 
 # target to generate assembly for a file
 clientVar.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/clientVar.cc.s
 .PHONY : clientVar.cc.s
 
 compressGen.o: compressGen.cc.o
@@ -161,7 +161,7 @@ compressGen.o: compressGen.cc.o
 
 # target to build an object file
 compressGen.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.o
 .PHONY : compressGen.cc.o
 
 compressGen.i: compressGen.cc.i
@@ -170,7 +170,7 @@ compressGen.i: compressGen.cc.i
 
 # target to preprocess a source file
 compressGen.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.i
 .PHONY : compressGen.cc.i
 
 compressGen.s: compressGen.cc.s
@@ -179,7 +179,7 @@ compressGen.s: compressGen.cc.s
 
 # target to generate assembly for a file
 compressGen.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/compressGen.cc.s
 .PHONY : compressGen.cc.s
 
 configure.o: configure.cc.o
@@ -188,7 +188,7 @@ configure.o: configure.cc.o
 
 # target to build an object file
 configure.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.o
 .PHONY : configure.cc.o
 
 configure.i: configure.cc.i
@@ -197,7 +197,7 @@ configure.i: configure.cc.i
 
 # target to preprocess a source file
 configure.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.i
 .PHONY : configure.cc.i
 
 configure.s: configure.cc.s
@@ -206,7 +206,7 @@ configure.s: configure.cc.s
 
 # target to generate assembly for a file
 configure.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/configure.cc.s
 .PHONY : configure.cc.s
 
 cryptoPrimitive.o: cryptoPrimitive.cc.o
@@ -215,7 +215,7 @@ cryptoPrimitive.o: cryptoPrimitive.cc.o
 
 # target to build an object file
 cryptoPrimitive.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.o
 .PHONY : cryptoPrimitive.cc.o
 
 cryptoPrimitive.i: cryptoPrimitive.cc.i
@@ -224,7 +224,7 @@ cryptoPrimitive.i: cryptoPrimitive.cc.i
 
 # target to preprocess a source file
 cryptoPrimitive.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.i
 .PHONY : cryptoPrimitive.cc.i
 
 cryptoPrimitive.s: cryptoPrimitive.cc.s
@@ -233,7 +233,7 @@ cryptoPrimitive.s: cryptoPrimitive.cc.s
 
 # target to generate assembly for a file
 cryptoPrimitive.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/cryptoPrimitive.cc.s
 .PHONY : cryptoPrimitive.cc.s
 
 readCache.o: readCache.cc.o
@@ -242,7 +242,7 @@ readCache.o: readCache.cc.o
 
 # target to build an object file
 readCache.cc.o:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.o
 .PHONY : readCache.cc.o
 
 readCache.i: readCache.cc.i
@@ -251,7 +251,7 @@ readCache.i: readCache.cc.i
 
 # target to preprocess a source file
 readCache.cc.i:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.i
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.i
 .PHONY : readCache.cc.i
 
 readCache.s: readCache.cc.s
@@ -260,7 +260,7 @@ readCache.s: readCache.cc.s
 
 # target to generate assembly for a file
 readCache.cc.s:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.s
+	cd /root/shieldreduce-tos/Prototype/build && $(MAKE) -f src/Util/CMakeFiles/UtilCore.dir/build.make src/Util/CMakeFiles/UtilCore.dir/readCache.cc.s
 .PHONY : readCache.cc.s
 
 # Help Target
@@ -298,6 +298,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Database/CMakeFiles/DatabaseCore.dir/depend.make
@@ -62,55 +62,55 @@ include src/Database/CMakeFiles/DatabaseCore.dir/flags.make
 
 src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o: src/Database/CMakeFiles/DatabaseCore.dir/flags.make
 src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o: ../src/Database/absDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/absDatabase.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Database/absDatabase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/absDatabase.cc.o -c /root/shieldreduce-tos/Prototype/src/Database/absDatabase.cc
 
 src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DatabaseCore.dir/absDatabase.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Database/absDatabase.cc > CMakeFiles/DatabaseCore.dir/absDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Database/absDatabase.cc > CMakeFiles/DatabaseCore.dir/absDatabase.cc.i
 
 src/Database/CMakeFiles/DatabaseCore.dir/absDatabase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DatabaseCore.dir/absDatabase.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Database/absDatabase.cc -o CMakeFiles/DatabaseCore.dir/absDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Database/absDatabase.cc -o CMakeFiles/DatabaseCore.dir/absDatabase.cc.s
 
 src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o: src/Database/CMakeFiles/DatabaseCore.dir/flags.make
 src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o: ../src/Database/factoryDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.o -c /root/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc
 
 src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc > CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc > CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.i
 
 src/Database/CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc -o CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Database/factoryDatabase.cc -o CMakeFiles/DatabaseCore.dir/factoryDatabase.cc.s
 
 src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o: src/Database/CMakeFiles/DatabaseCore.dir/flags.make
 src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o: ../src/Database/inMemoryDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.o -c /root/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc
 
 src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc > CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc > CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.i
 
 src/Database/CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc -o CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Database/inMemoryDatabase.cc -o CMakeFiles/DatabaseCore.dir/inMemoryDatabase.cc.s
 
 src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o: src/Database/CMakeFiles/DatabaseCore.dir/flags.make
 src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o: ../src/Database/leveldbDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o -c /root/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc
 
 src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc > CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc > CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.i
 
 src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc -o CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Database/leveldbDatabase.cc -o CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.s
 
 # Object files for target DatabaseCore
 DatabaseCore_OBJECTS = \
@@ -128,9 +128,9 @@ DatabaseCore_EXTERNAL_OBJECTS =
 ../lib/libDatabaseCore.a: src/Database/CMakeFiles/DatabaseCore.dir/leveldbDatabase.cc.o
 ../lib/libDatabaseCore.a: src/Database/CMakeFiles/DatabaseCore.dir/build.make
 ../lib/libDatabaseCore.a: src/Database/CMakeFiles/DatabaseCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../../lib/libDatabaseCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -P CMakeFiles/DatabaseCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DatabaseCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../../lib/libDatabaseCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -P CMakeFiles/DatabaseCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DatabaseCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/Database/CMakeFiles/DatabaseCore.dir/build: ../lib/libDatabaseCore.a
@@ -138,10 +138,10 @@ src/Database/CMakeFiles/DatabaseCore.dir/build: ../lib/libDatabaseCore.a
 .PHONY : src/Database/CMakeFiles/DatabaseCore.dir/build
 
 src/Database/CMakeFiles/DatabaseCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -P CMakeFiles/DatabaseCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Database && $(CMAKE_COMMAND) -P CMakeFiles/DatabaseCore.dir/cmake_clean.cmake
 .PHONY : src/Database/CMakeFiles/DatabaseCore.dir/clean
 
 src/Database/CMakeFiles/DatabaseCore.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Database /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database /home/helix/repos/shieldreduce-tos/Prototype/build/src/Database/CMakeFiles/DatabaseCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Database /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Database /root/shieldreduce-tos/Prototype/build/src/Database/CMakeFiles/DatabaseCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Database/CMakeFiles/DatabaseCore.dir/depend
 

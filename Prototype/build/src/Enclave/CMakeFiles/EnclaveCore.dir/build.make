@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Enclave/CMakeFiles/EnclaveCore.dir/depend.make
@@ -61,47 +61,47 @@ include src/Enclave/CMakeFiles/EnclaveCore.dir/progress.make
 include src/Enclave/CMakeFiles/EnclaveCore.dir/flags.make
 
 src/Enclave/storeEnclave_u.c: ../src/Enclave/storeEnclave.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating storeEnclave_u.c"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.edl --search-path /opt/intel/sgxssl/include:/opt/intel/sgxsdk/include:/opt/intel/sgxsdk/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating storeEnclave_u.c"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted /root/shieldreduce-tos/Prototype/src/Enclave/storeEnclave.edl --search-path /opt/intel/sgxssl/include:/opt/intel/sgxsdk/include:/opt/intel/sgxsdk/include
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: src/Enclave/CMakeFiles/EnclaveCore.dir/flags.make
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o: ../src/Enclave/ocallSrc/ocallUtil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.o -c /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc > CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc > CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.i
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc -o CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/ocallUtil.cc -o CMakeFiles/EnclaveCore.dir/ocallSrc/ocallUtil.cc.s
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: src/Enclave/CMakeFiles/EnclaveCore.dir/flags.make
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o: ../src/Enclave/ocallSrc/storeOCall.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.o -c /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc > CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc > CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.i
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc -o CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Enclave/ocallSrc/storeOCall.cc -o CMakeFiles/EnclaveCore.dir/ocallSrc/storeOCall.cc.s
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/CMakeFiles/EnclaveCore.dir/flags.make
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o: src/Enclave/storeEnclave_u.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o   -c /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c > CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c > CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.i
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c -o CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_u.c -o CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.s
 
 # Object files for target EnclaveCore
 EnclaveCore_OBJECTS = \
@@ -117,9 +117,9 @@ EnclaveCore_EXTERNAL_OBJECTS =
 ../lib/libEnclaveCore.a: src/Enclave/CMakeFiles/EnclaveCore.dir/storeEnclave_u.c.o
 ../lib/libEnclaveCore.a: src/Enclave/CMakeFiles/EnclaveCore.dir/build.make
 ../lib/libEnclaveCore.a: src/Enclave/CMakeFiles/EnclaveCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../../lib/libEnclaveCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/EnclaveCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EnclaveCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../../lib/libEnclaveCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/EnclaveCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EnclaveCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/Enclave/CMakeFiles/EnclaveCore.dir/build: ../lib/libEnclaveCore.a
@@ -127,10 +127,10 @@ src/Enclave/CMakeFiles/EnclaveCore.dir/build: ../lib/libEnclaveCore.a
 .PHONY : src/Enclave/CMakeFiles/EnclaveCore.dir/build
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/EnclaveCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Enclave && $(CMAKE_COMMAND) -P CMakeFiles/EnclaveCore.dir/cmake_clean.cmake
 .PHONY : src/Enclave/CMakeFiles/EnclaveCore.dir/clean
 
 src/Enclave/CMakeFiles/EnclaveCore.dir/depend: src/Enclave/storeEnclave_u.c
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Enclave /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Enclave /root/shieldreduce-tos/Prototype/build/src/Enclave/CMakeFiles/EnclaveCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Enclave/CMakeFiles/EnclaveCore.dir/depend
 

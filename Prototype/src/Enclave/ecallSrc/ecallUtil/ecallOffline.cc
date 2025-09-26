@@ -180,7 +180,8 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
             // Enclave::Logging("DEBUG", "local base map size is %d\n", local_basemap.size());
             for (unordered_map<string, string>::iterator it = local_basemap.begin(); it != local_basemap.end(); it++)
             {
-
+                extension_sampledFeatureCounts_.clear();
+                extension_chunkFeatures_.clear();
                 if (GreeyOfflineSize >= _offlineCurrBackup_size)
                 {
                     old_basechunkhash = it->first;
@@ -348,7 +349,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                         memcpy(tmpNewContainer, outEntry->containerbuffer, MAX_CONTAINER_SIZE);
                     }
                 }
-
+                _offline_Ocall++;
                 // Ocall_OneContainer(upOutSGX->outClient);
                 // if (outEntry->offlineFlag == false)
                 // {
@@ -473,8 +474,11 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                 {
                     candidateGroup.insert(candidateGroup.end(), delta_it->second.begin(), delta_it->second.end());
                 }
-
+                Ocall_GetCurrentTime(&_startTimeOffline);
                 optimalBaseChunkHash = SelectOptimalBaseChunk(candidateGroup, upOutSGX, cryptoObj_, old_chunk, old_refchunksize, new_chunk, new_refchunksize);
+                Ocall_GetCurrentTime(&_endTimeOffline);
+                selectOptimalBaseTime += (_endTimeOffline - _startTimeOffline);
+                selectOptimalBaseCount++;
                 // if (optimalBaseChunkHash != new_basechunkhash)
                 // {
                 //     Enclave::Logging("DEBUG", "unlike backward\n");
@@ -495,12 +499,12 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                 uint8_t *optimal_chunk_content_decrypt;
                 uint8_t *optimal_chunk_content_decompression;
                 int optimal_chunk_size = new_recipe_->length;
-                Enclave::Logging(myName_.c_str(), "optimal chunk size is %d\n", optimal_chunk_size);
+                // Enclave::Logging(myName_.c_str(), "optimal chunk size is %d\n", optimal_chunk_size);
                 int optimal_refchunksize;
                 optimal_basecontainerID.assign((char *)&new_recipe_->containerName, CONTAINER_ID_LENGTH);
                 if (new_recipe_->deltaFlag == NO_DELTA)
                 {
-                    Enclave::Logging("debug", "optimal is base\n");
+                    // Enclave::Logging("debug", "optimal is base\n");
                     tmpBaseContainerID.assign((char *)new_recipe_->containerName, CONTAINER_ID_LENGTH);
                     curHotBaseContainerID.assign((char *)hot_base_container.containerID, CONTAINER_ID_LENGTH);
                     if (tmpBaseContainerID == curHotBaseContainerID)
@@ -528,7 +532,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                     cryptoObj_->DecryptionWithKeyIV(cipherCtx, optimal_chunk_content_crypt, optimal_chunk_size, Enclave::enclaveKey_, optimal_chunk_content_decrypt, optimal_chunk_IV);
                     optimal_chunk_content_decompression = offline_newChunkDecompression_;
                     optimal_refchunksize = LZ4_decompress_safe((char *)optimal_chunk_content_decrypt, (char *)optimal_chunk_content_decompression, optimal_chunk_size, MAX_CHUNK_SIZE);
-                    Enclave::Logging("DEBUG", "optimal BaseChunk decompression finished, ref size is %d\n", optimal_refchunksize);
+                    // Enclave::Logging("DEBUG", "optimal BaseChunk decompression finished, ref size is %d\n", optimal_refchunksize);
                     if (optimal_refchunksize < 0)
                     {
                         // old_refchunksize < 0 means chunk didn't do compression
@@ -554,7 +558,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                 }
                 else
                 {
-                    Enclave::Logging("debug", "optimal is delta\n");
+                    // Enclave::Logging("debug", "optimal is delta\n");
                     Ocall_OneDeltaContainer(upOutSGX->outClient);
                     memcpy(tmpNewContainer, outEntry->containerbuffer, MAX_CONTAINER_SIZE);
                     optimal_chunk_content_crypt = GetChunk_content_buffer(tmpNewContainer, new_recipe_, true, optimalpair, encNewChunkBuffer_);
@@ -582,11 +586,12 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                         _offline_Ocall++;
                     }
                 }
-                Enclave::Logging("DEBUG", "optimal ref size is: %d\n", optimal_refchunksize);
+                // Enclave::Logging("DEBUG", "optimal ref size is: %d\n", optimal_refchunksize);
                 // Enclave::Logging(myName_.c_str(), "load optimal base chunk done\n");
                 memcpy(new_basechunksf, &new_recipe_->superfeature, 3 * CHUNK_HASH_SIZE);
                 memcpy((uint8_t *)&outEntry->superfeature, new_basechunksf, 3 * CHUNK_HASH_SIZE);
                 Ocall_OFFline_updateIndex(upOutSGX->outClient, 1);
+                _offline_Ocall++;
                 // Enclave::Logging(myName_.c_str(), "update optimal base chunk index store done\n");
                 // if (delta_it != delta_map.end() && optimalBaseChunkHash != old_basechunkhash) // exist in delta map
                 if (delta_it != delta_map.end())
@@ -733,8 +738,8 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                 // Enclave::Logging(myName_.c_str(), "total delta num is %d\n", _deltaChunkNum);
                 if (optimalBaseChunkHash != old_basechunkhash)
                 {
-                    Enclave::Logging("debug", "Base process\n");
-                    Enclave::Logging(myName_.c_str(), "old chunk edelta with optimal base chunk\n");
+                    // Enclave::Logging("debug", "Base process\n");
+                    // Enclave::Logging(myName_.c_str(), "old chunk edelta with optimal base chunk\n");
                     uint8_t *new_delta_content;
                     size_t new_delta_size;
                     // Enclave::Logging("debug", "xdelta begin\n");
@@ -745,7 +750,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                     //  recc_chunk = ed3_decode(new_delta_content, new_delta_size, new_chunk, new_refchunksize, &recc_size);
                     if (new_delta_size > old_refchunksize)
                     {
-                        Enclave::Logging("debug", "NO delta!!! base_recc_chunk_size: 111");
+                        // Enclave::Logging("debug", "NO delta!!! base_recc_chunk_size: 111");
                         delta_flag = false;
                     }
                     else
@@ -772,9 +777,9 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 
                         old_recipe_->length = new_delta_size;
                         old_recipe_->deltaFlag = DELTA;
-                        Enclave::Logging("debug", " 1\n");
+                        // Enclave::Logging("debug", " 1\n");
                         memcpy(&old_recipe_->basechunkHash, (uint8_t *)&optimalBaseChunkHash[0], CHUNK_HASH_SIZE);
-                        Enclave::Logging("debug", " 2\n");
+                        // Enclave::Logging("debug", " 2\n");
                         uint8_t *new_delta_content_crypt = offline_newDeltaChunkEnc_;
                         // uint8_t* new_delta_content_crypt = (uint8_t*)malloc(MAX_CHUNK_SIZE);
                         if (!new_delta_content_crypt)
@@ -842,7 +847,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                 if (new_basechunkhash != optimalBaseChunkHash)
                 {
                     // load newchunk
-                    Enclave::Logging(myName_.c_str(), "new chunk edelta with optimal base chunk\n");
+                    // Enclave::Logging(myName_.c_str(), "new chunk edelta with optimal base chunk\n");
                     memcpy(&outEntry->chunkHash, (uint8_t *)&new_basechunkhash[0], CHUNK_HASH_SIZE);
                     Ocall_OneRecipe(upOutSGX->outClient);
                     _offline_Ocall++;
@@ -898,10 +903,10 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                     size_t tmp_chunk_size = tmp_recipe_->length;
                     uint8_t *tmp_chunkcontent_decrypt = offline_oldDeltaChunkDec_;
                     cryptoObj_->DecryptionWithKeyIV(cipherCtx, tmp_chunk_content_crypt, tmp_chunk_size, Enclave::enclaveKey_, tmp_chunkcontent_decrypt, tmp_chunk_iv);
-                    Enclave::Logging(myName_.c_str(), "decrypt old chunk done\n");
+                    // Enclave::Logging(myName_.c_str(), "decrypt old chunk done\n");
                     uint8_t *tmp_chunk_content_decompress = offline_newDeltaChunkEnc_;
                     int tmp_refchunksize = LZ4_decompress_safe((char *)tmp_chunkcontent_decrypt, (char *)tmp_chunk_content_decompress, tmp_chunk_size, MAX_CHUNK_SIZE);
-                    Enclave::Logging(myName_.c_str(), "old chunk size is %d, ref size is %d\n", tmp_chunk_size, tmp_refchunksize);
+                    // Enclave::Logging(myName_.c_str(), "old chunk size is %d, ref size is %d\n", tmp_chunk_size, tmp_refchunksize);
                     uint8_t *tmpchunk;
                     if (tmp_refchunksize < 0)
                     {
@@ -917,7 +922,7 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                     uint8_t *new_delta_content;
                     size_t new_delta_size;
                     // Enclave::Logging("debug", "xdelta begin\n");
-                    Enclave::Logging(myName_.c_str(), "old chunk edelta with optimal base chunk size is %d, ref size is %d\n", optimal_chunk_size, optimal_refchunksize);
+                    // Enclave::Logging(myName_.c_str(), "old chunk edelta with optimal base chunk size is %d, ref size is %d\n", optimal_chunk_size, optimal_refchunksize);
 
                     new_delta_content = ed3_encode_buffer(tmpchunk, tmp_refchunksize, optimal_chunk, optimal_refchunksize, offline_plainNewDeltaChunkBuffer_, &new_delta_size);
                     // Enclave::Logging("debug", "edelta end\n");
@@ -954,27 +959,27 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 
                         old_recipe_->length = new_delta_size;
                         old_recipe_->deltaFlag = DELTA;
-                        Enclave::Logging("debug", " 1\n");
+                        // Enclave::Logging("debug", " 1\n");
                         memcpy(&old_recipe_->basechunkHash, (uint8_t *)&optimalBaseChunkHash[0], CHUNK_HASH_SIZE);
-                        Enclave::Logging("debug", " 2\n");
+                        // Enclave::Logging("debug", " 2\n");
                         uint8_t *new_delta_content_crypt = offline_newDeltaChunkEnc_;
                         // uint8_t* new_delta_content_crypt = (uint8_t*)malloc(MAX_CHUNK_SIZE);
                         if (!new_delta_content_crypt)
                         {
                             Enclave::Logging("malloc", "new_delta_content_crypt\n");
                         }
-                        Enclave::Logging("debug", " 3\n");
+                        // Enclave::Logging("debug", " 3\n");
                         cryptoObj_->EncryptWithKeyIV(cipherCtx, new_delta_content, new_delta_size, Enclave::enclaveKey_,
                                                      new_delta_content_crypt, old_chunk_IV);
-                        Enclave::Logging("debug", " 4\n");
+                        // Enclave::Logging("debug", " 4\n");
                         InsertHot_container(new_delta_content_crypt, old_recipe_, (uint8_t *)&new_basechunkhash[0], tmp_chunk_sf, tmp_chunk_iv);
-                        Enclave::Logging("debug", " 5\n");
+                        // Enclave::Logging("debug", " 5\n");
                         //  uint8_t* outRecipe = (uint8_t*)malloc(sizeof(RecipeEntry_t));
                         uint8_t *outRecipe = offline_outRecipeBuffer_;
-                        Enclave::Logging("debug", " 6\n");
+                        // Enclave::Logging("debug", " 6\n");
                         cryptoObj_->AESCBCEnc(cipherCtx, (uint8_t *)old_recipe_, sizeof(RecipeEntry_t), Enclave::indexQueryKey_,
                                               outRecipe);
-                        Enclave::Logging("debug", " 7\n");
+                        // Enclave::Logging("debug", " 7\n");
                         bool status;
 
                         // Ocall_UpdateIndexStoreBuffer(&status, &old_basechunkhash[0], CHUNK_HASH_SIZE, (uint8_t*)&outRecipe, sizeof(RecipeEntry_t));
@@ -1019,8 +1024,6 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                         //  free(new_delta_content_crypt);
                         //  free(new_delta_content);
                     }
-                    _baseChunkNum--;
-                    _deltaChunkNum++;
                 }
 
                 // update optimal base chunk
@@ -1055,6 +1058,12 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
                     _offlineCurrBackup_size -= optimal_chunk_size;
                     _offlineCompress_size += finalSize;
                     _offlineCurrBackup_size += finalSize;
+                    _deltaChunkNum--;
+                    _baseChunkNum++;
+                    _baseDataSize += finalSize;
+                    _deltaDataSize -= optimal_chunk_size;
+                    _lz4SaveSize += (optimal_refchunksize - optimal_chunk_size);
+                    _DeltaSaveSize -= (optimal_refchunksize - optimal_chunk_size);
                 }
                 // uint8_t *compressdata = offline_lz4CompressBuffer_;
                 // int optimal_chunk_compress_size = LZ4_compress_default((char *)optimal_chunk, (char *)compressdata, optimal_refchunksize, MAX_CHUNK_SIZE);
@@ -1181,13 +1190,17 @@ void OFFLineBackward::Easy_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
     Print();
 
     delta_map.clear();
+    Ocall_GetCurrentTime(&_startTimeOffline);
+    Ocall_GetCurrentTime(&_endTimeOffline);
+    _testOcallTimeOffline += (_endTimeOffline - _startTimeOffline);
+    _testOcallCountOffline++;
     // free(old_basechunksf);
     // free(new_basechunksf);
     // free(old_recipe);
     // free(new_recipe);
     // free(delta_recipe);
     // Enclave::Logging("debug", "Cold end\n");
-    Enclave::Logging(myName_.c_str(), "bad delta num is %d\n", badDelta);
+    // Enclave::Logging(myName_.c_str(), "bad delta num is %d\n", badDelta);
     return;
 }
 
@@ -1438,6 +1451,12 @@ uint8_t *OFFLineBackward::GetNew_deltachunk(uint8_t *old_deltachunk, size_t old_
     }
     else
     {
+        if (lz4_flag)
+        {
+            _baseChunkNum--;
+            _baseDataSize -= old_deltasize;
+            _lz4SaveSize -= (old_deltasize - old_unique_chunk_size);
+        }
         _offlineCompress_size -= old_deltasize;
         _offlineCompress_size += new_delta_chunk_size;
         _offlineCurrBackup_size -= old_deltasize;
@@ -3117,7 +3136,6 @@ string OFFLineBackward::SelectOptimalBaseChunk(const vector<string> &chunkGroup,
         // get delta recipe
         memcpy(&outEntry->chunkHash, (uint8_t *)chunkFP.data(), CHUNK_HASH_SIZE);
         Ocall_OneRecipe(upOutSGX->outClient);
-        _offline_Ocall++;
         cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)delta_recipe_);
         // get delta chunk content
         memcpy(&outEntry->chunkAddr.containerName, delta_recipe_->containerName, CONTAINER_ID_LENGTH);
@@ -3165,7 +3183,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(const vector<string> &chunkGroup,
         // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: LoadChunkData ret data=%p size=%zu for candidate[%zu]\n", (void *)chunkData, chunkSize, i);
         if (old_unique_chunk && old_unique_size > 0)
         {
-            features.clear();
+            // features.clear();
             ExtractChunkFeatures(old_unique_chunk, old_unique_size, features);
             // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: features extracted=%zu for candidate[%zu]\n", features.size(), i);
             extension_chunkFeatures_[chunkFP] = features;

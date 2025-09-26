@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Index/CMakeFiles/IndexCore.dir/depend.make
@@ -62,29 +62,29 @@ include src/Index/CMakeFiles/IndexCore.dir/flags.make
 
 src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o: src/Index/CMakeFiles/IndexCore.dir/flags.make
 src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o: ../src/Index/absIndex.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IndexCore.dir/absIndex.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Index/absIndex.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IndexCore.dir/absIndex.cc.o -c /root/shieldreduce-tos/Prototype/src/Index/absIndex.cc
 
 src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IndexCore.dir/absIndex.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Index/absIndex.cc > CMakeFiles/IndexCore.dir/absIndex.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Index/absIndex.cc > CMakeFiles/IndexCore.dir/absIndex.cc.i
 
 src/Index/CMakeFiles/IndexCore.dir/absIndex.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IndexCore.dir/absIndex.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Index/absIndex.cc -o CMakeFiles/IndexCore.dir/absIndex.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Index/absIndex.cc -o CMakeFiles/IndexCore.dir/absIndex.cc.s
 
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: src/Index/CMakeFiles/IndexCore.dir/flags.make
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o: ../src/Index/enclaveIndex.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IndexCore.dir/enclaveIndex.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IndexCore.dir/enclaveIndex.cc.o -c /root/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc
 
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IndexCore.dir/enclaveIndex.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc > CMakeFiles/IndexCore.dir/enclaveIndex.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc > CMakeFiles/IndexCore.dir/enclaveIndex.cc.i
 
 src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IndexCore.dir/enclaveIndex.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc -o CMakeFiles/IndexCore.dir/enclaveIndex.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Index/enclaveIndex.cc -o CMakeFiles/IndexCore.dir/enclaveIndex.cc.s
 
 # Object files for target IndexCore
 IndexCore_OBJECTS = \
@@ -98,9 +98,9 @@ IndexCore_EXTERNAL_OBJECTS =
 ../lib/libIndexCore.a: src/Index/CMakeFiles/IndexCore.dir/enclaveIndex.cc.o
 ../lib/libIndexCore.a: src/Index/CMakeFiles/IndexCore.dir/build.make
 ../lib/libIndexCore.a: src/Index/CMakeFiles/IndexCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../../../lib/libIndexCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -P CMakeFiles/IndexCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IndexCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../../../lib/libIndexCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -P CMakeFiles/IndexCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IndexCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/Index/CMakeFiles/IndexCore.dir/build: ../lib/libIndexCore.a
@@ -108,10 +108,10 @@ src/Index/CMakeFiles/IndexCore.dir/build: ../lib/libIndexCore.a
 .PHONY : src/Index/CMakeFiles/IndexCore.dir/build
 
 src/Index/CMakeFiles/IndexCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -P CMakeFiles/IndexCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Index && $(CMAKE_COMMAND) -P CMakeFiles/IndexCore.dir/cmake_clean.cmake
 .PHONY : src/Index/CMakeFiles/IndexCore.dir/clean
 
 src/Index/CMakeFiles/IndexCore.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Index /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index /home/helix/repos/shieldreduce-tos/Prototype/build/src/Index/CMakeFiles/IndexCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Index /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Index /root/shieldreduce-tos/Prototype/build/src/Index/CMakeFiles/IndexCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Index/CMakeFiles/IndexCore.dir/depend
 

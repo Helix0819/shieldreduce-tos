@@ -5,11 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/base64.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/crypto.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/logfile.c" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/base64.c" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/crypto.c" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/logfile.c" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -20,10 +20,10 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/opt/intel/sgxsdk/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/common.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o"
-  "/home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/json.cc" "/home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/common.cc" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o"
+  "/root/shieldreduce-tos/Prototype/src/IASUtil/json.cc" "/root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

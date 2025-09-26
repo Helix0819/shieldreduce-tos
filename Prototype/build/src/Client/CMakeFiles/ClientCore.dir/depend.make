@@ -41,6 +41,16 @@ src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.o: ../include/messageQueue/re
 src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.o: ../include/sslConnection.h
 src/Client/CMakeFiles/ClientCore.dir/dataSender.cc.o: ../src/Client/dataSender.cc
 
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_defs.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_ecp_types.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_error.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_key.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_key_exchange.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_quote.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_report.h
+src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_tcrypto.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/IAS/agent.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/IAS/base64.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/IAS/byteorder.h
@@ -58,16 +68,6 @@ src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/define.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/raVerifier.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../include/sslConnection.h
 src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: ../src/Client/raVerifier.cc
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_attributes.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_defs.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_ecp_types.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_error.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_key.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_key_exchange.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_quote.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_report.h
-src/Client/CMakeFiles/ClientCore.dir/raVerifier.cc.o: /opt/intel/sgxsdk/include/sgx_tcrypto.h
 
 src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.o: ../include/chunkStructure.h
 src/Client/CMakeFiles/ClientCore.dir/restoreWriter.cc.o: ../include/configure.h

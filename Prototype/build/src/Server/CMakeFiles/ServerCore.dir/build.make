@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/Server/CMakeFiles/ServerCore.dir/depend.make
@@ -62,94 +62,94 @@ include src/Server/CMakeFiles/ServerCore.dir/flags.make
 
 src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o: ../src/Server/absRecvDecoder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/absRecvDecoder.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc
 
 src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/absRecvDecoder.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc > CMakeFiles/ServerCore.dir/absRecvDecoder.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc > CMakeFiles/ServerCore.dir/absRecvDecoder.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/absRecvDecoder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/absRecvDecoder.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc -o CMakeFiles/ServerCore.dir/absRecvDecoder.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/absRecvDecoder.cc -o CMakeFiles/ServerCore.dir/absRecvDecoder.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.o: ../src/Server/dataReceiver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/dataReceiver.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/dataReceiver.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc
 
 src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/dataReceiver.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc > CMakeFiles/ServerCore.dir/dataReceiver.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc > CMakeFiles/ServerCore.dir/dataReceiver.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/dataReceiver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/dataReceiver.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc -o CMakeFiles/ServerCore.dir/dataReceiver.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/dataReceiver.cc -o CMakeFiles/ServerCore.dir/dataReceiver.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.o: ../src/Server/dataWriter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/dataWriter.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataWriter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/dataWriter.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/dataWriter.cc
 
 src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/dataWriter.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataWriter.cc > CMakeFiles/ServerCore.dir/dataWriter.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/dataWriter.cc > CMakeFiles/ServerCore.dir/dataWriter.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/dataWriter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/dataWriter.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/dataWriter.cc -o CMakeFiles/ServerCore.dir/dataWriter.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/dataWriter.cc -o CMakeFiles/ServerCore.dir/dataWriter.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o: ../src/Server/enclaveRecvDecoder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc
 
 src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc > CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc > CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc -o CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/enclaveRecvDecoder.cc -o CMakeFiles/ServerCore.dir/enclaveRecvDecoder.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.o: ../src/Server/raUtil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/raUtil.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/raUtil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/raUtil.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/raUtil.cc
 
 src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/raUtil.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/raUtil.cc > CMakeFiles/ServerCore.dir/raUtil.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/raUtil.cc > CMakeFiles/ServerCore.dir/raUtil.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/raUtil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/raUtil.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/raUtil.cc -o CMakeFiles/ServerCore.dir/raUtil.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/raUtil.cc -o CMakeFiles/ServerCore.dir/raUtil.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.o: ../src/Server/serverOptThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/serverOptThread.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/serverOptThread.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc
 
 src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/serverOptThread.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc > CMakeFiles/ServerCore.dir/serverOptThread.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc > CMakeFiles/ServerCore.dir/serverOptThread.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/serverOptThread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/serverOptThread.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc -o CMakeFiles/ServerCore.dir/serverOptThread.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/serverOptThread.cc -o CMakeFiles/ServerCore.dir/serverOptThread.cc.s
 
 src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.o: src/Server/CMakeFiles/ServerCore.dir/flags.make
 src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.o: ../src/Server/storageCore.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/storageCore.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/Server/storageCore.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ServerCore.dir/storageCore.cc.o -c /root/shieldreduce-tos/Prototype/src/Server/storageCore.cc
 
 src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ServerCore.dir/storageCore.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/Server/storageCore.cc > CMakeFiles/ServerCore.dir/storageCore.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/Server/storageCore.cc > CMakeFiles/ServerCore.dir/storageCore.cc.i
 
 src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ServerCore.dir/storageCore.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/Server/storageCore.cc -o CMakeFiles/ServerCore.dir/storageCore.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/Server/storageCore.cc -o CMakeFiles/ServerCore.dir/storageCore.cc.s
 
 # Object files for target ServerCore
 ServerCore_OBJECTS = \
@@ -173,9 +173,9 @@ ServerCore_EXTERNAL_OBJECTS =
 ../lib/libServerCore.a: src/Server/CMakeFiles/ServerCore.dir/storageCore.cc.o
 ../lib/libServerCore.a: src/Server/CMakeFiles/ServerCore.dir/build.make
 ../lib/libServerCore.a: src/Server/CMakeFiles/ServerCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library ../../../lib/libServerCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -P CMakeFiles/ServerCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ServerCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library ../../../lib/libServerCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -P CMakeFiles/ServerCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ServerCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/Server/CMakeFiles/ServerCore.dir/build: ../lib/libServerCore.a
@@ -183,10 +183,10 @@ src/Server/CMakeFiles/ServerCore.dir/build: ../lib/libServerCore.a
 .PHONY : src/Server/CMakeFiles/ServerCore.dir/build
 
 src/Server/CMakeFiles/ServerCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -P CMakeFiles/ServerCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/Server && $(CMAKE_COMMAND) -P CMakeFiles/ServerCore.dir/cmake_clean.cmake
 .PHONY : src/Server/CMakeFiles/ServerCore.dir/clean
 
 src/Server/CMakeFiles/ServerCore.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/Server /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server /home/helix/repos/shieldreduce-tos/Prototype/build/src/Server/CMakeFiles/ServerCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/Server /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/Server /root/shieldreduce-tos/Prototype/build/src/Server/CMakeFiles/ServerCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Server/CMakeFiles/ServerCore.dir/depend
 

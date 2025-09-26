@@ -4,8 +4,6 @@
 src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o
  ../include/chunkStructure.h
  ../include/constVar.h
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c
- /home/helix/repos/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h
  /opt/intel/sgxsdk/include/sgx.h
  /opt/intel/sgxsdk/include/sgx_attributes.h
  /opt/intel/sgxsdk/include/sgx_defs.h
@@ -33,3 +31,5 @@ src/Enclave/CMakeFiles/storeEnclave-edlobj.dir/storeEnclave_t.c.o
  /opt/intel/sgxsdk/include/tlibc/sys/cdefs.h
  /opt/intel/sgxsdk/include/tlibc/sys/stdint.h
  /opt/intel/sgxsdk/include/tlibc/wchar.h
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.c
+ /root/shieldreduce-tos/Prototype/build/src/Enclave/storeEnclave_t.h

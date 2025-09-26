@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/helix/repos/shieldreduce-tos/Prototype
+CMAKE_SOURCE_DIR = /root/shieldreduce-tos/Prototype
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/helix/repos/shieldreduce-tos/Prototype/build
+CMAKE_BINARY_DIR = /root/shieldreduce-tos/Prototype/build
 
 # Include any dependencies generated for this target.
 include src/IASUtil/CMakeFiles/IASCore.dir/depend.make
@@ -62,120 +62,120 @@ include src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 
 src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o: ../src/IASUtil/agent_wget.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/agent_wget.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/agent_wget.cc.o -c /root/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc
 
 src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IASCore.dir/agent_wget.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc > CMakeFiles/IASCore.dir/agent_wget.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc > CMakeFiles/IASCore.dir/agent_wget.cc.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/agent_wget.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IASCore.dir/agent_wget.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc -o CMakeFiles/IASCore.dir/agent_wget.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/agent_wget.cc -o CMakeFiles/IASCore.dir/agent_wget.cc.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o: ../src/IASUtil/base64.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/base64.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/base64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/base64.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/base64.c.o   -c /root/shieldreduce-tos/Prototype/src/IASUtil/base64.c
 
 src/IASUtil/CMakeFiles/IASCore.dir/base64.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/IASCore.dir/base64.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/base64.c > CMakeFiles/IASCore.dir/base64.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/base64.c > CMakeFiles/IASCore.dir/base64.c.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/base64.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/IASCore.dir/base64.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/base64.c -o CMakeFiles/IASCore.dir/base64.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/base64.c -o CMakeFiles/IASCore.dir/base64.c.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o: ../src/IASUtil/byteorder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/byteorder.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/byteorder.c.o   -c /root/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c
 
 src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/IASCore.dir/byteorder.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c > CMakeFiles/IASCore.dir/byteorder.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c > CMakeFiles/IASCore.dir/byteorder.c.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/byteorder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/IASCore.dir/byteorder.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c -o CMakeFiles/IASCore.dir/byteorder.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/byteorder.c -o CMakeFiles/IASCore.dir/byteorder.c.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o: ../src/IASUtil/common.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/common.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/common.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/common.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/common.cc.o -c /root/shieldreduce-tos/Prototype/src/IASUtil/common.cc
 
 src/IASUtil/CMakeFiles/IASCore.dir/common.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IASCore.dir/common.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/common.cc > CMakeFiles/IASCore.dir/common.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/common.cc > CMakeFiles/IASCore.dir/common.cc.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/common.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IASCore.dir/common.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/common.cc -o CMakeFiles/IASCore.dir/common.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/common.cc -o CMakeFiles/IASCore.dir/common.cc.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o: ../src/IASUtil/crypto.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/crypto.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/crypto.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/crypto.c.o   -c /root/shieldreduce-tos/Prototype/src/IASUtil/crypto.c
 
 src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/IASCore.dir/crypto.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/crypto.c > CMakeFiles/IASCore.dir/crypto.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/crypto.c > CMakeFiles/IASCore.dir/crypto.c.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/crypto.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/IASCore.dir/crypto.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/crypto.c -o CMakeFiles/IASCore.dir/crypto.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/crypto.c -o CMakeFiles/IASCore.dir/crypto.c.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o: ../src/IASUtil/hexutil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/hexutil.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/hexutil.c.o   -c /root/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c
 
 src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/IASCore.dir/hexutil.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c > CMakeFiles/IASCore.dir/hexutil.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c > CMakeFiles/IASCore.dir/hexutil.c.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/hexutil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/IASCore.dir/hexutil.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c -o CMakeFiles/IASCore.dir/hexutil.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/hexutil.c -o CMakeFiles/IASCore.dir/hexutil.c.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o: ../src/IASUtil/iasrequest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/iasrequest.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/iasrequest.cc.o -c /root/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc
 
 src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IASCore.dir/iasrequest.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc > CMakeFiles/IASCore.dir/iasrequest.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc > CMakeFiles/IASCore.dir/iasrequest.cc.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/iasrequest.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IASCore.dir/iasrequest.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc -o CMakeFiles/IASCore.dir/iasrequest.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/iasrequest.cc -o CMakeFiles/IASCore.dir/iasrequest.cc.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o: ../src/IASUtil/json.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/json.cc.o -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/json.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/IASUtil/CMakeFiles/IASCore.dir/json.cc.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IASCore.dir/json.cc.o -c /root/shieldreduce-tos/Prototype/src/IASUtil/json.cc
 
 src/IASUtil/CMakeFiles/IASCore.dir/json.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IASCore.dir/json.cc.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/json.cc > CMakeFiles/IASCore.dir/json.cc.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/json.cc > CMakeFiles/IASCore.dir/json.cc.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/json.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IASCore.dir/json.cc.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/json.cc -o CMakeFiles/IASCore.dir/json.cc.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/json.cc -o CMakeFiles/IASCore.dir/json.cc.s
 
 src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o: src/IASUtil/CMakeFiles/IASCore.dir/flags.make
 src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o: ../src/IASUtil/logfile.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/logfile.c.o   -c /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/logfile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/IASCore.dir/logfile.c.o   -c /root/shieldreduce-tos/Prototype/src/IASUtil/logfile.c
 
 src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/IASCore.dir/logfile.c.i"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/logfile.c > CMakeFiles/IASCore.dir/logfile.c.i
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/shieldreduce-tos/Prototype/src/IASUtil/logfile.c > CMakeFiles/IASCore.dir/logfile.c.i
 
 src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/IASCore.dir/logfile.c.s"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil/logfile.c -o CMakeFiles/IASCore.dir/logfile.c.s
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/shieldreduce-tos/Prototype/src/IASUtil/logfile.c -o CMakeFiles/IASCore.dir/logfile.c.s
 
 # Object files for target IASCore
 IASCore_OBJECTS = \
@@ -203,9 +203,9 @@ IASCore_EXTERNAL_OBJECTS =
 ../lib/libIASCore.a: src/IASUtil/CMakeFiles/IASCore.dir/logfile.c.o
 ../lib/libIASCore.a: src/IASUtil/CMakeFiles/IASCore.dir/build.make
 ../lib/libIASCore.a: src/IASUtil/CMakeFiles/IASCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/helix/repos/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library ../../../lib/libIASCore.a"
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -P CMakeFiles/IASCore.dir/cmake_clean_target.cmake
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IASCore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/shieldreduce-tos/Prototype/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library ../../../lib/libIASCore.a"
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -P CMakeFiles/IASCore.dir/cmake_clean_target.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IASCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/IASUtil/CMakeFiles/IASCore.dir/build: ../lib/libIASCore.a
@@ -213,10 +213,10 @@ src/IASUtil/CMakeFiles/IASCore.dir/build: ../lib/libIASCore.a
 .PHONY : src/IASUtil/CMakeFiles/IASCore.dir/build
 
 src/IASUtil/CMakeFiles/IASCore.dir/clean:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -P CMakeFiles/IASCore.dir/cmake_clean.cmake
+	cd /root/shieldreduce-tos/Prototype/build/src/IASUtil && $(CMAKE_COMMAND) -P CMakeFiles/IASCore.dir/cmake_clean.cmake
 .PHONY : src/IASUtil/CMakeFiles/IASCore.dir/clean
 
 src/IASUtil/CMakeFiles/IASCore.dir/depend:
-	cd /home/helix/repos/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/helix/repos/shieldreduce-tos/Prototype /home/helix/repos/shieldreduce-tos/Prototype/src/IASUtil /home/helix/repos/shieldreduce-tos/Prototype/build /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil /home/helix/repos/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/shieldreduce-tos/Prototype/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/shieldreduce-tos/Prototype /root/shieldreduce-tos/Prototype/src/IASUtil /root/shieldreduce-tos/Prototype/build /root/shieldreduce-tos/Prototype/build/src/IASUtil /root/shieldreduce-tos/Prototype/build/src/IASUtil/CMakeFiles/IASCore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/IASUtil/CMakeFiles/IASCore.dir/depend
 

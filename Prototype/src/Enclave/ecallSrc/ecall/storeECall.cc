@@ -422,6 +422,9 @@ void Ecall_GetEnclaveInfo(EnclaveInfo_t *info)
 
 void Ecall_GetOfflineInfo(EnclaveInfo_t *info)
 {
+    double rawOcallTime = enclaveBaseObj_->offlinebackOBj_->_testOcallTimeOffline /
+                          static_cast<double>(enclaveBaseObj_->offlinebackOBj_->_testOcallCountOffline);
+    double MS_TO_USEC = 1000.0;
     info->offlineCompress_size = enclaveBaseObj_->offlinebackOBj_->_offlineCompress_size;
     info->offlineDeletenum = enclaveBaseObj_->offlinebackOBj_->_offlineDeletenum;
     info->offlineDeltanum = enclaveBaseObj_->offlinebackOBj_->_offlineDeltanum;
@@ -435,6 +438,13 @@ void Ecall_GetOfflineInfo(EnclaveInfo_t *info)
     info->lz4SaveSize = enclaveBaseObj_->offlinebackOBj_->_lz4SaveSize;
     info->DeltaSaveSize = enclaveBaseObj_->offlinebackOBj_->_DeltaSaveSize;
     info->offline_Ocall = enclaveBaseObj_->offlinebackOBj_->_offline_Ocall;
+    info->selectOptimalBaseTime = (enclaveBaseObj_->offlinebackOBj_->selectOptimalBaseTime -
+                                   (enclaveBaseObj_->offlinebackOBj_->selectOptimalBaseCount * rawOcallTime)) /
+                                  MS_TO_USEC / MS_TO_USEC;
+    enclaveBaseObj_->offlinebackOBj_->selectOptimalBaseTime = 0;
+    enclaveBaseObj_->offlinebackOBj_->selectOptimalBaseCount = 0;
+    enclaveBaseObj_->offlinebackOBj_->_testOcallTimeOffline = 0;
+    enclaveBaseObj_->offlinebackOBj_->_testOcallCountOffline = 0;
 }
 
 void Ecall_UpdateOnlineInfo()
