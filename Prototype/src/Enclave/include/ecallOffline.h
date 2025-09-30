@@ -86,6 +86,7 @@ private:
 
     // for extension
     vector<string> candidateGroup;
+    uint64_t failedNewDeltaCnt = 0;
 
 public:
     unordered_map<string, string> local_basemap;

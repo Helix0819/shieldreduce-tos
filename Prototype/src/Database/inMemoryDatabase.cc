@@ -322,10 +322,10 @@ bool InMemoryDatabase::InsertSF(const char *key, size_t keySize, const char *buf
         }
         else if (updateflag == 2)
         {
-            // if (sfObj_[i].find(keyStr) == sfObj_[i].end())
-            // {
-            //     tool::Logging("InMemoryDatabase", "error: cannot find the key when update the sf index\n");
-            // }
+            if (sfObj_[i].find(keyStr) == sfObj_[i].end())
+            {
+                tool::Logging("InMemoryDatabase", "error: cannot find the key when update the sf index\n");
+            }
             sfObj_[i].erase(keyStr);
         }
         // sfObj_[i][keyStr].push_back(valueStr);
@@ -381,7 +381,7 @@ void InMemoryDatabase::DeleteDeltaIndex(const std::string &key)
     }
     else
     {
-        tool::Logging("InMemoryDatabase", "no old delta\n");
+        // tool::Logging("InMemoryDatabase", "no old delta\n");
     }
 }
 /**

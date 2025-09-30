@@ -133,6 +133,7 @@ public:
     RecipeEntry_t *tmpRecipe_;
     uint8_t *oldBasechunkSf_;
     uint8_t *newBasechunkSf_;
+    uint8_t *tmpBasechunkSf_;
     uint8_t *offline_encOldChunkBuffer_;
     uint8_t *offline_encNewChunkBuffer_;
     uint8_t *offline_plainOldUniqueBuffer_;

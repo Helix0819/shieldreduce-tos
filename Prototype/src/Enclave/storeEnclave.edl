@@ -140,6 +140,8 @@ enclave {
         void Ocall_GetMergePair([user_check] void* outClient, [in, out, size=7] uint8_t* containerID, [in, out] uint32_t* size);
 
         void Ocall_MergeContent([user_check] void* outClient, [in, size=currentSize] uint8_t* containerBody, size_t currentSize);
+
+        void Ocall_CopyDeltaIndex([user_check] void* outClient);
     };
 
 

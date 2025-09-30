@@ -2024,10 +2024,11 @@ void EcallFreqIndex::ProcessOffline(SendMsgBuffer_t *recvChunkBuf, UpOutSGX_t *u
     offlinebackOBj_->_deltaDataSize = _deltaDataSize;
     offlinebackOBj_->_DeltaSaveSize = _DeltaSaveSize;
     offlinebackOBj_->_lz4SaveSize = _lz4SaveSize;
-    // if (++backnum < 78)
-    // {
-    //     return;
-    // }
+    if (++backnum < 20)
+    {
+        return;
+    }
+    Ocall_CopyDeltaIndex(upOutSGX->outClient);
     Enclave::Logging(myName_.c_str(), "basechunk num is %d and delta chunk num is%d\n", _baseChunkNum, _deltaChunkNum);
     // init
     offlinebackOBj_->Init();
@@ -2035,7 +2036,7 @@ void EcallFreqIndex::ProcessOffline(SendMsgBuffer_t *recvChunkBuf, UpOutSGX_t *u
     if (Offline_Flag == true)
     {
         // offlinebackOBj_->Easy_update(upOutSGX, cryptoObj_);
-        offlinebackOBj_->ProcessOfflineWithMode(upOutSGX, cryptoObj_, 0);
+        offlinebackOBj_->ProcessOfflineWithMode(upOutSGX, cryptoObj_, 1);
     }
     else
     {

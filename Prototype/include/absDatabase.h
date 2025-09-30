@@ -39,7 +39,7 @@ public:
     uint64_t fpindexsize;
     uint64_t sfindexsize;
     // for extension
-    unordered_map<string, vector<string>> extensionMap;
+    map<string, vector<string>> extensionMap;
 
     /**
      * @brief Construct a new Abs Database object

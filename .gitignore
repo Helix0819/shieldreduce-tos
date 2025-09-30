@@ -1,0 +1,47 @@
+# 编译生成文件
+Prototype/build/
+Prototype/bin/
+Prototype/obj/
+Prototype/*.o
+Prototype/*.so
+Prototype/*.a
+Prototype/*.out
+Prototype/*.exe
+
+# 日志文件
+Prototype/*.log
+*.tmp
+
+# 临时文件
+*~
+*.swp
+*.swo
+.DS_Store
+
+# VSCode 配置
+.vscode/
+
+# CMake 生成文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# 忽略密钥和凭证
+*.pem
+*.key
+*.crt
+
+# 忽略数据库和数据文件
+*.db
+*.sqlite
+*.sqlite3
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 其他
+*.bak
+*.old
+*.orig

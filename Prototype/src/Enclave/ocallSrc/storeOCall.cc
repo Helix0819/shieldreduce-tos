@@ -763,14 +763,14 @@ void Ocall_UpdateDeltaIndex(void *outClient, size_t chunkNum)
         // indexStoreObj_->extensionMap[baseChunkHash].push_back(deltaChunkHash);
     }
 
-    offset = 0;
-    tmpBuffer = outClientPtr->_process_buffer;
-    for (int i = 0; i < chunkNum; ++i)
-    {
-        baseChunkHash.assign((char *)tmpBuffer + offset, CHUNK_HASH_SIZE);
-        offset += (2 * CHUNK_HASH_SIZE);
-        indexStoreObj_->extensionMap[baseChunkHash] = indexStoreObj_->delta_index[baseChunkHash];
-    }
+    // offset = 0;
+    // tmpBuffer = outClientPtr->_process_buffer;
+    // for (int i = 0; i < chunkNum; ++i)
+    // {
+    //     baseChunkHash.assign((char *)tmpBuffer + offset, CHUNK_HASH_SIZE);
+    //     offset += (2 * CHUNK_HASH_SIZE);
+    //     indexStoreObj_->extensionMap[baseChunkHash] = indexStoreObj_->delta_index[baseChunkHash];
+    // }
     // tool::Logging("DEBUG", "finish insert delta index, delta index size is : %lu\n", indexStoreObj_->delta_index.size());
 
 #if (MULTI_CLIENT == 1)
@@ -1053,7 +1053,7 @@ void Ocall_GetAllDeltaIndex(void *outClient)
     uint8_t *buffer = outClientPtr->_test_buffer;
     size_t offset = 0;
     uint32_t written = 0;                   // 本批写入的组数（每组：baseFP + count + deltaFP 列表）
-    const uint32_t DELTA_BATCH_SIZE = 2000; // 每批最多写入的组数
+    const uint32_t DELTA_BATCH_SIZE = 1000; // 每批最多写入的组数
 
     static auto delta_iter = indexStoreObj_->extensionMap.begin();
     static bool iter_initialized = false;
@@ -1719,5 +1719,16 @@ void Ocall_MergeContent(void *outClient, uint8_t *containerBody, size_t currentS
 
     outClientPtr->baseMergePair.erase(outClientPtr->baseMergePair.begin());
 
+    return;
+}
+
+void Ocall_CopyDeltaIndex(void *outClient)
+{
+    ClientVar *outClientPtr = (ClientVar *)outClient;
+    for (auto &item : indexStoreObj_->delta_index)
+    {
+        indexStoreObj_->extensionMap[item.first] = item.second;
+    }
+    tool::Logging("OCALL", "CopyDeltaIndex: copy delta_index, size=%zu\n", indexStoreObj_->delta_index.size());
     return;
 }

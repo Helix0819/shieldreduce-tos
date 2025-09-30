@@ -123,6 +123,7 @@ void EnclaveClient::InitUploadBuffer()
     tmpRecipe_ = (RecipeEntry_t *)malloc(sizeof(RecipeEntry_t));
     oldBasechunkSf_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
     newBasechunkSf_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
+    tmpBasechunkSf_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
 
     offline_plainOldUniqueBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
 
@@ -183,6 +184,7 @@ void EnclaveClient::DestroyUploadBuffer()
     free(deltaRecipe_);
     free(oldBasechunkSf_);
     free(newBasechunkSf_);
+    free(tmpBasechunkSf_);
     free(offline_encOldChunkBuffer_);
     free(offline_encNewChunkBuffer_);
     free(offline_plainNewDeltaChunkBuffer_);

@@ -352,4 +352,6 @@ void Ocall_GetMergePair(void *outClient, uint8_t *containerID, uint32_t *size);
 
 void Ocall_MergeContent(void *outClient, uint8_t *containerBody, size_t currentSize);
 
+void Ocall_CopyDeltaIndex(void *outClient);
+
 #endif //  ENC_OCALL_H!
