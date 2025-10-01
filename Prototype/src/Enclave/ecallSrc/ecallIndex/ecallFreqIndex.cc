@@ -2024,7 +2024,7 @@ void EcallFreqIndex::ProcessOffline(SendMsgBuffer_t *recvChunkBuf, UpOutSGX_t *u
     offlinebackOBj_->_deltaDataSize = _deltaDataSize;
     offlinebackOBj_->_DeltaSaveSize = _DeltaSaveSize;
     offlinebackOBj_->_lz4SaveSize = _lz4SaveSize;
-    if (++backnum < 20)
+    if (++backnum < 78)
     {
         return;
     }

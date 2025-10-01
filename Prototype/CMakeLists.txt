@@ -28,8 +28,8 @@ endif()
 set(CMAKE_C_FLAGS_DEBUG "-Wall -g -ggdb3 ${MY_OPTION}") 
 # set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -fsanitize=address -fno-omit-frame-pointer -g -ggdb3") 
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -g -ggdb ${MY_OPTION}") # for gbd
-set(CMAKE_C_FLAGS_RELEASE "-O3 -Wall ${MY_OPTION}") 
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall ${MY_OPTION}") 
+set(CMAKE_C_FLAGS_RELEASE "-O1 -Wall ${MY_OPTION}") 
+set(CMAKE_CXX_FLAGS_RELEASE "-O1 -Wall ${MY_OPTION}") 
 
 SET (CMAKE_C_COMPILER "/usr/bin/clang")
 SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")

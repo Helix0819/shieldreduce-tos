@@ -3053,6 +3053,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
     vector<uint64_t> features;
     ExtractChunkFeatures(old_chunk, old_base_ref_size, features);
     extension_chunkFeatures_[optimalBaseFP] = features;
+    Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
 
     for (size_t i = 1; i < candidateGroup.size(); i++)
     {
@@ -3077,6 +3078,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         size_t old_unique_size;
         old_unique_chunk = ed3_decode_buffer(delta_content_decrypt, delta_size, old_chunk, old_base_ref_size, offline_tmpUniqueBuffer_, &old_unique_size);
         // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: LoadChunkData ret data=%p size=%zu for candidate[%zu]\n", (void *)chunkData, chunkSize, i);
+        Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load delta chunk done\n");
         if (old_unique_chunk && old_unique_size > 0)
         {
             features.clear();
@@ -3110,8 +3112,8 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
             //                  i, maxScore);
         }
     }
-    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 选择完成, optimalBaseFP=%02x, maxScore=%zu\n",
-    //                  (uint8_t)optimalBaseFP[0], maxScore);
+    Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 选择完成, optimalBaseFP=%02x, maxScore=%zu\n",
+                     (uint8_t)optimalBaseFP[0], maxScore);
     return optimalBaseFP;
 }
 
@@ -3269,7 +3271,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
     OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
 
-    // Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
+    Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
     // get old base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)oldBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
@@ -3300,7 +3302,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     {
         old_chunk = old_base_content_decompression;
     }
-    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
+    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
     // get optimal new base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)optimalBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
@@ -3322,7 +3324,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     uint8_t *optimal_chunk;
     size_t optimal_size;
     optimal_chunk = ed3_decode_buffer(optimalBaseDataDecrypt, new_recipe_->length, old_chunk, old_base_ref_size, offline_optimalChunkBuffer_, &optimal_size);
-    // Enclave::Logging(myName_.c_str(), "Extension: 新基础块加载成功\n");
+    Enclave::Logging(myName_.c_str(), "Extension: 新基础块加载成功\n");
     // 1. 获取最优基础块的数据内容
     // size_t optimalBaseSize;
     // size_t onlineBaseSize;
@@ -3333,13 +3335,14 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     //     return;
     // }
     // update superfeature index
-    memcpy(optimalBaseSFBuffer_, optimalBaseSF, 3 * CHUNK_HASH_SIZE);
-    memcpy((uint8_t *)&outEntry->superfeature, optimalBaseSFBuffer_, 3 * CHUNK_HASH_SIZE);
-    Ocall_OFFline_updateIndex(upOutSGX->outClient, 1);
-    memcpy(oldBaseChunkSFBuffer_, oldBaseSF, 3 * CHUNK_HASH_SIZE);
-    memcpy((uint8_t *)&outEntry->superfeature, oldBaseChunkSFBuffer_, 3 * CHUNK_HASH_SIZE);
-    Ocall_OFFline_updateIndex(upOutSGX->outClient, 0);
-    _extension_Ocall += 2;
+    // memcpy(optimalBaseSFBuffer_, optimalBaseSF, 3 * CHUNK_HASH_SIZE);
+    // memcpy((uint8_t *)&outEntry->superfeature, optimalBaseSFBuffer_, 3 * CHUNK_HASH_SIZE);
+    // Ocall_OFFline_updateIndex(upOutSGX->outClient, 1);
+    // memcpy(oldBaseChunkSFBuffer_, oldBaseSF, 3 * CHUNK_HASH_SIZE);
+    // memcpy((uint8_t *)&outEntry->superfeature, oldBaseChunkSFBuffer_, 3 * CHUNK_HASH_SIZE);
+    // Ocall_OFFline_updateIndex(upOutSGX->outClient, 0);
+    // _extension_Ocall += 2;
+    // Enclave::Logging(myName_.c_str(), "update sf index succeed\n");
     // Enclave::Logging(myName_.c_str(), "Extension: 最优基础块加载成功, size=%zu, flag=%u, onlineSize=%zu\n",
     //                  optimalBaseSize, (unsigned)optimalBaseFlag, onlineBaseSize);
 
@@ -3436,7 +3439,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             }
         }
     }
-    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
+    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
     // 4.2 最后处理oldBaseFP（如果它不是最优基础块）
     if (oldBaseFP != optimalBaseFP)
     {
@@ -3466,7 +3469,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
         }
     }
-    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成, total new deltas=%zu\n", newDeltaFPs.size());
+    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成, total new deltas=%zu\n", newDeltaFPs.size());
     // lz4 compress optimal basechunk
     uint32_t onlinesize = new_recipe_->length;
     uint8_t *compressdata = offline_lz4CompressBuffer_;
