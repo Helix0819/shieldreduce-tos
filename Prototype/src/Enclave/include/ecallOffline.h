@@ -534,17 +534,8 @@ public:
     uint64_t _extensionSavedSize_ = 0;       // Extension优化节省的存储空间
     uint64_t _extension_Ocall = 0;           // Extension过程中的Ocall调用次数
 
-    // Extension 专用缓冲区（独立分配，避免冲突）
-    uint8_t *extension_workBuffer_;        // Extension工作缓冲区
-    uint8_t *extension_DecryptBuffer_;     // 特征提取缓冲区
-    uint8_t *extension_reconstructBuffer_; // 数据重构缓冲区
-    uint8_t *extension_deltaEncodeBuffer_; // 增量编码专用缓冲区
-    uint8_t *extension_baseLoadBuffer_;    // 基础块加载专用缓冲区
-    uint8_t *extension_tempDataBuffer_;    // 临时数据保存缓冲区
-    uint8_t *extension_loadChunkBuffer_;
-    uint8_t *extension_EncryptBuffer_;
-
     uint8_t *optimalBaseSFBuffer_;
     uint8_t *oldBaseChunkSFBuffer_;
+    vector<uint64_t> features;
 };
 #endif

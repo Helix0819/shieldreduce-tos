@@ -14,7 +14,7 @@ OFFLineBackward::OFFLineBackward()
     tmpOldContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     tmpNewContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     tmpDeltaContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
-    tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
+    // tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     // tmpColdContainer = (uint8_t*)malloc(MAX_CONTAINER_SIZE);
 }
 
@@ -23,7 +23,7 @@ OFFLineBackward::~OFFLineBackward()
     free(tmpOldContainer);
     free(tmpNewContainer);
     free(tmpDeltaContainer);
-    free(tmpUseContainer);
+    // free(tmpUseContainer);
     // free(tmpColdContainer);
 }
 
@@ -2841,8 +2841,6 @@ int OFFLineBackward::EDeltaDecode(uint8_t *deltaBuf, uint32_t deltaSize, uint8_t
 }
 
 // ==================== Extension 离线优化功能实现 ====================
-
-/** Extension离线处理主函数：遍历所有数据块组并优化增量压缩效率 */
 void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 {
     Enclave::Logging(myName_.c_str(), "===== 开始Extension离线处理 =====\n");
@@ -3050,7 +3048,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         old_chunk = old_base_content_decompression;
     }
     // compute basechunk scores
-    vector<uint64_t> features;
+    features.clear();
     ExtractChunkFeatures(old_chunk, old_base_ref_size, features);
     extension_chunkFeatures_[optimalBaseFP] = features;
     Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
@@ -3350,7 +3348,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     // delta_map.erase(oldBaseFP);
 
     // 3. 创建新的增量块列表
-    vector<string> newDeltaFPs;
+    // vector<string> newDeltaFPs;
 
     // 4. 分两步处理：先处理依赖于oldBaseFP的delta块，最后处理oldBaseFP本身
     // 4.1 首先处理所有delta块（除了oldBaseFP和optimalBaseFP）
@@ -3411,7 +3409,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
                                           Enclave::indexQueryKey_, outRecipe);
 
                     bool status = UpdateIndexStore(chunkFP, (char *)outRecipe, sizeof(RecipeEntry_t));
-                    newDeltaFPs.push_back(chunkFP);
+                    // newDeltaFPs.push_back(chunkFP);
                     // UpdateChunkWithNewDelta(chunkFP, newDeltaData, newDeltaSize, optimalBaseFP, upOutSGX, cryptoObj_, 0);
 
                     // // 更新系统统计变量（参考Backward算法的统计方式）
@@ -3439,7 +3437,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             }
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
+    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成.\n");
     // 4.2 最后处理oldBaseFP（如果它不是最优基础块）
     if (oldBaseFP != optimalBaseFP)
     {
@@ -3461,7 +3459,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             cryptoObj_->AESCBCEnc(cipherCtx, (uint8_t *)old_recipe_, sizeof(RecipeEntry_t),
                                   Enclave::indexQueryKey_, outRecipe);
             bool status = UpdateIndexStore(oldBaseFP, (char *)outRecipe, sizeof(RecipeEntry_t));
-            newDeltaFPs.push_back(oldBaseFP);
+            // newDeltaFPs.push_back(oldBaseFP);
 
             _offlineCompress_size -= onlineSize;     // 减去原始压缩大小
             _offlineCurrBackup_size -= onlineSize;   // 减去原始备份
@@ -3469,7 +3467,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成, total new deltas=%zu\n", newDeltaFPs.size());
+    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
     // lz4 compress optimal basechunk
     uint32_t onlinesize = new_recipe_->length;
     uint8_t *compressdata = offline_lz4CompressBuffer_;
@@ -3529,6 +3527,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     //     // Enclave::Logging(myName_.c_str(), "Extension: 建立新映射关系，基础块 [%02x] -> %zu 个增量块\n",
     //     //                 (uint8_t)optimalBaseFP[0], newDeltaFPs.size());
     // }
+    return;
 }
 /**
  * @brief 初始化Extension处理环境
@@ -3536,6 +3535,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
  */
 void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
 {
+    Enclave::Logging(myName_.c_str(), "Init Start\n");
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
@@ -3579,28 +3579,7 @@ void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
     optimalBaseSFBuffer_ = sgxClient->newBasechunkSf_;
     oldBaseChunkSFBuffer_ = sgxClient->oldBasechunkSf_;
     offline_lz4CompressBuffer_ = sgxClient->offline_lz4CompressBuffer_;
-
-    // 为Extension分配专用的独立缓冲区，避免与其他函数的buffer冲突
-    extension_workBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_EncryptBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_DecryptBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_reconstructBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_deltaEncodeBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_baseLoadBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_tempDataBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-
-    if (!extension_workBuffer_ || !extension_DecryptBuffer_ || !extension_reconstructBuffer_ ||
-        !extension_deltaEncodeBuffer_ || !extension_baseLoadBuffer_ || !extension_tempDataBuffer_)
-    {
-        Enclave::Logging("ERROR", "Extension: 无法分配专用缓冲区\n");
-    }
-
-    Enclave::Logging("DEBUG", "Extension环境初始化完成，已分配专用缓冲区\n");
-    Enclave::Logging(myName_.c_str(),
-                     "InitExtension: buffers work=%p feature=%p recon=%p deltaEnc=%p baseLoad=%p temp=%p\n",
-                     (void *)extension_workBuffer_, (void *)extension_DecryptBuffer_,
-                     (void *)extension_reconstructBuffer_, (void *)extension_deltaEncodeBuffer_,
-                     (void *)extension_baseLoadBuffer_, (void *)extension_tempDataBuffer_);
+    Enclave::Logging(myName_.c_str(), "Init Done\n");
 }
 
 /**
@@ -3612,47 +3591,9 @@ void OFFLineBackward::CleanExtension()
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
-    pendingIndexUpdates_.clear(); // 清空缓存的索引更新
+    pendingIndexUpdates_.clear();
 
-    // 释放Extension专用缓冲区
-    if (extension_workBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free work=%p\n", (void *)extension_workBuffer_);
-        free(extension_workBuffer_);
-        extension_workBuffer_ = nullptr;
-    }
-    if (extension_DecryptBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free feature=%p\n", (void *)extension_DecryptBuffer_);
-        free(extension_DecryptBuffer_);
-        extension_DecryptBuffer_ = nullptr;
-    }
-    if (extension_reconstructBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free recon=%p\n", (void *)extension_reconstructBuffer_);
-        free(extension_reconstructBuffer_);
-        extension_reconstructBuffer_ = nullptr;
-    }
-    if (extension_deltaEncodeBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free deltaEnc=%p\n", (void *)extension_deltaEncodeBuffer_);
-        free(extension_deltaEncodeBuffer_);
-        extension_deltaEncodeBuffer_ = nullptr;
-    }
-    if (extension_baseLoadBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free baseLoad=%p\n", (void *)extension_baseLoadBuffer_);
-        free(extension_baseLoadBuffer_);
-        extension_baseLoadBuffer_ = nullptr;
-    }
-    if (extension_tempDataBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free temp=%p\n", (void *)extension_tempDataBuffer_);
-        free(extension_tempDataBuffer_);
-        extension_tempDataBuffer_ = nullptr;
-    }
-
-    Enclave::Logging("DEBUG", "Extension环境清理完成，已释放专用缓冲区\n");
+    Enclave::Logging(myName_.c_str(), "Extension环境清理完成，已释放专用缓冲区\n");
 }
 
 /**
