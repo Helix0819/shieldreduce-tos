@@ -15,6 +15,7 @@ OFFLineBackward::OFFLineBackward()
     tmpNewContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     tmpDeltaContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     // tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
+    // tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     // tmpColdContainer = (uint8_t*)malloc(MAX_CONTAINER_SIZE);
 }
 
@@ -2890,8 +2891,6 @@ int OFFLineBackward::EDeltaDecode(uint8_t *deltaBuf, uint32_t deltaSize, uint8_t
 }
 
 // ==================== Extension 离线优化功能实现 ====================
-
-/** Extension离线处理主函数：遍历所有数据块组并优化增量压缩效率 */
 void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 {
     Enclave::Logging(myName_.c_str(), "===== 开始Extension离线处理 =====\n");
@@ -3487,8 +3486,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             }
         }
     }
-    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
-    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成");
+    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成.\n");
     // 4.2 最后处理oldBaseFP（如果它不是最优基础块）
     if (oldBaseFP != optimalBaseFP)
     {
@@ -3518,7 +3516,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
         }
     }
-    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
+    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
     // lz4 compress optimal basechunk
     uint32_t onlinesize = new_recipe_->length;
     uint8_t *compressdata = offline_lz4CompressBuffer_;
@@ -3586,6 +3584,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
  */
 void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
 {
+    Enclave::Logging(myName_.c_str(), "Init Start\n");
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
@@ -3629,9 +3628,7 @@ void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
     optimalBaseSFBuffer_ = sgxClient->newBasechunkSf_;
     oldBaseChunkSFBuffer_ = sgxClient->oldBasechunkSf_;
     offline_lz4CompressBuffer_ = sgxClient->offline_lz4CompressBuffer_;
-
-    Enclave::Logging("DEBUG", "Extension环境初始化完成，已分配专用缓冲区\n");
-    return;
+    Enclave::Logging(myName_.c_str(), "Init Done\n");
 }
 
 /**
@@ -3643,9 +3640,9 @@ void OFFLineBackward::CleanExtension()
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
-    // pendingIndexUpdates_.clear(); // 清空缓存的索引更新
+    pendingIndexUpdates_.clear();
 
-    Enclave::Logging("DEBUG", "Extension环境清理完成，已释放专用缓冲区\n");
+    Enclave::Logging(myName_.c_str(), "Extension环境清理完成，已释放专用缓冲区\n");
 }
 
 /**
