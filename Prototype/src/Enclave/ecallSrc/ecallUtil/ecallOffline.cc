@@ -14,7 +14,7 @@ OFFLineBackward::OFFLineBackward()
     tmpOldContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     tmpNewContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     tmpDeltaContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
-    tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
+    // tmpUseContainer = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
     // tmpColdContainer = (uint8_t*)malloc(MAX_CONTAINER_SIZE);
 }
 
@@ -23,7 +23,7 @@ OFFLineBackward::~OFFLineBackward()
     free(tmpOldContainer);
     free(tmpNewContainer);
     free(tmpDeltaContainer);
-    free(tmpUseContainer);
+    // free(tmpUseContainer);
     // free(tmpColdContainer);
 }
 
@@ -1327,6 +1327,13 @@ uint8_t *OFFLineBackward::GetChunk_SF(uint8_t *tmpcontainer, RecipeEntry_t *tmpr
     tmpContainerStr.assign((char *)tmprecipe->containerName, CONTAINER_ID_LENGTH);
     // tmpchunkSF = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
     tmpchunkSF = offline_deltaSFBuffer_;
+    // Bounds: header + FP + SF(3 hashes)
+    size_t need = (size_t)offset + sizeof(RecipeEntry_t) + CHUNK_HASH_SIZE + (size_t)3 * CHUNK_HASH_SIZE;
+    if (need > MAX_CONTAINER_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_SF: out of bounds (offset=%u, len=%u, need=%zu, max=%u)\n", offset, length, need, MAX_CONTAINER_SIZE);
+        return nullptr;
+    }
     memcpy(tmpchunkSF, tmpcontainer + offset + sizeof(RecipeEntry_t) + CHUNK_HASH_SIZE, 3 * CHUNK_HASH_SIZE);
     return tmpchunkSF;
 }
@@ -1344,6 +1351,13 @@ uint8_t *OFFLineBackward::GetChunk_FP(uint8_t *tmpcontainer, RecipeEntry_t *tmpr
     if (!tmpchunkFP)
     {
         Enclave::Logging("malloc", "tmpchunkFP\n");
+    }
+    // Bounds: header + FP
+    size_t need = (size_t)offset + sizeof(RecipeEntry_t) + CHUNK_HASH_SIZE;
+    if (need > MAX_CONTAINER_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_FP: out of bounds (offset=%u, need=%zu, max=%u)\n", offset, need, MAX_CONTAINER_SIZE);
+        return nullptr;
     }
     memcpy(tmpchunkFP, tmpcontainer + offset + sizeof(RecipeEntry_t), CHUNK_HASH_SIZE);
     return tmpchunkFP;
@@ -1363,7 +1377,15 @@ uint8_t *OFFLineBackward::GetChunk_IV(uint8_t *tmpcontainer, RecipeEntry_t *tmpr
     {
         Enclave::Logging("malloc", "tmpchunkIV\n");
     }
-    memcpy(tmpchunkIV, tmpcontainer + offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE + length, CRYPTO_BLOCK_SIZE);
+    // Bounds: header + 4*hash + content(length) + IV
+    size_t data_off = (size_t)offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE;
+    size_t need_end = data_off + (size_t)length + CRYPTO_BLOCK_SIZE;
+    if (need_end > MAX_CONTAINER_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_IV: out of bounds (offset=%u, len=%u, end=%zu, max=%u)\n", offset, length, need_end, MAX_CONTAINER_SIZE);
+        return nullptr;
+    }
+    memcpy(tmpchunkIV, tmpcontainer + data_off + length, CRYPTO_BLOCK_SIZE);
     return tmpchunkIV;
 }
 
@@ -1383,10 +1405,26 @@ uint8_t *OFFLineBackward::GetChunk_content(uint8_t *tmpcontainer, RecipeEntry_t 
     {
         tmppair = _tmppair;
     }
-    // ?
-    // tmpchunkcontent = (uint8_t *)malloc(MAX_CHUNK_SIZE + 4 * CHUNK_HASH_SIZE + CRYPTO_BLOCK_SIZE);
+    // Bounds checks
+    if (length > MAX_CHUNK_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_content: chunk length %u > MAX_CHUNK_SIZE %u\n", length, (unsigned)MAX_CHUNK_SIZE);
+        return nullptr;
+    }
+    size_t data_off = (size_t)offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE;
+    size_t need_end = data_off + (size_t)length + CRYPTO_BLOCK_SIZE; // include IV tail for pair calc
+    if (need_end > MAX_CONTAINER_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_content: out of bounds (offset=%u, len=%u, end=%zu, max=%u)\n", offset, length, need_end, MAX_CONTAINER_SIZE);
+        return nullptr;
+    }
     tmpchunkcontent = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    memcpy(tmpchunkcontent, tmpcontainer + offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE, length);
+    if (!tmpchunkcontent)
+    {
+        Enclave::Logging("ERROR", "GetChunk_content: malloc failed\n");
+        return nullptr;
+    }
+    memcpy(tmpchunkcontent, tmpcontainer + data_off, length);
     // tool::Logging(myName_.c_str(), "containerid: %s , offset: %d\n",tmpContainerStr.c_str(),offset);
     return tmpchunkcontent;
 }
@@ -1407,11 +1445,22 @@ uint8_t *OFFLineBackward::GetChunk_content_buffer(uint8_t *tmpcontainer, RecipeE
     {
         tmppair = _tmppair;
     }
-    // ?
-    // tmpchunkcontent = (uint8_t *)malloc(MAX_CHUNK_SIZE + 4 * CHUNK_HASH_SIZE + CRYPTO_BLOCK_SIZE);
+    // Bounds checks
+    if (length > MAX_CHUNK_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_content_buffer: chunk length %u > MAX_CHUNK_SIZE %u\n", length, (unsigned)MAX_CHUNK_SIZE);
+        return nullptr;
+    }
+    size_t data_off2 = (size_t)offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE;
+    size_t need_end2 = data_off2 + (size_t)length + CRYPTO_BLOCK_SIZE; // include IV tail for pair calc
+    if (need_end2 > MAX_CONTAINER_SIZE)
+    {
+        Enclave::Logging("ERROR", "GetChunk_content_buffer: out of bounds (offset=%u, len=%u, end=%zu, max=%u)\n", offset, length, need_end2, MAX_CONTAINER_SIZE);
+        return nullptr;
+    }
     // Enclave::Logging("DEBUG", "bb \n");
     tmpchunkcontent = res;
-    memcpy(tmpchunkcontent, tmpcontainer + offset + sizeof(RecipeEntry_t) + 4 * CHUNK_HASH_SIZE, length);
+    memcpy(tmpchunkcontent, tmpcontainer + data_off2, length);
     // Enclave::Logging("DEBUG", "cc \n");
     // tool::Logging(myName_.c_str(), "containerid: %s , offset: %d\n",tmpContainerStr.c_str(),offset);
     return tmpchunkcontent;
@@ -2874,7 +2923,7 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     uint64_t checkSum = 0;
     // 与 outClient->_test_buffer 分配保持一致，防御性检查
     const size_t TEST_BUFFER_BYTES = 200000 * CHUNK_HASH_SIZE;
-    Enclave::Logging(myName_.c_str(), "Extension_update: test_buffer=%p, TEST_BUFFER_BYTES=%zu\n", (void *)buffer, TEST_BUFFER_BYTES);
+    // Enclave::Logging(myName_.c_str(), "Extension_update: test_buffer=%p, TEST_BUFFER_BYTES=%zu\n", (void *)buffer, TEST_BUFFER_BYTES);
     do
     {
         Ocall_GetAllDeltaIndex(upOutSGX->outClient);
@@ -3049,11 +3098,10 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
     {
         old_chunk = old_base_content_decompression;
     }
-    // compute basechunk scores
-    vector<uint64_t> features;
+    features.clear();
     ExtractChunkFeatures(old_chunk, old_base_ref_size, features);
     extension_chunkFeatures_[optimalBaseFP] = features;
-    Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
+    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
 
     for (size_t i = 1; i < candidateGroup.size(); i++)
     {
@@ -3078,7 +3126,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         size_t old_unique_size;
         old_unique_chunk = ed3_decode_buffer(delta_content_decrypt, delta_size, old_chunk, old_base_ref_size, offline_tmpUniqueBuffer_, &old_unique_size);
         // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: LoadChunkData ret data=%p size=%zu for candidate[%zu]\n", (void *)chunkData, chunkSize, i);
-        Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load delta chunk done\n");
+        // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load delta chunk done\n");
         if (old_unique_chunk && old_unique_size > 0)
         {
             features.clear();
@@ -3112,8 +3160,8 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
             //                  i, maxScore);
         }
     }
-    Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 选择完成, optimalBaseFP=%02x, maxScore=%zu\n",
-                     (uint8_t)optimalBaseFP[0], maxScore);
+    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 选择完成, optimalBaseFP=%02x, maxScore=%zu\n",
+    //                  (uint8_t)optimalBaseFP[0], maxScore);
     return optimalBaseFP;
 }
 
@@ -3271,7 +3319,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
     OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
 
-    Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
+    // Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
     // get old base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)oldBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
@@ -3302,7 +3350,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     {
         old_chunk = old_base_content_decompression;
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
+    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
     // get optimal new base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)optimalBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
@@ -3324,7 +3372,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     uint8_t *optimal_chunk;
     size_t optimal_size;
     optimal_chunk = ed3_decode_buffer(optimalBaseDataDecrypt, new_recipe_->length, old_chunk, old_base_ref_size, offline_optimalChunkBuffer_, &optimal_size);
-    Enclave::Logging(myName_.c_str(), "Extension: 新基础块加载成功\n");
+    // Enclave::Logging(myName_.c_str(), "Extension: 新基础块加载成功\n");
     // 1. 获取最优基础块的数据内容
     // size_t optimalBaseSize;
     // size_t onlineBaseSize;
@@ -3350,7 +3398,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     // delta_map.erase(oldBaseFP);
 
     // 3. 创建新的增量块列表
-    vector<string> newDeltaFPs;
+    // vector<string> newDeltaFPs;
 
     // 4. 分两步处理：先处理依赖于oldBaseFP的delta块，最后处理oldBaseFP本身
     // 4.1 首先处理所有delta块（除了oldBaseFP和optimalBaseFP）
@@ -3411,7 +3459,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
                                           Enclave::indexQueryKey_, outRecipe);
 
                     bool status = UpdateIndexStore(chunkFP, (char *)outRecipe, sizeof(RecipeEntry_t));
-                    newDeltaFPs.push_back(chunkFP);
+                    // newDeltaFPs.push_back(chunkFP);
                     // UpdateChunkWithNewDelta(chunkFP, newDeltaData, newDeltaSize, optimalBaseFP, upOutSGX, cryptoObj_, 0);
 
                     // // 更新系统统计变量（参考Backward算法的统计方式）
@@ -3439,7 +3487,8 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             }
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
+    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成, count=%zu\n", newDeltaFPs.size());
+    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成");
     // 4.2 最后处理oldBaseFP（如果它不是最优基础块）
     if (oldBaseFP != optimalBaseFP)
     {
@@ -3461,7 +3510,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             cryptoObj_->AESCBCEnc(cipherCtx, (uint8_t *)old_recipe_, sizeof(RecipeEntry_t),
                                   Enclave::indexQueryKey_, outRecipe);
             bool status = UpdateIndexStore(oldBaseFP, (char *)outRecipe, sizeof(RecipeEntry_t));
-            newDeltaFPs.push_back(oldBaseFP);
+            // newDeltaFPs.push_back(oldBaseFP);
 
             _offlineCompress_size -= onlineSize;     // 减去原始压缩大小
             _offlineCurrBackup_size -= onlineSize;   // 减去原始备份
@@ -3469,7 +3518,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成, total new deltas=%zu\n", newDeltaFPs.size());
+    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
     // lz4 compress optimal basechunk
     uint32_t onlinesize = new_recipe_->length;
     uint8_t *compressdata = offline_lz4CompressBuffer_;
@@ -3529,6 +3578,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     //     // Enclave::Logging(myName_.c_str(), "Extension: 建立新映射关系，基础块 [%02x] -> %zu 个增量块\n",
     //     //                 (uint8_t)optimalBaseFP[0], newDeltaFPs.size());
     // }
+    return;
 }
 /**
  * @brief 初始化Extension处理环境
@@ -3539,7 +3589,7 @@ void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
-    pendingIndexUpdates_.clear(); // 清空缓存的索引更新
+    // pendingIndexUpdates_.clear(); // 清空缓存的索引更新
 
     // 获取sgxClient指针，模仿Easy_update函数的做法
     EnclaveClient *sgxClient = (EnclaveClient *)upOutSGX->sgxClient;
@@ -3580,27 +3630,8 @@ void OFFLineBackward::InitExtension(UpOutSGX_t *upOutSGX)
     oldBaseChunkSFBuffer_ = sgxClient->oldBasechunkSf_;
     offline_lz4CompressBuffer_ = sgxClient->offline_lz4CompressBuffer_;
 
-    // 为Extension分配专用的独立缓冲区，避免与其他函数的buffer冲突
-    extension_workBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_EncryptBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_DecryptBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_reconstructBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_deltaEncodeBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_baseLoadBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-    extension_tempDataBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
-
-    if (!extension_workBuffer_ || !extension_DecryptBuffer_ || !extension_reconstructBuffer_ ||
-        !extension_deltaEncodeBuffer_ || !extension_baseLoadBuffer_ || !extension_tempDataBuffer_)
-    {
-        Enclave::Logging("ERROR", "Extension: 无法分配专用缓冲区\n");
-    }
-
     Enclave::Logging("DEBUG", "Extension环境初始化完成，已分配专用缓冲区\n");
-    Enclave::Logging(myName_.c_str(),
-                     "InitExtension: buffers work=%p feature=%p recon=%p deltaEnc=%p baseLoad=%p temp=%p\n",
-                     (void *)extension_workBuffer_, (void *)extension_DecryptBuffer_,
-                     (void *)extension_reconstructBuffer_, (void *)extension_deltaEncodeBuffer_,
-                     (void *)extension_baseLoadBuffer_, (void *)extension_tempDataBuffer_);
+    return;
 }
 
 /**
@@ -3612,45 +3643,7 @@ void OFFLineBackward::CleanExtension()
     // 清理数据结构
     extension_sampledFeatureCounts_.clear();
     extension_chunkFeatures_.clear();
-    pendingIndexUpdates_.clear(); // 清空缓存的索引更新
-
-    // 释放Extension专用缓冲区
-    if (extension_workBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free work=%p\n", (void *)extension_workBuffer_);
-        free(extension_workBuffer_);
-        extension_workBuffer_ = nullptr;
-    }
-    if (extension_DecryptBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free feature=%p\n", (void *)extension_DecryptBuffer_);
-        free(extension_DecryptBuffer_);
-        extension_DecryptBuffer_ = nullptr;
-    }
-    if (extension_reconstructBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free recon=%p\n", (void *)extension_reconstructBuffer_);
-        free(extension_reconstructBuffer_);
-        extension_reconstructBuffer_ = nullptr;
-    }
-    if (extension_deltaEncodeBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free deltaEnc=%p\n", (void *)extension_deltaEncodeBuffer_);
-        free(extension_deltaEncodeBuffer_);
-        extension_deltaEncodeBuffer_ = nullptr;
-    }
-    if (extension_baseLoadBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free baseLoad=%p\n", (void *)extension_baseLoadBuffer_);
-        free(extension_baseLoadBuffer_);
-        extension_baseLoadBuffer_ = nullptr;
-    }
-    if (extension_tempDataBuffer_)
-    {
-        Enclave::Logging(myName_.c_str(), "CleanExtension: free temp=%p\n", (void *)extension_tempDataBuffer_);
-        free(extension_tempDataBuffer_);
-        extension_tempDataBuffer_ = nullptr;
-    }
+    // pendingIndexUpdates_.clear(); // 清空缓存的索引更新
 
     Enclave::Logging("DEBUG", "Extension环境清理完成，已释放专用缓冲区\n");
 }

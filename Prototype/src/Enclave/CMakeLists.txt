@@ -36,6 +36,12 @@ add_enclave_library(storeEnclave
                     EDL_SEARCH_PATHS ${EDL_SEARCH_PATHS}
                     LDSCRIPT ${LDS})
 
+# For safety, ensure no AVX/AVX2/AVX512/BMI/ADX instructions are emitted inside the enclave.
+# This avoids SIGILL when XFRM in enclave config doesn't include AVX state.
+target_compile_options(storeEnclave PRIVATE
+    -mno-avx -mno-avx2 -mno-avx512f -mno-bmi -mno-bmi2 -mno-adx
+)
+
 enclave_sign(storeEnclave KEY storeEnclave.pem CONFIG storeEnclave.config.xml)
 
 add_untrusted_library(EnclaveCore
