@@ -523,6 +523,8 @@ public:
 
     void PrintBinaryArray(const uint8_t *data, size_t len, bool upper = true);
 
+    void LogExtensionChunkFeaturesStats(const char *tag = nullptr);
+
     // Extension 相关的私有数据成员
     unordered_map<uint64_t, size_t> extension_sampledFeatureCounts_;  // 特征使用计数
     unordered_map<string, vector<uint64_t>> extension_chunkFeatures_; // 数据块特征映射
@@ -536,6 +538,6 @@ public:
 
     uint8_t *optimalBaseSFBuffer_;
     uint8_t *oldBaseChunkSFBuffer_;
-    vector<uint64_t> features;
+    // vector<uint64_t> features;
 };
 #endif

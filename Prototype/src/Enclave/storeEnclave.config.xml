@@ -3,7 +3,7 @@
     <ISVSVN>0</ISVSVN>
     <StackMaxSize>0x1000000</StackMaxSize>
     <StackMinSize>0x100000</StackMinSize>
-    <HeapMaxSize>0x80000000</HeapMaxSize>
+    <HeapMaxSize>0x200000000</HeapMaxSize>
     <HeapMinSize>0x800000</HeapMinSize>
     <TCSNum>20</TCSNum>
     <TCSMaxNum>20</TCSMaxNum>

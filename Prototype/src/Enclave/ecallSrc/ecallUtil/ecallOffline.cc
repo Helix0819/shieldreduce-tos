@@ -3014,6 +3014,8 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
 {
     string optimalBaseFP = candidateGroup[0];
     size_t maxScore = 0;
+    extension_chunkFeatures_.clear();
+    extension_chunkFeatures_.reserve(candidateGroup.size());
 
     EnclaveClient *sgxClient = (EnclaveClient *)upOutSGX->sgxClient;
     EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
@@ -3048,9 +3050,11 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         old_chunk = old_base_content_decompression;
     }
     // compute basechunk scores
-    features.clear();
-    ExtractChunkFeatures(old_chunk, old_base_ref_size, features);
-    extension_chunkFeatures_[optimalBaseFP] = features;
+    // vector<uint64_t> features;
+    // features.clear();
+    auto &vec = extension_chunkFeatures_[optimalBaseFP];
+    vec.clear();
+    ExtractChunkFeatures(old_chunk, old_base_ref_size, vec);
     Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
 
     for (size_t i = 1; i < candidateGroup.size(); i++)
@@ -3077,12 +3081,14 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         old_unique_chunk = ed3_decode_buffer(delta_content_decrypt, delta_size, old_chunk, old_base_ref_size, offline_tmpUniqueBuffer_, &old_unique_size);
         // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: LoadChunkData ret data=%p size=%zu for candidate[%zu]\n", (void *)chunkData, chunkSize, i);
         Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load delta chunk done\n");
+        LogExtensionChunkFeaturesStats("after loading candidate chunk");
         if (old_unique_chunk && old_unique_size > 0)
         {
-            features.clear();
-            ExtractChunkFeatures(old_unique_chunk, old_unique_size, features);
+            auto &vec = extension_chunkFeatures_[chunkFP];
+            vec.clear();
+            ExtractChunkFeatures(old_unique_chunk, old_unique_size, vec);
             // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: features extracted=%zu for candidate[%zu]\n", features.size(), i);
-            extension_chunkFeatures_[chunkFP] = features;
+            // extension_chunkFeatures_[chunkFP] = features;
         }
         else
         {
@@ -3096,8 +3102,14 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         size_t currentScore = 0;
         // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 计算候选块[%zu]得分, features=%zu\n",
         //                  i, extension_chunkFeatures_[chunkFP].size());
-        unordered_set<uint64_t> uniqueFeatures(extension_chunkFeatures_[chunkFP].begin(), extension_chunkFeatures_[chunkFP].end());
-        for (auto &feature : uniqueFeatures)
+        // unordered_set<uint64_t> uniqueFeatures(extension_chunkFeatures_[chunkFP].begin(), extension_chunkFeatures_[chunkFP].end());
+        auto it = extension_chunkFeatures_.find(chunkFP);
+        if (it == extension_chunkFeatures_.end())
+            continue;
+        auto &vec = it->second;
+        std::sort(vec.begin(), vec.end());
+        vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
+        for (auto &feature : vec)
         {
             currentScore += extension_sampledFeatureCounts_[feature];
         }
@@ -3237,7 +3249,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(const vector<string> &chunkGroup,
 void OFFLineBackward::ProcessOneGroupChunk_Extension_Full(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 {
     _extensionProcessedGroups_++;
-
+    extension_chunkFeatures_.clear();
     extension_sampledFeatureCounts_.clear();
     string optimalBaseFP = SelectOptimalBaseChunk(upOutSGX, cryptoObj_);
 
@@ -3674,4 +3686,35 @@ void OFFLineBackward::PrintBinaryArray(const uint8_t *data, size_t len, bool upp
 
         Enclave::Logging("DEBUG", "%s", line);
     }
+}
+
+void OFFLineBackward::LogExtensionChunkFeaturesStats(const char *tag)
+{
+    const size_t entries = extension_chunkFeatures_.size();
+    const size_t buckets = extension_chunkFeatures_.bucket_count();
+
+    size_t key_len_bytes = 0;
+    size_t key_cap_bytes = 0;
+    size_t vec_elems = 0;
+    size_t vec_cap_elems = 0;
+
+    for (const auto &kv : extension_chunkFeatures_)
+    {
+        key_len_bytes += kv.first.size();
+        key_cap_bytes += kv.first.capacity();
+        vec_elems += kv.second.size();
+        vec_cap_elems += kv.second.capacity();
+    }
+
+    const size_t vec_cap_bytes = vec_cap_elems * sizeof(uint64_t);
+    const size_t approx_total_bytes = key_cap_bytes + vec_cap_bytes; // 下界估算，不含节点/桶开销
+
+    Enclave::Logging(
+        myName_.c_str(),
+        "ExtFeatures[%s]: entries=%zu, buckets=%zu, keys(len=%zuB, cap=%zuB), "
+        "vectors(size=%zu elems, cap=%zu elems -> %zuB), approx_total>=%zuB\n",
+        tag ? tag : "", entries, buckets,
+        key_len_bytes, key_cap_bytes,
+        vec_elems, vec_cap_elems, vec_cap_bytes,
+        approx_total_bytes);
 }
