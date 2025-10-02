@@ -2856,15 +2856,15 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     EnclaveClient *sgxClient = (EnclaveClient *)upOutSGX->sgxClient;
     EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
     OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
-    Enclave::Logging(myName_.c_str(),
-                     "Extension_update: upOutSGX=%p, sgxClient=%p, cipherCtx=%p, outEntry=%p\n",
-                     (void *)upOutSGX, (void *)sgxClient, (void *)cipherCtx, (void *)outEntry);
+    // Enclave::Logging(myName_.c_str(),
+    //                  "Extension_update: upOutSGX=%p, sgxClient=%p, cipherCtx=%p, outEntry=%p\n",
+    //                  (void *)upOutSGX, (void *)sgxClient, (void *)cipherCtx, (void *)outEntry);
 
     // 统计信息初始化
     _extensionProcessedGroups_ = 0;
     _extensionReselectedBase_ = 0;
     _extensionSavedSize_ = 0;
-    _extension_Ocall = 0;
+    // _offline_Ocall = 0;
 
     uint8_t *buffer = upOutSGX->test_buffer;
     uint32_t batchNum;
@@ -2872,16 +2872,16 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     uint64_t checkSum = 0;
     // 与 outClient->_test_buffer 分配保持一致，防御性检查
     const size_t TEST_BUFFER_BYTES = 200000 * CHUNK_HASH_SIZE;
-    Enclave::Logging(myName_.c_str(), "Extension_update: test_buffer=%p, TEST_BUFFER_BYTES=%zu\n", (void *)buffer, TEST_BUFFER_BYTES);
+    // Enclave::Logging(myName_.c_str(), "Extension_update: test_buffer=%p, TEST_BUFFER_BYTES=%zu\n", (void *)buffer, TEST_BUFFER_BYTES);
     do
     {
         Ocall_GetAllDeltaIndex(upOutSGX->outClient);
-        _extension_Ocall++;
-        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_GetAllDeltaIndex 完成, _extension_Ocall=%llu\n", _extension_Ocall);
-        // Enclave::Logging(myName_.c_str(), "ocall count is %d amd batch num is %d\n", _extension_Ocall, batchNum);
+        _offline_Ocall++;
+        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_GetAllDeltaIndex 完成, _offline_Ocall=%llu\n", _offline_Ocall);
+        // Enclave::Logging(myName_.c_str(), "ocall count is %d amd batch num is %d\n", _offline_Ocall, batchNum);
         memcpy(&batchNum, buffer, sizeof(uint32_t));
         size_t offset = sizeof(uint32_t);
-        Enclave::Logging(myName_.c_str(), "Extension_update: 解析批次 batchNum=%u, 初始offset=%zu\n", batchNum, offset);
+        // Enclave::Logging(myName_.c_str(), "Extension_update: 解析批次 batchNum=%u, 初始offset=%zu\n", batchNum, offset);
 
         if (batchNum == 0)
         {
@@ -2906,9 +2906,9 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
                 Enclave::Logging(myName_.c_str(), "Extension_update: delta count = 0");
                 continue;
             }
-            Enclave::Logging(myName_.c_str(),
-                             "Extension_update: 组 %u/%u, offset=%zu, deltaCount=%u\n",
-                             i + 1, batchNum, offset, deltaCount);
+            // Enclave::Logging(myName_.c_str(),
+            //                  "Extension_update: 组 %u/%u, offset=%zu, deltaCount=%u\n",
+            //                  i + 1, batchNum, offset, deltaCount);
 
             candidateGroup.push_back(baseChunkFP);
             // 读取所有delta chunk FPs
@@ -2944,16 +2944,16 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     {
         // Enclave::Logging(myName_.c_str(), "Extension_update: 保存热容器, currentSize=%u\n", hot_container.currentSize);
         Ocall_SavehotContainer(&hot_container.containerID[0], hot_container.body, hot_container.currentSize);
-        _extension_Ocall++;
-        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_SavehotContainer 完成, _extension_Ocall=%llu\n", _extension_Ocall);
+        _offline_Ocall++;
+        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_SavehotContainer 完成, _offline_Ocall=%llu\n", _offline_Ocall);
     }
 
     if (hot_base_container.currentSize != 0)
     {
         // Enclave::Logging(myName_.c_str(), "Extension_update: 保存热基础容器, currentSize=%u\n", hot_base_container.currentSize);
         Ocall_SavehotBaseContainer(&hot_base_container.containerID[0], hot_base_container.body, hot_base_container.currentSize);
-        _extension_Ocall++;
-        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_SavehotContainer 完成, _extension_Ocall=%llu\n", _extension_Ocall);
+        _offline_Ocall++;
+        // Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_SavehotContainer 完成, _offline_Ocall=%llu\n", _offline_Ocall);
     }
     CleanExtension();
 
@@ -2965,12 +2965,12 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     }
     // clear extension map
     Ocall_CleanLocalIndex();
-    _extension_Ocall++;
-    Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_CleanLocalIndex 完成, _extension_Ocall=%llu\n", _extension_Ocall);
+    _offline_Ocall++;
+    Enclave::Logging(myName_.c_str(), "Extension_update: Ocall_CleanLocalIndex 完成, _offline_Ocall=%llu\n", _offline_Ocall);
 
     Enclave::Logging(myName_.c_str(), "===== Extension处理完成 =====\n");
     Enclave::Logging(myName_.c_str(), "处理组数: %llu, 重选基础块: %llu, Ocall次数: %llu\n",
-                     _extensionProcessedGroups_, _extensionReselectedBase_, _extension_Ocall);
+                     _extensionProcessedGroups_, _extensionReselectedBase_, _offline_Ocall);
     Enclave::Logging(myName_.c_str(), "系统统计: 压缩大小: %llu bytes, 备份大小: %llu bytes\n",
                      _offlineCompress_size, _offlineCurrBackup_size);
     Enclave::Logging(myName_.c_str(), "基础块数: %lld, 增量块数: %llu\n", _baseChunkNum, _deltaChunkNum);
@@ -3024,12 +3024,12 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
     // load old base chunk recipe
     memcpy(&outEntry->chunkHash, (uint8_t *)&optimalBaseFP[0], CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)old_recipe_);
     // load old base chunk content
     memcpy(&outEntry->chunkAddr.containerName, old_recipe_->containerName, CONTAINER_ID_LENGTH);
     Ocall_OneContainer(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     pair<uint32_t, uint32_t> tmpPair;
     uint8_t *encryptContent = GetChunk_content_buffer(outEntry->containerbuffer, old_recipe_, false, tmpPair, encOldChunkBuffer_);
     // decrypt
@@ -3063,12 +3063,12 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
         // get delta recipe
         memcpy(&outEntry->chunkHash, (uint8_t *)chunkFP.data(), CHUNK_HASH_SIZE);
         Ocall_OneRecipe(upOutSGX->outClient);
-        _extension_Ocall++;
+        _offline_Ocall++;
         cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)delta_recipe_);
         // get delta chunk content
         memcpy(&outEntry->chunkAddr.containerName, delta_recipe_->containerName, CONTAINER_ID_LENGTH);
         Ocall_OneDeltaContainer(upOutSGX->outClient);
-        _extension_Ocall++;
+        _offline_Ocall++;
         // decrypt
         uint8_t *deltaIV = GetChunk_IV(outEntry->containerbuffer, delta_recipe_, offline_deltaIVBuffer_);
         uint8_t *delta_content_crypt = GetChunk_content_buffer(outEntry->containerbuffer, delta_recipe_, false, tmpPair, offline_oldDeltaChunkEnc_);
@@ -3281,16 +3281,16 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
     OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
 
-    Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
+    // Enclave::Logging(myName_.c_str(), "Extension: 开始重组织, 候选=%zu\n", candidateGroup.size());
     // get old base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)oldBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)old_recipe_);
     // load old base chunk content
     memcpy(&outEntry->chunkAddr.containerName, old_recipe_->containerName, CONTAINER_ID_LENGTH);
     Ocall_OneContainer(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     pair<uint32_t, uint32_t> tmpPair;
     uint8_t *encryptContent = GetChunk_content_buffer(outEntry->containerbuffer, old_recipe_, false, tmpPair, encOldChunkBuffer_);
     // decrypt
@@ -3312,15 +3312,15 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     {
         old_chunk = old_base_content_decompression;
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
+    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块加载成功\n");
     // get optimal new base chunk data
     memcpy(&outEntry->chunkHash, (uint8_t *)optimalBaseFP.data(), CHUNK_HASH_SIZE);
     Ocall_OneRecipe(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)new_recipe_);
     memcpy(&outEntry->chunkAddr.containerName, new_recipe_->containerName, CONTAINER_ID_LENGTH);
     Ocall_OneDeltaContainer(upOutSGX->outClient);
-    _extension_Ocall++;
+    _offline_Ocall++;
     tmpPair;
     uint8_t *optimalBaseIV = GetChunk_IV(outEntry->containerbuffer, new_recipe_, offline_newIVBuffer_);
     // uint8_t *optimalBaseFP = GetChunk_FP(outEntry->containerbuffer, new_recipe_);
@@ -3351,7 +3351,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     // memcpy(oldBaseChunkSFBuffer_, oldBaseSF, 3 * CHUNK_HASH_SIZE);
     // memcpy((uint8_t *)&outEntry->superfeature, oldBaseChunkSFBuffer_, 3 * CHUNK_HASH_SIZE);
     // Ocall_OFFline_updateIndex(upOutSGX->outClient, 0);
-    // _extension_Ocall += 2;
+    // _offline_Ocall += 2;
     // Enclave::Logging(myName_.c_str(), "update sf index succeed\n");
     // Enclave::Logging(myName_.c_str(), "Extension: 最优基础块加载成功, size=%zu, flag=%u, onlineSize=%zu\n",
     //                  optimalBaseSize, (unsigned)optimalBaseFlag, onlineBaseSize);
@@ -3370,12 +3370,12 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
         {
             memcpy(&outEntry->chunkHash, (uint8_t *)chunkFP.data(), CHUNK_HASH_SIZE);
             Ocall_OneRecipe(upOutSGX->outClient);
-            _extension_Ocall++;
+            _offline_Ocall++;
             cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)delta_recipe_);
             // get delta chunk content
             memcpy(&outEntry->chunkAddr.containerName, delta_recipe_->containerName, CONTAINER_ID_LENGTH);
             Ocall_OneDeltaContainer(upOutSGX->outClient);
-            _extension_Ocall++;
+            _offline_Ocall++;
             // decrypt
             uint8_t *deltaIV = GetChunk_IV(outEntry->containerbuffer, delta_recipe_, offline_deltaIVBuffer_);
             uint8_t *deltaFp = GetChunk_FP(outEntry->containerbuffer, delta_recipe_);
@@ -3449,7 +3449,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             }
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成.\n");
+    // Enclave::Logging(myName_.c_str(), "Extension: 所有依赖旧基础块的delta块处理完成.\n");
     // 4.2 最后处理oldBaseFP（如果它不是最优基础块）
     if (oldBaseFP != optimalBaseFP)
     {
@@ -3479,7 +3479,7 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
         }
     }
-    Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
+    // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
     // lz4 compress optimal basechunk
     uint32_t onlinesize = new_recipe_->length;
     uint8_t *compressdata = offline_lz4CompressBuffer_;
@@ -3532,9 +3532,9 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     //                (uint8_t *)&newDeltaFPs[i][0], CHUNK_HASH_SIZE);
     //     }
     //     Ocall_UpdateDeltaIndexOnly(upOutSGX->outClient, newDeltaFPs.size());
-    //     _extension_Ocall++;
-    //     // Enclave::Logging(myName_.c_str(), "Extension: 更新外部增量索引, pairCount=%zu, _extension_Ocall=%llu\n",
-    //     //                  newDeltaFPs.size(), _extension_Ocall);
+    //     _offline_Ocall++;
+    //     // Enclave::Logging(myName_.c_str(), "Extension: 更新外部增量索引, pairCount=%zu, _offline_Ocall=%llu\n",
+    //     //                  newDeltaFPs.size(), _offline_Ocall);
 
     //     // Enclave::Logging(myName_.c_str(), "Extension: 建立新映射关系，基础块 [%02x] -> %zu 个增量块\n",
     //     //                 (uint8_t)optimalBaseFP[0], newDeltaFPs.size());
