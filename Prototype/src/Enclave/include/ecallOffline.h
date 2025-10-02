@@ -528,7 +528,7 @@ public:
     // Extension 相关的私有数据成员
     unordered_map<uint64_t, size_t> extension_sampledFeatureCounts_;  // 特征使用计数
     unordered_map<string, vector<uint64_t>> extension_chunkFeatures_; // 数据块特征映射             // 缓存的索引更新（延迟到容器落盘后）
-    vector<uint64_t> features;
+    // vector<uint64_t> features;
 
     // Extension 统计信息
     uint64_t _extensionProcessedGroups_ = 0; // 已处理的数据块组数量
