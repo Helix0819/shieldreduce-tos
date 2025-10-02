@@ -3027,6 +3027,11 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     Enclave::Logging(myName_.c_str(), "Extension节省空间: %llu bytes, 系统总压缩率: %.2f%%\n",
                      _extensionSavedSize_, totalCompressionRatio);
     Enclave::Logging(myName_.c_str(), "Extension_update: 汇总 checkSum=%llu, totalProcessedGroups=%d\n", checkSum, totalProcessedGroups);
+
+    Ocall_GetCurrentTime(&_startTimeOffline);
+    Ocall_GetCurrentTime(&_endTimeOffline);
+    _testOcallTimeOffline += (_endTimeOffline - _startTimeOffline);
+    _testOcallCountOffline++;
 }
 
 /**
@@ -3105,7 +3110,7 @@ string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto
     auto &vec = extension_chunkFeatures_[optimalBaseFP];
     vec.clear();
     ExtractChunkFeatures(old_chunk, old_base_ref_size, vec);
-    Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
+    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
 
     for (size_t i = 1; i < candidateGroup.size(); i++)
     {
@@ -3301,8 +3306,11 @@ void OFFLineBackward::ProcessOneGroupChunk_Extension_Full(UpOutSGX_t *upOutSGX, 
     _extensionProcessedGroups_++;
     extension_chunkFeatures_.clear();
     extension_sampledFeatureCounts_.clear();
+    Ocall_GetCurrentTime(&_startTimeOffline);
     string optimalBaseFP = SelectOptimalBaseChunk(upOutSGX, cryptoObj_);
-
+    Ocall_GetCurrentTime(&_endTimeOffline);
+    selectOptimalBaseTime += (_endTimeOffline - _startTimeOffline);
+    selectOptimalBaseCount++;
     // 如果最优基础块与当前基础块不同，进行重组织
     if (optimalBaseFP != candidateGroup[0])
     {
@@ -3481,6 +3489,10 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
                     _offlineCurrBackup_size -= onlineSize;   // 减去原始备份大小
                     _offlineCompress_size += newDeltaSize;   // 加上新的增量大小
                     _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
+                    _deltaDataSize -= onlineSize;
+                    _deltaDataSize += newDeltaSize;
+                    _Offline_DeltaSaveSize += (onlineSize - newDeltaSize);
+                    _offlineDeltanum++;
                     // Enclave::Logging(myName_.c_str(), "Extension: delta块重压缩 [%02x] %zu -> %zu bytes (%.1f%%), 原deltaFlag=%d\n",
                     //    (uint8_t)chunkFP[0], originalSize, newDeltaSize,
                     //    100.0 * newDeltaSize / originalSize, originalDeltaFlag);
@@ -3527,6 +3539,11 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
             _offlineCurrBackup_size -= onlineSize;   // 减去原始备份
             _offlineCompress_size += newDeltaSize;   // 加上新的增量大小
             _offlineCurrBackup_size += newDeltaSize; // 加上新的增量大小
+            _baseDataSize -= onlineSize;
+            _deltaDataSize += newDeltaSize;
+            _DeltaSaveSize += (onlineSize - newDeltaSize);
+            _Offline_DeltaSaveSize += (onlineSize - newDeltaSize);
+            _offlineDeltanum++;
         }
     }
     // Enclave::Logging(myName_.c_str(), "Extension: 旧基础块处理完成\n");
@@ -3563,6 +3580,13 @@ void OFFLineBackward::ReorganizeChunkGroup_Extension(const string &oldBaseFP, co
     _offlineCurrBackup_size -= onlinesize;
     _offlineCompress_size += finalSize;
     _offlineCurrBackup_size += finalSize;
+    if (oldBaseFP != optimalBaseFP)
+    {
+        _deltaDataSize -= onlinesize;
+        _DeltaSaveSize -= onlinesize;
+        _baseDataSize += finalSize;
+        _lz4SaveSize += finalSize;
+    }
 
     // free(optimalBaseData);
 
