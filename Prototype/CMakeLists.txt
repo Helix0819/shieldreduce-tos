@@ -1,6 +1,6 @@
 set(SGX_HW ON CACHE BOOL "SGX Mode Parameter" FORCE)
-set(CMAKE_BUILD_TYPE "Release")
-# set(CMAKE_BUILD_TYPE "Debug")
+# set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Debug")
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(SGX_MODE Debug CACHE BOOL "SGX Mode Parameter" FORCE)
     set(SGX_DEBUG 1)

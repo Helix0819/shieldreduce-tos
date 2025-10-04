@@ -125,15 +125,15 @@ void EnclaveClient::InitUploadBuffer()
     newBasechunkSf_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
     tmpBasechunkSf_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);
 
-    offline_plainOldUniqueBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
+    offline_plainOldUniqueBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
 
     // for GetNew_deltachunk()
-    offline_tmpUniqueBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_plainNewDeltaChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_newDeltaChunkEnc_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_oldDeltaChunkDec_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_oldDeltaChunkEnc_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_optimalChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
+    offline_tmpUniqueBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_plainNewDeltaChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_newDeltaChunkEnc_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_oldDeltaChunkDec_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_oldDeltaChunkEnc_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_optimalChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
 
     // for merge container and update cold container
     offline_mergeNewContainer_ = (uint8_t *)malloc(MAX_CONTAINER_SIZE);
@@ -141,13 +141,13 @@ void EnclaveClient::InitUploadBuffer()
     offline_mergeRecipeDec_ = (RecipeEntry_t *)malloc(sizeof(RecipeEntry_t));
 
     // for offline process delta compression
-    offline_oldChunkDecrypt_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_newChunkDecrypt_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_oldChunkDecompression_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_newChunkDecompression_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_encOldChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_encNewChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
-    offline_lz4CompressBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE);
+    offline_oldChunkDecrypt_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_newChunkDecrypt_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_oldChunkDecompression_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_newChunkDecompression_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_encOldChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_encNewChunkBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
+    offline_lz4CompressBuffer_ = (uint8_t *)malloc(MAX_CHUNK_SIZE * 2);
 
     // for offline delta chunk
     offline_deltaSFBuffer_ = (uint8_t *)malloc(3 * CHUNK_HASH_SIZE);

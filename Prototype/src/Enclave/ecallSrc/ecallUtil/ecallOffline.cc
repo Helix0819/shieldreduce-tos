@@ -1,5 +1,9 @@
 #include "../../include/ecallOffline.h"
 
+#include <algorithm>
+#include <limits>
+#include <random>
+
 int skip_num = 0;
 
 void OFFLineBackward::Insert_local(string oldchunkhash, string newchunkhash)
@@ -2792,6 +2796,7 @@ int OFFLineBackward::EDeltaEncode(uint8_t *newBuf, uint32_t newSize, uint8_t *ba
                  * but not change the last DeltaUnit2, so the DeltaUnit2 should be
                  * overwritten when flag=1 or at the end of the loop.
                  */
+                // Enclave::Logging(myName_.c_str(), "hash error at inputPos: %u, length: %u\n", inputPos, length);
                 memcpy(deltaBuf + deltaLen, newBuf + inputPos, length);
                 deltaLen += length;
                 set_length(&record2, get_length(&record2) + length);
@@ -3021,6 +3026,7 @@ void OFFLineBackward::Extension_update(UpOutSGX_t *upOutSGX, EcallCrypto *crypto
     Enclave::Logging(myName_.c_str(), "===== Extension处理完成 =====\n");
     Enclave::Logging(myName_.c_str(), "处理组数: %llu, 重选基础块: %llu, Ocall次数: %llu\n",
                      _extensionProcessedGroups_, _extensionReselectedBase_, _offline_Ocall);
+    Enclave::Logging(myName_.c_str(), "候选大于300的组有: %llu\n", overSizeGroup);
     Enclave::Logging(myName_.c_str(), "系统统计: 压缩大小: %llu bytes, 备份大小: %llu bytes\n",
                      _offlineCompress_size, _offlineCurrBackup_size);
     Enclave::Logging(myName_.c_str(), "基础块数: %lld, 增量块数: %llu\n", _baseChunkNum, _deltaChunkNum);
@@ -3060,6 +3066,209 @@ void OFFLineBackward::ExtractChunkFeatures(uint8_t *chunkPtr, size_t chunkSize, 
     // Enclave::Logging(myName_.c_str(), "ExtractChunkFeatures: exit, features=%zu\n", features.size());
 }
 
+bool OFFLineBackward::EnsureChunkPayload(const string &chunkFP,
+                                         unordered_map<string, ChunkPayload> &cache,
+                                         UpOutSGX_t *upOutSGX,
+                                         EcallCrypto *cryptoObj_,
+                                         unordered_set<string> &loadingSet)
+{
+    if (chunkFP.empty())
+    {
+        return false;
+    }
+
+    auto existing = cache.find(chunkFP);
+    if (existing != cache.end())
+    {
+        return existing->second.valid;
+    }
+
+    if (!loadingSet.insert(chunkFP).second)
+    {
+        Enclave::Logging("ERROR", "Extension: 检测到块依赖循环，chunk无法加载\n");
+        return false;
+    }
+
+    EnclaveClient *sgxClient = (EnclaveClient *)upOutSGX->sgxClient;
+    EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
+    OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
+
+    memcpy(&outEntry->chunkHash, (uint8_t *)chunkFP.data(), CHUNK_HASH_SIZE);
+    Ocall_OneRecipe(upOutSGX->outClient);
+    _offline_Ocall++;
+    cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)delta_recipe_);
+
+    RecipeEntry_t recipeLocal;
+    memcpy(&recipeLocal, delta_recipe_, sizeof(RecipeEntry_t));
+
+    bool isDelta = (recipeLocal.deltaFlag == DELTA);
+
+    memcpy(&outEntry->chunkAddr.containerName, recipeLocal.containerName, CONTAINER_ID_LENGTH);
+    if (isDelta)
+    {
+        Ocall_OneDeltaContainer(upOutSGX->outClient);
+    }
+    else
+    {
+        Ocall_OneContainer(upOutSGX->outClient);
+    }
+    _offline_Ocall++;
+
+    pair<uint32_t, uint32_t> tmpPair;
+    uint8_t *contentBuffer = GetChunk_content_buffer(outEntry->containerbuffer, &recipeLocal, false, tmpPair,
+                                                     isDelta ? offline_oldDeltaChunkEnc_ : encOldChunkBuffer_);
+    uint8_t *ivBuffer = GetChunk_IV(outEntry->containerbuffer, &recipeLocal,
+                                    isDelta ? offline_deltaIVBuffer_ : offline_oldIVBuffer_);
+    uint8_t *decryptBuffer = isDelta ? offline_oldDeltaChunkDec_ : offline_oldChunkDecrypt_;
+    cryptoObj_->DecryptionWithKeyIV(cipherCtx, contentBuffer, recipeLocal.length, Enclave::enclaveKey_, decryptBuffer, ivBuffer);
+
+    vector<uint8_t> plainData;
+    size_t plainSize = 0;
+    bool success = true;
+
+    if (isDelta)
+    {
+        vector<uint8_t> deltaBytes(decryptBuffer, decryptBuffer + recipeLocal.length);
+
+        bool baseHashAllZero = true;
+        for (size_t i = 0; i < CHUNK_HASH_SIZE; ++i)
+        {
+            if (recipeLocal.basechunkHash[i] != 0)
+            {
+                baseHashAllZero = false;
+                break;
+            }
+        }
+
+        if (!baseHashAllZero)
+        {
+            string baseFP(reinterpret_cast<const char *>(recipeLocal.basechunkHash), CHUNK_HASH_SIZE);
+            if (EnsureChunkPayload(baseFP, cache, upOutSGX, cryptoObj_, loadingSet))
+            {
+                auto baseIt = cache.find(baseFP);
+                if (baseIt != cache.end() && baseIt->second.valid && !baseIt->second.data.empty())
+                {
+                    ChunkPayload &basePayload = baseIt->second;
+                    uint8_t *decodedPtr = ed3_decode_buffer(deltaBytes.data(), deltaBytes.size(),
+                                                            basePayload.data.data(), basePayload.logicalSize,
+                                                            offline_tmpUniqueBuffer_, &plainSize);
+                    if (decodedPtr && plainSize > 0)
+                    {
+                        plainData.assign(decodedPtr, decodedPtr + plainSize);
+                    }
+                    else
+                    {
+                        success = false;
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            else
+            {
+                success = false;
+            }
+        }
+        else
+        {
+            success = false;
+        }
+    }
+    else
+    {
+        int decompressed = LZ4_decompress_safe((char *)decryptBuffer,
+                                               (char *)offline_plainOldUniqueBuffer_,
+                                               recipeLocal.length,
+                                               MAX_CHUNK_SIZE);
+        if (decompressed > 0)
+        {
+            plainSize = static_cast<size_t>(decompressed);
+            plainData.assign(offline_plainOldUniqueBuffer_, offline_plainOldUniqueBuffer_ + plainSize);
+        }
+        else
+        {
+            plainSize = recipeLocal.length;
+            plainData.assign(decryptBuffer, decryptBuffer + recipeLocal.length);
+        }
+    }
+
+    ChunkPayload payload;
+    payload.valid = success;
+    payload.isDelta = isDelta;
+    payload.logicalSize = plainSize;
+    payload.recipe = recipeLocal;
+    if (success)
+    {
+        payload.data = std::move(plainData);
+    }
+
+    cache.emplace(chunkFP, std::move(payload));
+    loadingSet.erase(chunkFP);
+
+    return success;
+}
+
+size_t OFFLineBackward::EstimateBaseChunkCost(const ChunkPayload &payload)
+{
+    if (!payload.valid)
+    {
+        return std::numeric_limits<size_t>::max();
+    }
+
+    if (payload.logicalSize == 0)
+    {
+        return 0;
+    }
+
+    if (!offline_lz4CompressBuffer_)
+    {
+        return payload.logicalSize;
+    }
+
+    int compressed = LZ4_compress_default((char *)payload.data.data(),
+                                          (char *)offline_lz4CompressBuffer_,
+                                          payload.logicalSize,
+                                          MAX_CHUNK_SIZE);
+    if (compressed > 0)
+    {
+        return static_cast<size_t>(compressed);
+    }
+
+    return payload.logicalSize;
+}
+
+bool OFFLineBackward::ComputeDeltaSizeAgainstBase(const ChunkPayload &target,
+                                                  const ChunkPayload &base,
+                                                  size_t &encodedSize)
+{
+    encodedSize = 0;
+    if (!offline_plainNewDeltaChunkBuffer_)
+    {
+        return false;
+    }
+
+    if (!target.valid || !base.valid || target.logicalSize == 0 || base.logicalSize == 0)
+    {
+        return false;
+    }
+    Enclave::Logging(myName_.c_str(), "ComputeDeltaSizeAgainstBase: target size=%u, base size=%u\n", target.logicalSize, base.logicalSize);
+    uint8_t *encoded = ed3_encode_buffer(const_cast<uint8_t *>(target.data.data()),
+                                         target.logicalSize,
+                                         const_cast<uint8_t *>(base.data.data()),
+                                         base.logicalSize,
+                                         offline_plainNewDeltaChunkBuffer_,
+                                         &encodedSize);
+
+    if (!encoded)
+    {
+        return false;
+    }
+
+    return true;
+}
+
 /**
  * @brief 为一组数据块选择最优的基础块
  * @details 计算每个候选块的特征重用度得分，选择得分最高的作为新基础块
@@ -3067,119 +3276,122 @@ void OFFLineBackward::ExtractChunkFeatures(uint8_t *chunkPtr, size_t chunkSize, 
  */
 string OFFLineBackward::SelectOptimalBaseChunk(UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_)
 {
-    string optimalBaseFP = candidateGroup[0];
-    size_t maxScore = 0;
-    extension_chunkFeatures_.clear();
-    extension_chunkFeatures_.reserve(candidateGroup.size());
-
-    EnclaveClient *sgxClient = (EnclaveClient *)upOutSGX->sgxClient;
-    EVP_CIPHER_CTX *cipherCtx = sgxClient->_cipherCtx;
-    OutQueryEntry_t *outEntry = upOutSGX->outQuery->outQueryBase;
-
-    // load old base chunk recipe
-    memcpy(&outEntry->chunkHash, (uint8_t *)&optimalBaseFP[0], CHUNK_HASH_SIZE);
-    Ocall_OneRecipe(upOutSGX->outClient);
-    _offline_Ocall++;
-    cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)old_recipe_);
-    // load old base chunk content
-    memcpy(&outEntry->chunkAddr.containerName, old_recipe_->containerName, CONTAINER_ID_LENGTH);
-    Ocall_OneContainer(upOutSGX->outClient);
-    _offline_Ocall++;
-    pair<uint32_t, uint32_t> tmpPair;
-    uint8_t *encryptContent = GetChunk_content_buffer(outEntry->containerbuffer, old_recipe_, false, tmpPair, encOldChunkBuffer_);
-    // decrypt
-    uint8_t *oldBaseIV = GetChunk_IV(outEntry->containerbuffer, old_recipe_, offline_oldIVBuffer_);
-    uint8_t *old_base_content_decrypt = offline_oldChunkDecrypt_;
-    cryptoObj_->DecryptionWithKeyIV(cipherCtx, encryptContent, old_recipe_->length, Enclave::enclaveKey_, old_base_content_decrypt, oldBaseIV);
-    // decompression
-    uint8_t *old_base_content_decompression = offline_oldChunkDecompression_;
-    int old_base_ref_size = LZ4_decompress_safe((char *)old_base_content_decrypt, (char *)old_base_content_decompression, old_recipe_->length, MAX_CHUNK_SIZE);
-    uint8_t *old_chunk;
-    if (old_base_ref_size < 0)
+    if (candidateGroup.empty())
     {
-        old_base_ref_size = old_recipe_->length;
-        old_chunk = old_base_content_decrypt;
+        return {};
+    }
+
+    if (candidateGroup.size() == 1)
+    {
+        return candidateGroup[0];
+    }
+
+    vector<string> sampledGroup;
+    if (candidateGroup.size() <= kMaxBruteforceCandidates)
+    {
+        sampledGroup = candidateGroup;
     }
     else
     {
-        old_chunk = old_base_content_decompression;
-    }
-    // compute basechunk scores
-    // vector<uint64_t> features;
-    // features.clear();
-    auto &vec = extension_chunkFeatures_[optimalBaseFP];
-    vec.clear();
-    ExtractChunkFeatures(old_chunk, old_base_ref_size, vec);
-    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load old base chunk done\n");
+        overSizeGroup++;
+        sampledGroup.reserve(kMaxBruteforceCandidates);
+        sampledGroup.push_back(candidateGroup[0]);
 
-    for (size_t i = 1; i < candidateGroup.size(); i++)
+        vector<string> rest(candidateGroup.begin() + 1, candidateGroup.end());
+        uint32_t seed = static_cast<uint32_t>(candidateGroup.size() * 1315423911u);
+        if (!candidateGroup[0].empty())
+        {
+            for (size_t i = 0; i < std::min(sizeof(seed), candidateGroup[0].size()); ++i)
+            {
+                seed ^= static_cast<uint8_t>(candidateGroup[0][i]) << ((i % 4) * 8);
+            }
+        }
+        std::mt19937 rng(seed);
+        std::shuffle(rest.begin(), rest.end(), rng);
+        size_t remaining = std::min(rest.size(), kMaxBruteforceCandidates - 1);
+        sampledGroup.insert(sampledGroup.end(), rest.begin(), rest.begin() + remaining);
+    }
+
+    unordered_map<string, ChunkPayload> payloadCache;
+    payloadCache.reserve(sampledGroup.size());
+    unordered_set<string> loadingSet;
+
+    for (const auto &fp : sampledGroup)
     {
-        const string &chunkFP = candidateGroup[i];
-        // get delta recipe
-        memcpy(&outEntry->chunkHash, (uint8_t *)chunkFP.data(), CHUNK_HASH_SIZE);
-        Ocall_OneRecipe(upOutSGX->outClient);
-        _offline_Ocall++;
-        cryptoObj_->AESCBCDec(cipherCtx, (uint8_t *)&outEntry->chunkAddr, sizeof(RecipeEntry_t), Enclave::indexQueryKey_, (uint8_t *)delta_recipe_);
-        // get delta chunk content
-        memcpy(&outEntry->chunkAddr.containerName, delta_recipe_->containerName, CONTAINER_ID_LENGTH);
-        Ocall_OneDeltaContainer(upOutSGX->outClient);
-        _offline_Ocall++;
-        // decrypt
-        uint8_t *deltaIV = GetChunk_IV(outEntry->containerbuffer, delta_recipe_, offline_deltaIVBuffer_);
-        uint8_t *delta_content_crypt = GetChunk_content_buffer(outEntry->containerbuffer, delta_recipe_, false, tmpPair, offline_oldDeltaChunkEnc_);
-        uint8_t *delta_content_decrypt = offline_oldDeltaChunkEnc_;
-        size_t delta_size = delta_recipe_->length;
-        cryptoObj_->DecryptionWithKeyIV(cipherCtx, delta_content_crypt, delta_size, Enclave::enclaveKey_, delta_content_decrypt, deltaIV);
-        // delta decode
-        uint8_t *old_unique_chunk;
-        size_t old_unique_size;
-        old_unique_chunk = ed3_decode_buffer(delta_content_decrypt, delta_size, old_chunk, old_base_ref_size, offline_tmpUniqueBuffer_, &old_unique_size);
-        // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: LoadChunkData ret data=%p size=%zu for candidate[%zu]\n", (void *)chunkData, chunkSize, i);
-        // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: load delta chunk done\n");
-        // LogExtensionChunkFeaturesStats("after loading candidate chunk");
-        if (old_unique_chunk && old_unique_size > 0)
-        {
-            auto &vec = extension_chunkFeatures_[chunkFP];
-            vec.clear();
-            ExtractChunkFeatures(old_unique_chunk, old_unique_size, vec);
-            // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: features extracted=%zu for candidate[%zu]\n", features.size(), i);
-            // extension_chunkFeatures_[chunkFP] = features;
-        }
-        else
-        {
-            Enclave::Logging("ERROR", "Extension: 无法加载候选块 [%02x] 的数据\n", (uint8_t)chunkFP[0]);
-        }
+        EnsureChunkPayload(fp, payloadCache, upOutSGX, cryptoObj_, loadingSet);
     }
 
-    for (size_t i = 0; i < candidateGroup.size(); i++)
-    {
-        const string &chunkFP = candidateGroup[i];
-        size_t currentScore = 0;
-        // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 计算候选块[%zu]得分, features=%zu\n",
-        //                  i, extension_chunkFeatures_[chunkFP].size());
-        // unordered_set<uint64_t> uniqueFeatures(extension_chunkFeatures_[chunkFP].begin(), extension_chunkFeatures_[chunkFP].end());
-        auto it = extension_chunkFeatures_.find(chunkFP);
-        if (it == extension_chunkFeatures_.end())
-            continue;
-        auto &vec = it->second;
-        std::sort(vec.begin(), vec.end());
-        vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
-        for (auto &feature : vec)
-        {
-            currentScore += extension_sampledFeatureCounts_[feature];
-        }
+    const string &originalBase = candidateGroup[0];
+    string optimalBase = originalBase;
+    // size_t bestCost = std::numeric_limits<size_t>::max();
+    // size_t baselineCost = std::numeric_limits<size_t>::max();
+    // bool foundValid = false;
+    // uint32_t count = 0;
+    // for (const auto &baseFP : sampledGroup)
+    // {
+    //     Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 组内块 %u/%zu, 评估作为基础块 %s\n", ++count, sampledGroup.size(), baseFP.substr(0, 8).c_str());
+    //     auto baseIt = payloadCache.find(baseFP);
+    //     if (baseIt == payloadCache.end() || !baseIt->second.valid)
+    //     {
+    //         continue;
+    //     }
 
-        if (currentScore > maxScore)
-        {
-            maxScore = currentScore;
-            optimalBaseFP = chunkFP;
-            // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 候选块[%zu]当前最高得分 %zu, 设为最优基础块\n",
-            //                  i, maxScore);
-        }
-    }
-    // Enclave::Logging(myName_.c_str(), "SelectOptimalBaseChunk: 选择完成, optimalBaseFP=%02x, maxScore=%zu\n",
-    //                  (uint8_t)optimalBaseFP[0], maxScore);
-    return optimalBaseFP;
+    //     size_t totalCost = EstimateBaseChunkCost(baseIt->second);
+    //     if (totalCost == std::numeric_limits<size_t>::max())
+    //     {
+    //         continue;
+    //     }
+
+    //     bool feasible = true;
+    //     for (const auto &chunkFP : sampledGroup)
+    //     {
+    //         if (chunkFP == baseFP)
+    //         {
+    //             continue;
+    //         }
+
+    //         auto chunkIt = payloadCache.find(chunkFP);
+    //         if (chunkIt == payloadCache.end() || !chunkIt->second.valid)
+    //         {
+    //             feasible = false;
+    //             break;
+    //         }
+
+    //         size_t deltaSize = 0;
+    //         bool encoded = ComputeDeltaSizeAgainstBase(chunkIt->second, baseIt->second, deltaSize);
+    //         totalCost += deltaSize;
+
+    //         if (totalCost >= bestCost)
+    //         {
+    //             feasible = false;
+    //             break;
+    //         }
+    //     }
+
+    //     if (!feasible)
+    //     {
+    //         continue;
+    //     }
+
+    //     if (baseFP == originalBase)
+    //     {
+    //         baselineCost = totalCost;
+    //     }
+
+    //     if (!foundValid || totalCost < bestCost)
+    //     {
+    //         bestCost = totalCost;
+    //         optimalBase = baseFP;
+    //         foundValid = true;
+    //     }
+    // }
+
+    // if (!foundValid)
+    // {
+    //     return originalBase;
+    // }
+
+    return optimalBase;
 }
 
 string OFFLineBackward::SelectOptimalBaseChunk(const vector<string> &chunkGroup, UpOutSGX_t *upOutSGX, EcallCrypto *cryptoObj_, uint8_t *old_chunk, size_t old_chunk_ref_size, uint8_t *new_chunk, size_t new_chunk_ref_size)
@@ -3315,7 +3527,7 @@ void OFFLineBackward::ProcessOneGroupChunk_Extension_Full(UpOutSGX_t *upOutSGX, 
     if (optimalBaseFP != candidateGroup[0])
     {
         // Enclave::Logging(myName_.c_str(), "Extension: 需重组织块组: base->optimal\n");
-        ReorganizeChunkGroup_Extension(candidateGroup[0], optimalBaseFP, upOutSGX, cryptoObj_);
+        // ReorganizeChunkGroup_Extension(candidateGroup[0], optimalBaseFP, upOutSGX, cryptoObj_);
     }
     else
     {

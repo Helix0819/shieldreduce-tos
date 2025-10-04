@@ -6,6 +6,7 @@
 #include <utility>
 
 #include <iostream>
+#include <unordered_set>
 #include "ecallLz4.h"
 
 #include "md5.h"
@@ -87,6 +88,30 @@ private:
     // for extension
     vector<string> candidateGroup;
     uint64_t failedNewDeltaCnt = 0;
+
+    struct ChunkPayload
+    {
+        vector<uint8_t> data;
+        size_t logicalSize = 0;
+        RecipeEntry_t recipe{};
+        bool isDelta = false;
+        bool valid = false;
+    };
+
+    static constexpr size_t kMaxBruteforceCandidates = 300;
+    uint64_t overSizeGroup = 0;
+
+    bool EnsureChunkPayload(const string &chunkFP,
+                            unordered_map<string, ChunkPayload> &cache,
+                            UpOutSGX_t *upOutSGX,
+                            EcallCrypto *cryptoObj_,
+                            unordered_set<string> &loadingSet);
+
+    size_t EstimateBaseChunkCost(const ChunkPayload &payload);
+
+    bool ComputeDeltaSizeAgainstBase(const ChunkPayload &target,
+                                     const ChunkPayload &base,
+                                     size_t &encodedSize);
 
 public:
     unordered_map<string, string> local_basemap;

@@ -7,6 +7,7 @@ Prototype/*.so
 Prototype/*.a
 Prototype/*.out
 Prototype/*.exe
+Prototype/lib/
 
 # 日志文件
 Prototype/*.log
